@@ -1,23 +1,12 @@
 <template lang="pug">
-div(id="app")
-  MainPage
+div
+  div(id="app")
+    router-view
 </template>
 
-<script>
-
-import MainPage from './views/MainPage.vue';
-
-export default {
-  name: 'App',
-  components: {
-    MainPage
-  }
-}
-</script>
-
 <style>
-*{
-  margin: 0;
+* {
+  margin: 0px;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -25,7 +14,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /* margin-top: 60px; */
 }
-
 </style>

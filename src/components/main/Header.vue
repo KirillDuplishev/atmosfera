@@ -2,7 +2,7 @@
 .header
   .logo
     span.a А
-    span тмосфера
+    span.logo-text Атмосфера
   .box
     .box-sm.red
       span Главная
@@ -16,8 +16,7 @@
 </template>
 <script>
 export default {
-    name:"HeaderTest"
-
+  name:"HeaderTest"
 }
 </script>
 <style scoped>
@@ -26,14 +25,42 @@ export default {
   border-radius: 100px;
   border: 2px solid;
   animation: spin 1.4s linear infinite;
+  left: 5px;
 }
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
 }
+.logo-text {
+  margin-left: 30px;
+  font-family: Arial;
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.2);
+  background: url(https://images.wallpaperscraft.ru/image/single/metall_poverhnost_pattern_206034_6016x4016.jpg) repeat-x;
+  -webkit-background-clip: text;
+  background-size: contain;
+  animation: clouds 13s linear infinite;
+}
+
+@keyframes clouds {
+  0% {
+    background-position: left 0 top 0;
+  }
+
+  50% {
+    background-position: left 150px top -10px;
+  }
+
+  100% {
+    background-position: left 300px top 0px;
+  }
+}
 .header{
-  position: absolute;
+  position: fixed;
+  z-index: 1001;
   display: flex;
   align-items: center;
   width: 100%;
