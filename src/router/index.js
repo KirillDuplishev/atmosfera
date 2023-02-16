@@ -1,6 +1,8 @@
 import Vue from 'vue'
 
 import MainPage from '../views/MainPage.vue'
+import PhotoGallery from '../views/PhotoGallery.vue'
+
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
@@ -8,8 +10,13 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'mainPage',
     component: MainPage
+  },
+  {
+    path: '/photoGallery',
+    name: 'photoGallery',
+    component: PhotoGallery
   },
 ]
 
