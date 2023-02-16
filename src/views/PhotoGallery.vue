@@ -1,6 +1,6 @@
 <template lang="pug">
-div
-	<h1 class="header">Атмосфера <span>Loading...</span></h1>
+.body-gallery
+	h1.header-gallery Атмосфера
 	.gallery
 		.gallery__item
 			img(src="../assets/photoGallery/1.jpg" alt="Alt")
@@ -175,6 +175,6 @@ export default {
 </script>
 
 <style scoped>
-@import '../css/main.css';
+@import '/public/css/main.css';
 
 </style>
