@@ -4,7 +4,7 @@
     span.a А
     span.logo-text Атмосфера
   .box
-    .box-sm.red
+    .box-sm.red(@click="$router.push({path:'/'})")
       span Главная
     .box-sm.orange
       span Магазин
@@ -65,7 +65,7 @@ export default {
   align-items: center;
   width: 100%;
   height: 80px;
-  background: rgb(0, 0, 0, 0.7);
+  /* background: rgb(0, 0, 0, 0.7); */
 }
 span:hover{
   transform: scale(1.1);
