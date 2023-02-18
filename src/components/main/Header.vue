@@ -1,13 +1,13 @@
 <template lang="pug">
 .header
   .logo
-    span.a А
+    //- span.a А
     span.logo-text Атмосфера
   .box
     .box-sm.red
       span Главная
-    .box-sm.orange
-      span Магазин
+    .box-sm.orange(@click="galleryRout")
+      span Фотогаллерея
     .box-sm.yellow
       span Контакты 
     //- .box-sm.green 
@@ -16,17 +16,18 @@
 </template>
 <script>
 export default {
-  name:"HeaderTest"
+  name:"HeaderTest",
+
+  methods: {
+    galleryRout() {
+      this.$router.push({path: '/photoGallery'}).then(() => {
+        location.reload()
+      })
+    }
+  }
 }
 </script>
 <style scoped>
-.a{
-  position: absolute;
-  border-radius: 100px;
-  border: 2px solid;
-  animation: spin 1.4s linear infinite;
-  left: 5px;
-}
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -39,7 +40,7 @@ export default {
   font-weight: 900;
   text-transform: uppercase;
   color: rgba(255,255,255,.2);
-  background: url(https://images.wallpaperscraft.ru/image/single/metall_poverhnost_pattern_206034_6016x4016.jpg) repeat-x;
+  background: url(https://kipmu.ru/wp-content/uploads/kobobl.jpg) repeat-x;
   -webkit-background-clip: text;
   background-size: contain;
   animation: clouds 13s linear infinite;
@@ -65,7 +66,7 @@ export default {
   align-items: center;
   width: 100%;
   height: 80px;
-  background: rgb(0, 0, 0, 0.7);
+  /* background: rgb(0, 0, 0, 0.7); */
 }
 span:hover{
   transform: scale(1.1);
@@ -82,11 +83,13 @@ span:hover{
   justify-content:center;
   align-items:center;
   height: 50px;
-  margin: 0;
+  margin: 20px;
   flex-grow: 1;
   transition: all .8s ease-in-out;
   cursor: pointer;
-  border:1px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #000;
+  /* border:1px solid #000; */
 }
 .box-sm:hover {
   flex-grow: 2;
@@ -94,7 +97,7 @@ span:hover{
 
 .red {
   background: linear-gradient(212deg, rgba(43,43,156,1) 35%, rgba(26,198,233,1) 100%);
-  border-radius:10px 0 0 10px
+  /* border-radius:10px 0 0 10px */
 }
 
 .orange {
@@ -103,7 +106,7 @@ span:hover{
 
 .yellow {
   background: linear-gradient(212deg, rgba(43,43,156,1) 35%, rgba(26,198,233,1) 100%);
-  border-radius:0 10px 10px 0
+  /* border-radius:0 10px 10px 0 */
 }
 
 .green {

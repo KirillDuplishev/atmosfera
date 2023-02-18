@@ -1,33 +1,21 @@
 <template lang="pug">
-.body
-  .preloader-scene
+.body1
+  .preloader-scene(v-if="qwe")
     .loading-block
-      .title
+      //- .title
       .progress
+    .preloader-block(id="asd")
+      span.span1 Атмо
     .preloader-block
-    .preloader-block
+      span.span2 сфера
   .container 
     Header.header
     .hero
-      //- h1 Get scrollin
       .down
-        svg( viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round")
-        polyline( points="7 13 12 18 17 13")
-        polyline( points="7 6 12 11 17 6")
-      .content 💙
+      //- .content 💙
 </template>
 
 <script>
-
-$(window).scroll(function() {
-    console.log("Adasd");
-  var scroll = $(window).scrollTop();
-  $(".hero").css({
-    transform: 'translate3d(0, +'+(scroll/100)+'%, 0) scale('+(100 - scroll/100)/100+')'
-  });
-});
-
-import $ from 'jquery'
 import Header from '../components/main/Header.vue'
 
 export default {
@@ -36,7 +24,27 @@ export default {
   Header
  },
  mounted() {
-  
+  //  setTimeout(() => {
+  //   let a = document.getElementById('asd')
+  //   let style1 = window.getComputedStyle(a, null)
+  //   let b = style1.getPropertyValue('transform')
+  //   console.log(b);
+  // }, 1000);
+ },
+ computed: {
+  qwe(){
+    // let style = document.getElementById('asd')
+    // let style1 = window.getComputedStyle(style, null).getPropertyValue('transform')
+    // console.log(style1);
+    // if(style1.getPropertyValue("transform") != 'none'){
+      // document.getElementsByClassName('preloader-block').style.background = "red"
+      // console.log("asdaffsbfsfjhksjanfsjhkjdjsdhbn");
+      // return false
+    // }
+    // else{
+      return true
+    // }
+  }
  }   
 }
 </script>
@@ -47,10 +55,11 @@ export default {
   margin:0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
   /* color: black; */
 }
 
-.body {
+.body1 {
   background-color: black;
 }
 
@@ -69,11 +78,33 @@ export default {
   overflow: hidden;
 }
 
+.span1 {
+  position: absolute;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 900;
+  /* margin: auto; */
+  left: 50%;
+  top: 50%;
+  transform: translate(270%, -50%);
+}
+.span2 {
+  position: absolute;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 900;
+  left: 50%;
+  top: 50%;
+  transform: translate(-315%, -50%);
+}
 .loading-block {
   position: absolute;
+  /* display: flex;
+  justify-content: center;
+  justify-items: end; */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 250%);
   z-index: 1001;
   animation: loading .2s ease forwards;
   animation-delay: .5s;
@@ -154,7 +185,8 @@ export default {
 .preloader-block {
   width: 50%;
   /* background: linear-gradient(212deg, rgb(67, 67, 67) 35%, rgb(37, 40, 41) 100%); */
-  background: url(https://images.wallpaperscraft.ru/image/single/nebo_oblaka_svet_84366_2560x1600.jpg);
+  /* background: url(https://images.wallpaperscraft.ru/image/single/nebo_oblaka_svet_84366_2560x1600.jpg); */
+  background: #f5c8c8;
   background-position: bottom;
   animation: leftBlock 1s linear forwards;
   animation-delay: .5s;
@@ -191,11 +223,11 @@ export default {
 }
 
 .hero {
-  background: url('https://images.unsplash.com/photo-1550353127-b0da3aeaa0ca') no-repeat center center;
+  background: url('@/assets/ventFirst.jpg') repeat;
+  background-size: 100%;
   justify-content: center;
   background-size: cover;
   flex-direction: column;
-  border-radius: 10px;
   align-items: center;
   position: fixed;
   display: flex;
@@ -212,7 +244,7 @@ export default {
   bottom: 0;
 }
 
-.content {
+/* .content {
   box-shadow: 0 0 100px rgba(0,0,0,0.4);
   justify-content: center;
   align-items: flex-end;
@@ -222,6 +254,6 @@ export default {
   height: 2000px;
   display: flex;
   top: 100vh;
-}
+} */
 
 </style>
