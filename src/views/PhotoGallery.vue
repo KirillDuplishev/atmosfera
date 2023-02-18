@@ -1,5 +1,6 @@
 <template lang="pug">
 .body-gallery
+	Header.header
 	h1.header-gallery Атмосфера
 	.gallery
 		.gallery__item
@@ -166,15 +167,22 @@
 
 <script>
 
+import Header from '../components/main/Header.vue'
+
 export default {
   name: "PhotoGallery",
   components: {
-
+	Header
   }
 }
 </script>
 
 <style scoped>
 @import '/public/css/main.css';
+
+.header {
+  z-index: 10012;
+  top: 0;
+}
 
 </style>

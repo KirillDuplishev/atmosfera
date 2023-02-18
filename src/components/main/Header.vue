@@ -4,7 +4,7 @@
     //- span.a А
     span.logo-text Атмосфера
   .box
-    .box-sm.red
+    .box-sm.red(@click="$router.push({path:'/'})")
       span Главная
     .box-sm.orange(@click="galleryRout")
       span Фотогаллерея
