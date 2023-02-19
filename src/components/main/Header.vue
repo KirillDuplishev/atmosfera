@@ -66,7 +66,6 @@ export default {
   align-items: center;
   width: 100%;
   height: 80px;
-  /* background: rgb(0, 0, 0, 0.7); */
 }
 span:hover{
   transform: scale(1.1);
@@ -89,7 +88,6 @@ span:hover{
   cursor: pointer;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #000;
-  /* border:1px solid #000; */
 }
 .box-sm:hover {
   flex-grow: 2;
@@ -97,7 +95,6 @@ span:hover{
 
 .red {
   background: linear-gradient(212deg, rgba(43,43,156,1) 35%, rgba(26,198,233,1) 100%);
-  /* border-radius:10px 0 0 10px */
 }
 
 .orange {
@@ -106,7 +103,6 @@ span:hover{
 
 .yellow {
   background: linear-gradient(212deg, rgba(43,43,156,1) 35%, rgba(26,198,233,1) 100%);
-  /* border-radius:0 10px 10px 0 */
 }
 
 .green {

@@ -2,7 +2,6 @@
 .body1
   .preloader-scene(id="scene")
     .loading-block
-      //- .title
       .progress
     .preloader-block(id="preloadBlock")
       span.span1 Атмо
@@ -10,9 +9,7 @@
       span.span2 сфера
   .container 
     Header.header
-    .hero
-      //- .down
-    //- section.second  
+    .hero  
 </template>
 
 <script>
@@ -25,41 +22,12 @@ export default {
  },
  mounted() {
   let el = document.getElementById('preloadBlock')
-  el.addEventListener('animationend', function(e) { 
-    console.log(e);
-    var sceneDiv = document.querySelector("div.preloader-scene");
+  el.addEventListener('animationend', function() { 
+    let sceneDiv = document.querySelector("div.preloader-scene");
     sceneDiv.className = "preloader-scene-end"; 
-  });
-  //  setTimeout(() => {
-  //   let a = document.getElementById('asd')
-  //   let style1 = window.getComputedStyle(a, null)
-  //   let b = style1.getPropertyValue('transform')
-  //   console.log("asdasdasd");
-  //   if(b != 'none'){
-  //     document.getElementsByClassName('preloader-block').style.display = "none"
-  //     console.log("asdaffsbfsfjhksjanfsjhkjdjsdhbn");
-  //   }
-  //   else{
-  //     console.log("else");
-  //   }
-  //   // console.log(b);
-  // }, 1000);
+  })
  },
- computed: {
-  qwe(){
-    // let style = document.getElementById('asd')
-    // let style1 = window.getComputedStyle(style, null).getPropertyValue('transform')
-    // console.log(style1);
-    // if(style1.getPropertyValue("transform") != 'none'){
-      // document.getElementsByClassName('preloader-block').style.background = "red"
-      // console.log("asdaffsbfsfjhksjanfsjhkjdjsdhbn");
-      // return false
-    // }
-    // else{
-      return true
-    // }
-  }
-},
+ computed: {},
 
 }
 </script>
@@ -71,7 +39,6 @@ export default {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   overflow: hidden;
-  /* color: black; */
 }
 
 .body1 {
@@ -109,7 +76,6 @@ export default {
   font-size: 40px;
   color: #fff;
   font-weight: 900;
-  /* margin: auto; */
   left: 50%;
   top: 50%;
   transform: translate(270%, -50%);
@@ -144,11 +110,6 @@ export default {
   to  {
     opacity: 0;
   }
-}
-
-.title {
-  font-size: 18px;
-  margin-bottom: 10px;
 }
 
 .progress {
@@ -210,8 +171,6 @@ export default {
 
 .preloader-block {
   width: 50%;
-  /* background: linear-gradient(212deg, rgb(67, 67, 67) 35%, rgb(37, 40, 41) 100%); */
-  /* background: url(https://images.wallpaperscraft.ru/image/single/nebo_oblaka_svet_84366_2560x1600.jpg); */
   background: #000;
   background-position: bottom;
   animation: leftBlock 1s linear forwards;
@@ -249,19 +208,6 @@ export default {
   animation: pageAnimate 1s linear forwards;
   animation-delay: .5s;
 }
-
-.second {
-  background: url('@/assets/ventSecond.jpg') repeat;
-  background-size: 100%;
-  justify-content: center;
-  background-size: cover;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  display: flex;
-  height: 100vh;
-  width: 100%;
-}
 .hero {
   background: url('@/assets/ventFirst.jpg') repeat;
   background-size: 100%;
@@ -274,26 +220,4 @@ export default {
   height: 100vh;
   width: 100%;
 }
-
-.down {
-  text-align: center;
-  position: absolute;
-  opacity: 0.6;
-  height: 40px;
-  width: 100%;
-  bottom: 0;
-}
-
-/* .content {
-  box-shadow: 0 0 100px rgba(0,0,0,0.4);
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 40px;
-  position: relative;
-  background: #000;
-  height: 2000px;
-  display: flex;
-  top: 100vh;
-} */
-
 </style>
