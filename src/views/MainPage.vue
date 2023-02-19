@@ -1,10 +1,10 @@
 <template lang="pug">
 .body1
-  .preloader-scene
+  .preloader-scene(id="scene")
     .loading-block
       //- .title
       .progress
-    .preloader-block(id="asd")
+    .preloader-block(id="preloadBlock")
       span.span1 Атмо
     .preloader-block
       span.span2 сфера
@@ -24,20 +24,26 @@ export default {
   Header
  },
  mounted() {
-   setTimeout(() => {
-    let a = document.getElementById('asd')
-    let style1 = window.getComputedStyle(a, null)
-    let b = style1.getPropertyValue('transform')
-    console.log("asdasdasd");
-    if(b != 'none'){
-      document.getElementsByClassName('preloader-block').style.display = "none"
-      console.log("asdaffsbfsfjhksjanfsjhkjdjsdhbn");
-    }
-    else{
-      console.log("else");
-    }
-    // console.log(b);
-  }, 1000);
+  let el = document.getElementById('preloadBlock')
+  el.addEventListener('animationend', function(e) { 
+    console.log(e);
+    var sceneDiv = document.querySelector("div.preloader-scene");
+    sceneDiv.className = "preloader-scene-end"; 
+  });
+  //  setTimeout(() => {
+  //   let a = document.getElementById('asd')
+  //   let style1 = window.getComputedStyle(a, null)
+  //   let b = style1.getPropertyValue('transform')
+  //   console.log("asdasdasd");
+  //   if(b != 'none'){
+  //     document.getElementsByClassName('preloader-block').style.display = "none"
+  //     console.log("asdaffsbfsfjhksjanfsjhkjdjsdhbn");
+  //   }
+  //   else{
+  //     console.log("else");
+  //   }
+  //   // console.log(b);
+  // }, 1000);
  },
  computed: {
   qwe(){
@@ -53,7 +59,8 @@ export default {
       return true
     // }
   }
- }   
+},
+
 }
 </script>
 
@@ -82,6 +89,17 @@ export default {
   width: 100%;
   height: 100%;
   z-index: 1000;
+  display: flex;
+  overflow: hidden;
+}
+
+.preloader-scene-end {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
   display: flex;
   overflow: hidden;
 }
