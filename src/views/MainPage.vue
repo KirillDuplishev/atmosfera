@@ -1,6 +1,6 @@
 <template lang="pug">
 .body1
-  .preloader-scene(v-if="qwe")
+  .preloader-scene
     .loading-block
       //- .title
       .progress
@@ -11,8 +11,8 @@
   .container 
     Header.header
     .hero
-      .down
-      //- .content 💙
+      //- .down
+    //- section.second  
 </template>
 
 <script>
@@ -24,12 +24,20 @@ export default {
   Header
  },
  mounted() {
-  //  setTimeout(() => {
-  //   let a = document.getElementById('asd')
-  //   let style1 = window.getComputedStyle(a, null)
-  //   let b = style1.getPropertyValue('transform')
-  //   console.log(b);
-  // }, 1000);
+   setTimeout(() => {
+    let a = document.getElementById('asd')
+    let style1 = window.getComputedStyle(a, null)
+    let b = style1.getPropertyValue('transform')
+    console.log("asdasdasd");
+    if(b != 'none'){
+      document.getElementsByClassName('preloader-block').style.display = "none"
+      console.log("asdaffsbfsfjhksjanfsjhkjdjsdhbn");
+    }
+    else{
+      console.log("else");
+    }
+    // console.log(b);
+  }, 1000);
  },
  computed: {
   qwe(){
@@ -186,7 +194,7 @@ export default {
   width: 50%;
   /* background: linear-gradient(212deg, rgb(67, 67, 67) 35%, rgb(37, 40, 41) 100%); */
   /* background: url(https://images.wallpaperscraft.ru/image/single/nebo_oblaka_svet_84366_2560x1600.jpg); */
-  background: #f5c8c8;
+  background: #000;
   background-position: bottom;
   animation: leftBlock 1s linear forwards;
   animation-delay: .5s;
@@ -206,10 +214,12 @@ export default {
   }
 }
 
-@import url('https://rsms.me/inter/inter.css');
+/* @import url('https://rsms.me/inter/inter.css'); */
 
 .container {
-  overflow-y: auto;
+  display: flex;
+  flex-flow: column;
+  overflow-y: scroll;
   font-family: 'Inter', sans-serif;
   letter-spacing: -1px;
   text-align: center;
@@ -217,11 +227,23 @@ export default {
   height: 100vh;
   color: #fff;
   margin: 0;
-  transform: scale(.7) rotateY(-25deg);
+  /* transform: scale(.7) rotateY(-25deg);
   animation: pageAnimate 1s linear forwards;
-  animation-delay: .5s;
+  animation-delay: .5s; */
 }
 
+.second {
+  background: url('@/assets/ventSecond.jpg') repeat;
+  background-size: 100%;
+  justify-content: center;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
 .hero {
   background: url('@/assets/ventFirst.jpg') repeat;
   background-size: 100%;

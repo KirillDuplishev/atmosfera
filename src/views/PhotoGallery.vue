@@ -183,6 +183,9 @@ export default {
 .header {
   z-index: 10012;
   top: 0;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
 }
 
 </style>
