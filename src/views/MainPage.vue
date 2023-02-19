@@ -214,7 +214,7 @@ export default {
   }
 }
 
-/* @import url('https://rsms.me/inter/inter.css'); */
+@import url('https://rsms.me/inter/inter.css');
 
 .container {
   display: flex;
@@ -227,9 +227,9 @@ export default {
   height: 100vh;
   color: #fff;
   margin: 0;
-  /* transform: scale(.7) rotateY(-25deg);
+  transform: scale(.7) rotateY(-25deg);
   animation: pageAnimate 1s linear forwards;
-  animation-delay: .5s; */
+  animation-delay: .5s;
 }
 
 .second {
