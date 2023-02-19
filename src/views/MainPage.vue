@@ -1,6 +1,6 @@
 <template lang="pug">
 .body1
-  .preloader-scene(id="scene")
+  .preloader-scene()
     .loading-block
       .progress
     .preloader-block(id="preloadBlock")
@@ -9,7 +9,11 @@
       span.span2 сфера
   .container 
     Header.header
-    .hero  
+    .hero
+  .containerTwo
+    span 312312
+  .containerThree
+    span 123123  
 </template>
 
 <script>
@@ -38,7 +42,11 @@ export default {
   margin:0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
 
 .body1 {
@@ -196,7 +204,7 @@ export default {
 .container {
   display: flex;
   flex-flow: column;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   font-family: 'Inter', sans-serif;
   letter-spacing: -1px;
   text-align: center;
@@ -207,6 +215,32 @@ export default {
   transform: scale(.7) rotateY(-25deg);
   animation: pageAnimate 1s linear forwards;
   animation-delay: .5s;
+}
+
+.containerTwo {
+  background: url('@/assets/ventSecond.jpg') repeat;
+  background-size: 100%;
+  justify-content: center;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  /* position: fixed; */
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.containerThree {
+  background: url('@/assets/ventThree.jpg') repeat;
+  background-size: 100%;
+  justify-content: center;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  /* position: fixed; */
+  display: flex;
+  height: 100vh;
+  width: 100%;
 }
 .hero {
   background: url('@/assets/ventFirst.jpg') repeat;
