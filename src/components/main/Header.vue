@@ -67,6 +67,7 @@ export default {
   height: 80px;
   background: transparent;
   backdrop-filter: blur(20px);
+  border-radius: 0 0 50px 50px;
 }
 span:hover{
   transform: scale(1.1);
