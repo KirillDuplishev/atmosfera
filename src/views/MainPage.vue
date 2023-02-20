@@ -359,20 +359,6 @@ export default {
   flex-direction: column;
   justify-content: center;
 }
-.text-block-section-two{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: rgb(0, 118, 169);
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.shtamp{
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-60%,-50%);
-}
 .hide{
   background: #000;
 }
