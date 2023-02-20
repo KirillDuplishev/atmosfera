@@ -4,15 +4,29 @@
     .loading-block
       .progress
     .preloader-block(id="preloadBlock")
-      span.span1 Атмо
-    .preloader-block
-      span.span2 сфера
+      img(src="@/assets/Logo.png" style="width:40%; height:20%")
+
+    //-   span.span1 Атмо
+    //- .preloader-block
+    //-   span.span2 сфера
   .container 
     Header.header
     .hero
+      span(style="text-transform:uppercase; font-size:25px") построим современные и безопасные 
+      span(style="text-transform:uppercase; font-size:60px; font-weight:900") вентиляционные системы
+    //- .heroBlur
   .containerTwo
-    span 312312
-  .containerThree
+    .text
+      span(style="font-size:25px") Вы получите 
+      span(style="font-size:50px; font-weight:900") готовую 
+      span(style="font-size:50px; font-weight:900") вентиляционную 
+      span(style="font-size:50px; font-weight:900") систему 
+      span(style="font-size:25px") сэкономив свое время
+    .img  
+      img(src="@/assets/ventThree.jpg")
+    .shtamp
+      img(src="@/assets/quality.png" style="width:20%; height:10%")  
+  //- .containerThree
     span 123123  
 </template>
 
@@ -54,6 +68,8 @@ export default {
 }
 
 .header {
+  position: fixed;
+  margin-top: auto;
   z-index: 1000;
 }
 
@@ -65,6 +81,7 @@ export default {
   height: 100%;
   z-index: 1000;
   display: flex;
+  flex-flow: column;
   overflow: hidden;
 }
 
@@ -79,7 +96,7 @@ export default {
   overflow: hidden;
 }
 
-.span1 {
+/* .span1 {
   position: absolute;
   font-size: 40px;
   color: #fff;
@@ -96,12 +113,12 @@ export default {
   left: 50%;
   top: 50%;
   transform: translate(-315%, -50%);
-}
+} */
 .loading-block {
   position: absolute;
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  justify-items: end; */
+  justify-items: end;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 250%);
@@ -150,7 +167,13 @@ export default {
 }
 
 @keyframes leftBlock {
-  0% {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+  /* 0% {
     transform: translateX(0) scale(1) rotateY(0);
   }
   
@@ -160,10 +183,10 @@ export default {
 
   100% {
     transform: translateX(-110%) scale(.9) rotateY(10deg);
-  }
+  } */
 }
 
-@keyframes rightBlock {
+/* @keyframes rightBlock {
   0% {
     transform: translateX(0) scale(1) rotateY(0);
   }
@@ -175,29 +198,30 @@ export default {
   100% {
     transform: translateX(110%) scale(.9) rotateY(-10deg);
   }
-}
+} */
 
 .preloader-block {
-  width: 50%;
+  width: 100vw;
+  height: 100vh;
   background: #000;
   background-position: bottom;
   animation: leftBlock 1s linear forwards;
   animation-delay: .5s;
 }
 
-.preloader-block:last-child {
+/* .preloader-block:last-child {
   animation: rightBlock 1s linear forwards;
   animation-delay: .5s;
-}
+} */
 
-@keyframes pageAnimate {
+/* @keyframes pageAnimate {
   from {
     transform: scale(.7) rotateY(-25deg)
   }
   to {
     transform: scale(1) rotateY(0deg)
   }
-}
+} */
 
 @import url('https://rsms.me/inter/inter.css');
 
@@ -212,15 +236,16 @@ export default {
   height: 100vh;
   color: #fff;
   margin: 0;
-  transform: scale(.7) rotateY(-25deg);
+  /* transform: scale(.7) rotateY(-25deg);
   animation: pageAnimate 1s linear forwards;
-  animation-delay: .5s;
+  animation-delay: .5s; */
 }
 
 .containerTwo {
-  background: url('@/assets/ventSecond.jpg') repeat;
-  background-size: 100%;
-  justify-content: center;
+  /* background: url('@/assets/ventSecond.jpg') repeat; */
+  background: #fff;
+  /* background-size: 100%; */
+  justify-content: space-evenly;
   background-size: cover;
   flex-direction: column;
   align-items: center;
@@ -228,6 +253,8 @@ export default {
   display: flex;
   height: 100vh;
   width: 100%;
+  text-transform: uppercase;
+  flex-wrap: wrap;
 }
 
 .containerThree {
@@ -253,5 +280,27 @@ export default {
   display: flex;
   height: 100vh;
   width: 100%;
+}
+.heroBlur{
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: rgb(0, 118, 169);
+}
+.shtamp{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%,-50%);
 }
 </style>

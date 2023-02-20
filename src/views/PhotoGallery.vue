@@ -181,6 +181,7 @@ export default {
 @import '/public/css/main.css';
 
 .header {
+  position:fixed;
   z-index: 10012;
   top: 0;
   text-align: center;
