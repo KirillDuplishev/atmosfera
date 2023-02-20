@@ -1,7 +1,7 @@
 <template lang="pug">
 div
-  .body1
-    Header.header
+  .body1(v-scroll="scroll")
+    Header.header#header
     .preloader-scene()
       .loading-block
         .progress
@@ -42,6 +42,7 @@ export default {
   Header
  },
  mounted() {
+  console.log(window.scrollY);
   let el = document.getElementById('preloadBlock')
   el.addEventListener('animationend', function() { 
     let sceneDiv = document.querySelector("div.preloader-scene");
@@ -49,7 +50,16 @@ export default {
   })
  },
  computed: {},
-
+ methods: {
+  scroll :function(){
+    if(window.scrollY > 100){
+      document.getElementById("header").classList.add('scrollAnim')
+    }
+    else{
+      document.getElementById("header").style.boxShadow = "5px 5px 15px #000"
+    }
+  },
+ }
 }
 </script>
 
@@ -321,5 +331,12 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-60%,-50%);
+}
+.hide{
+  background: #000;
+}
+.scrollAnim{
+  background: rgba(119, 0, 255, 0.5);
+  transition: background 5s;
 }
 </style>
