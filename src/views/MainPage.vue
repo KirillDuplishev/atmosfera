@@ -1,33 +1,36 @@
 <template lang="pug">
-.body1
-  .preloader-scene()
-    .loading-block
-      .progress
-    .preloader-block(id="preloadBlock")
-      img(src="@/assets/Logo.png" style="width:40%; height:20%")
-
-    //-   span.span1 Атмо
-    //- .preloader-block
-    //-   span.span2 сфера
-  .container 
+div
+  .body1
     Header.header
-    .hero
-      span(style="text-transform:uppercase; font-size:25px") построим современные и безопасные 
-      span(style="text-transform:uppercase; font-size:60px; font-weight:900") вентиляционные системы
-    //- .heroBlur
-  .containerTwo
-    .text
-      span(style="font-size:25px") Вы получите 
-      span(style="font-size:50px; font-weight:900") готовую 
-      span(style="font-size:50px; font-weight:900") вентиляционную 
-      span(style="font-size:50px; font-weight:900") систему 
-      span(style="font-size:25px") сэкономив свое время
-    .img  
-      img(src="@/assets/ventThree.jpg")
-    .shtamp
-      img(src="@/assets/quality.png" style="width:20%; height:10%")  
-  //- .containerThree
-    span 123123  
+    .preloader-scene()
+      .loading-block
+        .progress
+      .preloader-block(id="preloadBlock")
+        img(src="@/assets/Logo.png" style="width:40%; height:20%")
+
+      //-   span.span1 Атмо
+      //- .preloader-block
+      //-   span.span2 сфера
+    .container 
+      .hero
+        span(style="text-transform:uppercase; font-size:25px") построим современные и безопасные 
+        span(style="text-transform:uppercase; font-size:60px; font-weight:900") вентиляционные системы
+      //- .heroBlur
+    .containerTwo
+      .blockLeft-section-two
+        .text-block-section-two
+          span(style="font-size:25px") Вы получите 
+          span(style="font-size:50px; font-weight:900") готовую 
+          span(style="font-size:50px; font-weight:900") вентиляционную 
+          span(style="font-size:50px; font-weight:900") систему 
+          span(style="font-size:25px") сэкономив свое время
+      .blockRight-section-two
+        //- .img-section-two  
+        //-   img(src="@/assets/ventThree.jpg")
+        .shtamp
+          img(src="@/assets/quality.png" style="width:20%; height:10%")  
+    .containerThree
+      span   
 </template>
 
 <script>
@@ -56,7 +59,6 @@ export default {
   margin:0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  /* overflow: hidden; */
 }
 
 ::-webkit-scrollbar {
@@ -65,11 +67,19 @@ export default {
 
 .body1 {
   background-color: black;
+  position: relative;
 }
 
 .header {
-  position: fixed;
-  margin-top: auto;
+  width: 100%;
+  height: auto;
+  position: sticky;
+  top: 0px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -1px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
   z-index: 1000;
 }
 
@@ -223,19 +233,14 @@ export default {
   }
 } */
 
-@import url('https://rsms.me/inter/inter.css');
+/* @import url('https://rsms.me/inter/inter.css'); */
 
 .container {
   display: flex;
   flex-flow: column;
-  /* overflow-y: scroll; */
-  font-family: 'Inter', sans-serif;
-  letter-spacing: -1px;
-  text-align: center;
-  font-size: 20px;
   height: 100vh;
   color: #fff;
-  margin: 0;
+  margin-top: -80px;
   /* transform: scale(.7) rotateY(-25deg);
   animation: pageAnimate 1s linear forwards;
   animation-delay: .5s; */
@@ -257,8 +262,21 @@ export default {
   flex-wrap: wrap;
 }
 
+.blockLeft-section-two {
+  
+  width: 50%;
+  height: 100%;
+}
+
+.blockRight-section-two {
+  background: url("@/assets/ventThree.jpg");
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+}
+
 .containerThree {
-  background: url('@/assets/ventThree.jpg') repeat;
+  background: url('@/assets/ventSecond.jpg') repeat;
   background-size: 100%;
   justify-content: center;
   background-size: cover;
@@ -276,7 +294,6 @@ export default {
   background-size: cover;
   flex-direction: column;
   align-items: center;
-  position: fixed;
   display: flex;
   height: 100vh;
   width: 100%;
@@ -291,14 +308,16 @@ export default {
   flex-direction: column;
   justify-content: center;
 }
-.text{
+.text-block-section-two{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   color: rgb(0, 118, 169);
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .shtamp{
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-60%,-50%);
