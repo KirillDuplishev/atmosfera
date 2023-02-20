@@ -48,6 +48,7 @@ export default {
     let sceneDiv = document.querySelector("div.preloader-scene");
     sceneDiv.className = "preloader-scene-end"; 
   })
+
  },
  computed: {},
  methods: {
@@ -249,7 +250,7 @@ export default {
   display: flex;
   flex-flow: column;
   height: 100vh;
-  color: #fff;
+  color: #000;
   margin-top: -80px;
   /* transform: scale(.7) rotateY(-25deg);
   animation: pageAnimate 1s linear forwards;
@@ -298,8 +299,9 @@ export default {
   width: 100%;
 }
 .hero {
-  background: url('@/assets/ventFirst.jpg') repeat;
+  background: url('@/assets/First.jpg');
   background-size: 100%;
+  background-position-y: -160px;
   justify-content: center;
   background-size: cover;
   flex-direction: column;
