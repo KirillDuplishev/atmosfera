@@ -24,11 +24,20 @@ div
           span(style="font-size:50px; font-weight:900") вентиляционную 
           span(style="font-size:50px; font-weight:900") систему 
           span(style="font-size:25px") сэкономив свое время
-      .blockRight-section-two
-        //- .img-section-two  
-        //-   img(src="@/assets/ventThree.jpg")
-        .shtamp
-          img(src="@/assets/quality.png" style="width:20%; height:10%")  
+        .text-description-block-section-two.outline-border
+          span(style="font-size:15px; font-weight: 700") Мы строим вентиляционные системы от проекта до сдачи
+          span(style="font-size:15px; font-weight: 700") в эксплуатацию без привлечения сторонних 
+          span(style="font-size:15px; font-weight: 700") компаний и подрядчиков
+        .text-description-block-section-two
+          span(style="font-size:15px; font-weight: 700") Это значит что вам не придется тратить свое время
+          span(style="font-size:15px; font-weight: 700") и нервы на общение с 4-6 разными подрядчиками по 
+          span(style="font-size:15px; font-weight: 700") каждому этапу строительства вентиляционной системы
+        .text-description-block-section-two
+          span(style="font-size:15px; font-weight: 700") Вы изначально будете знать по всем работу и 
+          span(style="font-size:15px; font-weight: 700") эта цена не изменится 
+      .blockRight-section-two  
+      .img-garant
+        img(src="@/assets/quality.png" style="width:30%; height:15%")
     .containerThree
       span   
 </template>
@@ -274,7 +283,6 @@ export default {
 }
 
 .blockLeft-section-two {
-  
   width: 50%;
   height: 100%;
 }
@@ -285,7 +293,38 @@ export default {
   width: 50%;
   height: 100%;
 }
+.text-block-section-two{
+  /* top: 30%; */
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: rgb(0, 118, 169);
+  margin-top: 100px;
+  margin-left: 20px;
+}
+.text-description-block-section-two {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: black;
+  margin-top:  20px;
+  margin-left: 20px;
+}
 
+.outline-border {
+  width: auto;
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid rgb(0, 0, 0, 0.2);
+}
+.img-garant{
+  position: absolute;
+  top: 20%;
+  left: 54.5%;
+  transform: translate(-60%,-50%);
+}
 .containerThree {
   background: url('@/assets/ventSecond.jpg') repeat;
   background-size: 100%;
