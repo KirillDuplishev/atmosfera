@@ -13,8 +13,8 @@ div
       //-   span.span2 сфера
     .container 
       .hero
-        span(style="text-transform:uppercase; font-size:25px") построим современные и безопасные 
-        span(style="text-transform:uppercase; font-size:60px; font-weight:900") вентиляционные системы
+        span(style="text-transform:uppercase; font-size:35px; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные 
+        span(style="text-transform:uppercase; font-size:60px; font-weight:900; color: white; text-shadow: 2px 2px 4px black") вентиляционные системы
       //- .heroBlur
     .containerTwo
       .blockLeft-section-two
@@ -25,16 +25,16 @@ div
           span(style="font-size:50px; font-weight:900") систему 
           span(style="font-size:25px") сэкономив свое время
         .text-description-block-section-two.outline-border
-          span(style="font-size:15px; font-weight: 700") Мы строим вентиляционные системы от проекта до сдачи
-          span(style="font-size:15px; font-weight: 700") в эксплуатацию без привлечения сторонних 
-          span(style="font-size:15px; font-weight: 700") компаний и подрядчиков
+          span.text-17-b Мы строим вентиляционные системы от проекта до сдачи
+          span.text-17-b в эксплуатацию без привлечения сторонних 
+          span.text-17-b компаний и подрядчиков
         .text-description-block-section-two
-          span(style="font-size:15px; font-weight: 700") Это значит что вам не придется тратить свое время
-          span(style="font-size:15px; font-weight: 700") и нервы на общение с 4-6 разными подрядчиками по 
-          span(style="font-size:15px; font-weight: 700") каждому этапу строительства вентиляционной системы
+          span.text-17-b Это значит что вам не придется тратить свое время
+          span.text-17-b и нервы на общение с 4-6 разными подрядчиками по 
+          span.text-17-b каждому этапу строительства вентиляционной системы
         .text-description-block-section-two
-          span(style="font-size:15px; font-weight: 700") Вы изначально будете знать по всем работу и 
-          span(style="font-size:15px; font-weight: 700") эта цена не изменится 
+          span.text-17-b Вы изначально будете знать по всем работу и 
+          span.text-17-b эта цена не изменится 
       .blockRight-section-two  
       .img-garant
         img(src="@/assets/quality.png" style="width:30%; height:15%")
@@ -305,6 +305,8 @@ export default {
 }
 .text-description-block-section-two {
   /* position: absolute; */
+  text-align: left;
+  line-height: 25px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -314,14 +316,14 @@ export default {
 }
 
 .outline-border {
-  width: auto;
+  width: 80%;
   border-radius: 15px;
   padding: 20px;
   border: 2px solid rgb(0, 0, 0, 0.2);
 }
 .img-garant{
   position: absolute;
-  top: 20%;
+  top: 18%;
   left: 54.5%;
   transform: translate(-60%,-50%);
 }
