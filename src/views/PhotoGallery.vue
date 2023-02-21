@@ -188,5 +188,10 @@ export default {
   font-size: 20px;
   color: #fff;
 }
-
+.header-gallery{
+  font-family: Arial;
+  font-size: 45px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
 </style>

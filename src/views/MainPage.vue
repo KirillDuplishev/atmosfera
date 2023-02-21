@@ -93,7 +93,7 @@ export default {
 
 .header {
   width: 100%;
-  height: auto;
+  /* height: auto; */
   position: sticky;
   top: 0px;
   font-family: 'Inter', sans-serif;
@@ -347,7 +347,6 @@ export default {
 .hero {
   background: url('@/assets/ventFirst.jpg');
   background-size: 100%;
-  background-position-y: -160px;
   justify-content: center;
   background-size: cover;
   flex-direction: column;
@@ -370,7 +369,9 @@ export default {
   background: #000;
 }
 .scrollAnim{
-  background: rgba(119, 0, 255, 0.5);
-  transition: background 5s;
+  --a: linear-gradient(90deg, #040D2C, #462A8B,#8D05D6);
+  /* background: rgba(119, 0, 255, 0.5); */
+  background: var(--a);
+  transition: background 7s;
 }
 </style>
