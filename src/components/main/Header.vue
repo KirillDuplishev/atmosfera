@@ -9,10 +9,7 @@
     .box-sm(@click="galleryRout")
       span Фотогаллерея
     .box-sm
-      span Контакты 
-    //- .box-sm.green 
-    //- .box-sm.blue 
-    //- .box-sm.purple
+      span Контакты
   .otvet
     h3 8 800 123 45 67
     h6 Ежедневно с 10:00 до 18:00      
@@ -75,10 +72,7 @@ span:hover{
   transition: transform 0.5s;
 }
 .box {
-  /* padding: 0 15px 0 0; */
-  display: flex;;
-  /* width: 70%; */
-  /* margin-left:auto; */
+  display: flex;
 }
 
 .otvet{
@@ -92,37 +86,6 @@ span:hover{
   align-items:center;
   height: 50px;
   margin: 20px;
-  /* flex-grow: 1; */
-  /* transition: all .8s ease-in-out; */
   cursor: pointer;
-  /* border-radius: 10px; */
-  /* box-shadow: 5px 5px 10px #000; */
-}
-/* .box-sm:hover {
-  flex-grow: 2;
-} */
-
-.red {
-  background: linear-gradient(212deg, rgba(43,43,156,1) 35%, rgba(26,198,233,1) 100%);
-}
-
-.orange {
-  background: linear-gradient(212deg, rgba(43,43,156,1) 35%, rgba(26,198,233,1) 100%);
-}
-
-.yellow {
-  background: linear-gradient(212deg, rgba(43,43,156,1) 35%, rgba(26,198,233,1) 100%);
-}
-
-.green {
-  background: linear-gradient(212deg, rgba(43,43,156,1) 35%, rgba(26,198,233,1) 100%);
-}
-
-.blue {
-  background: linear-gradient(212deg, rgba(43,43,156,1) 35%, rgba(26,198,233,1) 100%);
-}
-
-.purple {
-  background: linear-gradient(212deg, rgba(43,43,156,1) 35%, rgba(26,198,233,1) 100%);
 }
 </style>

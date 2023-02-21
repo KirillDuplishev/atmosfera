@@ -7,15 +7,10 @@ div
         .progress
       .preloader-block(id="preloadBlock")
         img(src="@/assets/Logo.png" style="width:40%; height:20%")
-
-      //-   span.span1 Атмо
-      //- .preloader-block
-      //-   span.span2 сфера
     .container 
       .hero
         span(style="text-transform:uppercase; font-size:35px; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные 
         span(style="text-transform:uppercase; font-size:60px; font-weight:900; color: white; text-shadow: 2px 2px 4px black") вентиляционные системы
-      //- .heroBlur
     .containerTwo
       .blockLeft-section-two
         .text-block-main-section-two
@@ -68,7 +63,6 @@ export default {
   WorkType
  },
  mounted() {
-  console.log(window.scrollY);
   let el = document.getElementById('preloadBlock')
   el.addEventListener('animationend', function() { 
     let sceneDiv = document.querySelector("div.preloader-scene");
@@ -109,7 +103,6 @@ export default {
 
 .header {
   width: 100%;
-  /* height: auto; */
   position: sticky;
   top: 0px;
   font-family: 'Inter', sans-serif;
@@ -142,25 +135,6 @@ export default {
   display: flex;
   overflow: hidden;
 }
-
-/* .span1 {
-  position: absolute;
-  font-size: 40px;
-  color: #fff;
-  font-weight: 900;
-  left: 50%;
-  top: 50%;
-  transform: translate(270%, -50%);
-}
-.span2 {
-  position: absolute;
-  font-size: 40px;
-  color: #fff;
-  font-weight: 900;
-  left: 50%;
-  top: 50%;
-  transform: translate(-315%, -50%);
-} */
 .loading-block {
   position: absolute;
   display: flex;
@@ -213,64 +187,23 @@ export default {
   }
 }
 
-@keyframes leftBlock {
+@keyframes opacityBlock {
   from{
     opacity: 1;
   }
   to{
     opacity: 0;
   }
-  /* 0% {
-    transform: translateX(0) scale(1) rotateY(0);
-  }
-  
-  50% {
-    transform: translateX(0) scale(.9) rotateY(10deg);
-  }
-
-  100% {
-    transform: translateX(-110%) scale(.9) rotateY(10deg);
-  } */
 }
-
-/* @keyframes rightBlock {
-  0% {
-    transform: translateX(0) scale(1) rotateY(0);
-  }
-
-  50% {
-    transform: translateX(0) scale(.9) rotateY(-10deg);
-  }
-
-  100% {
-    transform: translateX(110%) scale(.9) rotateY(-10deg);
-  }
-} */
 
 .preloader-block {
   width: 100vw;
   height: 100vh;
   background: #000;
   background-position: bottom;
-  animation: leftBlock 1s linear forwards;
+  animation: opacityBlock 1s linear forwards;
   animation-delay: .5s;
 }
-
-/* .preloader-block:last-child {
-  animation: rightBlock 1s linear forwards;
-  animation-delay: .5s;
-} */
-
-/* @keyframes pageAnimate {
-  from {
-    transform: scale(.7) rotateY(-25deg)
-  }
-  to {
-    transform: scale(1) rotateY(0deg)
-  }
-} */
-
-/* @import url('https://rsms.me/inter/inter.css'); */
 
 .container {
   display: flex;
@@ -278,20 +211,14 @@ export default {
   height: 100vh;
   color: #000;
   margin-top: -80px;
-  /* transform: scale(.7) rotateY(-25deg);
-  animation: pageAnimate 1s linear forwards;
-  animation-delay: .5s; */
 }
 
 .containerTwo {
-  /* background: url('@/assets/ventSecond.jpg') repeat; */
   background: #fff;
-  /* background-size: 100%; */
   justify-content: space-evenly;
   background-size: cover;
   flex-direction: column;
   align-items: center;
-  /* position: fixed; */
   display: flex;
   height: 100vh;
   width: 100%;
@@ -312,8 +239,6 @@ export default {
   height: 100%;
 }
 .text-block-section-two{
-  /* top: 30%; */
-  /* position: absolute; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -322,7 +247,6 @@ export default {
   margin-left: 20px;
 }
 .text-description-block-section-two {
-  /* position: absolute; */
   text-align: left;
   line-height: 25px;
   display: flex;
