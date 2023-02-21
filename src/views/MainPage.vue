@@ -18,23 +18,24 @@ div
       //- .heroBlur
     .containerTwo
       .blockLeft-section-two
-        .text-block-section-two
-          span(style="font-size:25px") Вы получите 
-          span(style="font-size:50px; font-weight:900") готовую 
-          span(style="font-size:50px; font-weight:900") вентиляционную 
-          span(style="font-size:50px; font-weight:900") систему 
-          span(style="font-size:25px") сэкономив свое время
-        .text-description-block-section-two.outline-border
-          span.text-17-b Мы строим вентиляционные системы от проекта до сдачи
-          span.text-17-b в эксплуатацию без привлечения сторонних 
-          span.text-17-b компаний и подрядчиков
-        .text-description-block-section-two
-          span.text-17-b Это значит что вам не придется тратить свое время
-          span.text-17-b и нервы на общение с 4-6 разными подрядчиками по 
-          span.text-17-b каждому этапу строительства вентиляционной системы
-        .text-description-block-section-two
-          span.text-17-b Вы изначально будете знать по всем работу и 
-          span.text-17-b эта цена не изменится 
+        .text-block-main-section-two
+          .text-block-section-two
+            span(style="font-size:25px") Вы получите 
+            span(style="font-size:50px; font-weight:900") готовую 
+            span(style="font-size:50px; font-weight:900") вентиляционную 
+            span(style="font-size:50px; font-weight:900") систему 
+            span(style="font-size:25px") сэкономив свое время
+          .text-description-block-section-two.outline-border
+            span.text-15 Мы строим вентиляционные системы от проекта до сдачи
+            span.text-15 в эксплуатацию без привлечения сторонних 
+            span.text-15 компаний и подрядчиков
+          .text-description-block-section-two
+            span.text-14 Это значит что вам не придется тратить свое время
+            span.text-14 и нервы на общение с 4-6 разными подрядчиками по 
+            span.text-14 каждому этапу строительства вентиляционной системы
+          .text-description-block-section-two
+            span.text-14 Вы изначально будете знать по всем работу и 
+            span.text-14 эта цена не изменится 
       .blockRight-section-two  
       .img-garant
         img(src="@/assets/quality.png" style="width:30%; height:15%")
@@ -282,13 +283,17 @@ export default {
   flex-wrap: wrap;
 }
 
+
 .blockLeft-section-two {
   width: 50%;
   height: 100%;
 }
+.text-block-main-section-two{
+  
+}
 
 .blockRight-section-two {
-  background: url("@/assets/ventThree.jpg");
+  background: url("@/assets/KILLMEPLZX2_Air_conditioning_air_flowsoft_light_realism_utopia__7a048083-1c05-4cd5-84db-cd816e8fa967.png");
   background-size: cover;
   width: 50%;
   height: 100%;
@@ -324,7 +329,7 @@ export default {
 .img-garant{
   position: absolute;
   top: 18%;
-  left: 54.5%;
+  left: 54.9%;
   transform: translate(-60%,-50%);
 }
 .containerThree {
@@ -340,7 +345,7 @@ export default {
   width: 100%;
 }
 .hero {
-  background: url('@/assets/First.jpg');
+  background: url('@/assets/ventFirst.jpg');
   background-size: 100%;
   background-position-y: -160px;
   justify-content: center;
