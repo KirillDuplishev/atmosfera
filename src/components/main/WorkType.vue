@@ -19,8 +19,8 @@ export default {
 .container-work-type {
   max-height: 100%;
   max-width: 100%;
-  background: url('@/assets/KILLMEPLZX2_Air_conditioning_air_flowsoft_light_realism_utopia__7a048083-1c05-4cd5-84db-cd816e8fa967.png');
-  background-size: cover;
+  background: url('@/assets/ventThree.jpg');
+  background-size: 100%;
 }
 .text-block {
   position: absolute;

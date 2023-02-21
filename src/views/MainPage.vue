@@ -11,6 +11,7 @@ div
       .hero
         span(style="text-transform:uppercase; font-size:35px; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные 
         span(style="text-transform:uppercase; font-size:60px; font-weight:900; color: white; text-shadow: 2px 2px 4px black") вентиляционные системы
+        v-btn.button.text-15-b Подробнее о нас
     .containerTwo
       .blockLeft-section-two
         .text-block-main-section-two
@@ -29,7 +30,7 @@ div
             span.text-14 и нервы на общение с 4-6 разными подрядчиками по 
             span.text-14 каждому этапу строительства вентиляционной системы
           .text-description-block-section-two
-            span.text-14 Вы изначально будете знать по всем работу и 
+            span.text-14 Вы изначально будете знать смету по всем работу и 
             span.text-14 эта цена не изменится 
       .blockRight-section-two  
       .img-garant
@@ -38,6 +39,7 @@ div
       .text-title-section-three
         span(style="font-size:40px; font-weight:900") Что именно мы делаем
       .container-worktype-section-three
+        WorkType
         .span-typework-section-three.mg-b-10
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
@@ -72,7 +74,7 @@ export default {
  },
  computed: {},
  methods: {
-  scroll :function(){
+  scroll() {
     if(window.scrollY > 100){
       document.getElementById("header").classList.add('scrollAnim')
     }
@@ -210,7 +212,7 @@ export default {
   flex-flow: column;
   height: 100vh;
   color: #000;
-  margin-top: -80px;
+  /* margin-top: -80px; */
 }
 
 .containerTwo {
@@ -233,10 +235,13 @@ export default {
 }
 
 .blockRight-section-two {
-  background: url("@/assets/KILLMEPLZX2_Air_conditioning_air_flowsoft_light_realism_utopia__7a048083-1c05-4cd5-84db-cd816e8fa967.png");
+  background: url("@/assets/KILLMEPLZX2_Large_spaceventilation_air_flow_white_purpleorange__0727ac3a-0c43-4562-8842-6e8eb968b88f.png");
   background-size: cover;
   width: 50%;
-  height: 100%;
+  height: 90%;
+  margin-left: -5%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px #000;
 }
 .text-block-section-two{
   display: flex;
@@ -270,7 +275,7 @@ export default {
   transform: translate(-60%,-50%);
 }
 .containerThree {
-  background: white;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(69,69,83,1) 100%, rgba(0,212,255,1) 100%);
   height: 100vh;
   width: 100%;
 }
@@ -279,6 +284,7 @@ export default {
   height: 7%;
   color: rgb(0, 118, 169);
   margin-bottom: 20px;
+  /* padding: 5%; */
 }
 .container-worktype-section-three {
   width: 100%;
@@ -299,7 +305,7 @@ export default {
   box-shadow: 2px 2px 4px black; 
   width: 33%;
   height: 100%;
-  margin: auto;
+  margin: 50px;
 }
 .hero {
   background: url('@/assets/ventFirst.jpg');
@@ -330,5 +336,13 @@ export default {
   /* background: rgba(119, 0, 255, 0.5); */
   background: var(--a);
   transition: background 7s;
+}
+.button{
+  width: auto;
+  color: #fff;
+  background: #19CBE7;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 30px;
 }
 </style>
