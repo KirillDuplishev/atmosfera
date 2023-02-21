@@ -40,16 +40,32 @@ div
       .img-garant
         img(src="@/assets/quality.png" style="width:30%; height:15%")
     .containerThree
-      span   
+      .text-title-section-three
+        span(style="font-size:40px; font-weight:900") Что именно мы делаем
+      .container-worktype-section-three
+        .span-typework-section-three.mg-b-10
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+        .span-typework-section-three.mg-b-10
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+        .span-typework-section-three
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
 </template>
 
 <script>
 import Header from '../components/main/Header.vue'
+import WorkType from '@/components/main/WorkType.vue';
 
 export default {
  name:"MainPage",
  components: {
-  Header
+  Header,
+  WorkType
  },
  mounted() {
   console.log(window.scrollY);
@@ -288,9 +304,6 @@ export default {
   width: 50%;
   height: 100%;
 }
-.text-block-main-section-two{
-  
-}
 
 .blockRight-section-two {
   background: url("@/assets/KILLMEPLZX2_Air_conditioning_air_flowsoft_light_realism_utopia__7a048083-1c05-4cd5-84db-cd816e8fa967.png");
@@ -333,16 +346,36 @@ export default {
   transform: translate(-60%,-50%);
 }
 .containerThree {
-  background: url('@/assets/ventSecond.jpg') repeat;
-  background-size: 100%;
-  justify-content: center;
-  background-size: cover;
-  flex-direction: column;
-  align-items: center;
-  /* position: fixed; */
-  display: flex;
+  background: white;
   height: 100vh;
   width: 100%;
+}
+.text-title-section-three {
+  width: 100%;
+  height: 7%;
+  color: rgb(0, 118, 169);
+  margin-bottom: 20px;
+}
+.container-worktype-section-three {
+  width: 100%;
+  height: 90%;
+}
+
+.span-typework-section-three {
+  width: 100%;
+  height: 30%;
+  display: flex;
+}
+.mg-b-10 {
+  margin-bottom: 10px;
+}
+.block-type-section-three {
+  border-radius: 20px;
+  border: 2px solid white;
+  box-shadow: 2px 2px 4px black; 
+  width: 33%;
+  height: 100%;
+  margin: auto;
 }
 .hero {
   background: url('@/assets/ventFirst.jpg');
