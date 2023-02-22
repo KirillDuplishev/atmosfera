@@ -16,11 +16,11 @@ div
       .blockLeft-section-two
         .text-block-main-section-two
           .text-block-section-two
-            span(style="font-size:25px") Вы получите 
-            span(style="font-size:50px; font-weight:900") готовую 
-            span(style="font-size:50px; font-weight:900") вентиляционную 
-            span(style="font-size:50px; font-weight:900") систему 
-            span(style="font-size:25px") сэкономив свое время
+            span.text-25 Вы получите 
+            span.text-50-b готовую 
+            span.text-50-b вентиляционную 
+            span.text-50-b систему 
+            span.text-25 сэкономив свое время
           .text-description-block-section-two.outline-border
             span.text-15 Мы строим вентиляционные системы от проекта до сдачи
             span.text-15 в эксплуатацию без привлечения сторонних 
@@ -32,14 +32,15 @@ div
           .text-description-block-section-two
             span.text-14 Вы изначально будете знать смету по всем работу и 
             span.text-14 эта цена не изменится 
-      .blockRight-section-two  
+      .blockRight-section-two
+        .img-right-section-two  
       .img-garant
         img(src="@/assets/quality.png" style="width:30%; height:15%")
     .containerThree
       .text-title-section-three
         span(style="font-size:40px; font-weight:900") Что именно мы делаем
       .container-worktype-section-three
-        WorkType
+        //- WorkType
         .span-typework-section-three.mg-b-10
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
@@ -52,6 +53,19 @@ div
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+    .containerFor
+      .blockLeft-section-for
+        .text-block-main-section-for
+          .text-block-section-for
+            span.text-25 Неизменные 
+            span.text-50-b стоимость 
+            span.text-50-b и сроки 
+          .text-description-block-section-for
+            span.text-15 Мы несем ответственность за комплексный результат,
+            span.text-15 поэтому все этапы работы над вентиляционной системой идут  
+            span.text-15 параллельно без задержки:
+      .blockRight-section-for  
+        .img-right-section-for
 </template>
 
 <script>
@@ -210,7 +224,7 @@ export default {
 .container {
   display: flex;
   flex-flow: column;
-  height: 100vh;
+  height: 93vh;
   color: #000;
   /* margin-top: -80px; */
 }
@@ -222,7 +236,7 @@ export default {
   flex-direction: column;
   align-items: center;
   display: flex;
-  height: 100vh;
+  height: 93vh;
   width: 100%;
   text-transform: uppercase;
   flex-wrap: wrap;
@@ -235,13 +249,20 @@ export default {
 }
 
 .blockRight-section-two {
-  background: url("@/assets/KILLMEPLZX2_Large_spaceventilation_air_flow_white_purpleorange__0727ac3a-0c43-4562-8842-6e8eb968b88f.png");
-  background-size: cover;
   width: 50%;
   height: 90%;
-  margin-left: -5%;
+}
+.img-right-section-two {
+  background: url("@/assets/KILLMEPLZX2_Large_spaceventilation_air_flow_white_purpleorange__0727ac3a-0c43-4562-8842-6e8eb968b88f.png");
+  background-size: cover;
+  margin-right: 5%;
   border-radius: 20px;
   box-shadow: 5px 5px 20px #000;
+  height: 100%;
+  width: 100%;
+}
+.text-block-main-section-two {
+  margin-right: 20px;
 }
 .text-block-section-two{
   display: flex;
@@ -249,7 +270,7 @@ export default {
   align-items: flex-start;
   color: rgb(0, 118, 169);
   margin-top: 100px;
-  margin-left: 20px;
+  margin-left: 20%;
 }
 .text-description-block-section-two {
   text-align: left;
@@ -259,7 +280,7 @@ export default {
   align-items: flex-start;
   color: black;
   margin-top:  20px;
-  margin-left: 20px;
+  margin-left: 20%;
 }
 
 .outline-border {
@@ -276,7 +297,7 @@ export default {
 }
 .containerThree {
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(69,69,83,1) 100%, rgba(0,212,255,1) 100%);
-  height: 100vh;
+  height: 93vh;
   width: 100%;
 }
 .text-title-section-three {
@@ -306,6 +327,60 @@ export default {
   width: 33%;
   height: 100%;
   margin: 50px;
+}
+
+.containerFor {
+  background: #fff;
+  justify-content: space-evenly;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  height: 93vh;
+  width: 100%;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+}
+
+
+.blockLeft-section-for {
+  width: 50%;
+  height: 100%;
+}
+
+.blockRight-section-for {
+  width: 50%;
+  height: 90%;
+}
+.img-right-section-for {
+  background: url("@/assets/KILLMEPLZX2_Large_spaceventilation_air_flow_white_purpleorange__0727ac3a-0c43-4562-8842-6e8eb968b88f.png");
+  background-size: cover;
+  margin-right: 5%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px #000;
+  height: 100%;
+  width: 100%;
+}
+.text-block-main-section-two {
+  margin-right: 20px;
+}
+.text-block-section-for{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: rgb(0, 118, 169);
+  margin-top: 100px;
+  margin-left: 20%;
+}
+.text-description-block-section-for {
+  text-align: left;
+  line-height: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: black;
+  margin-top:  20px;
+  margin-left: 20%;
 }
 .hero {
   background: url('@/assets/ventFirst.jpg');

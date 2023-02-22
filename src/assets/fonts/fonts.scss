@@ -7,12 +7,18 @@
   font-style: normal;
 }
 
+.text-50-b {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+}
 .text-29-b {
   font-family: 'SF UI Display';
   font-style: normal;
   font-weight: bold;
   font-size: 29px;
-  line-height: 27px;
+  line-height: 35px;
 }
 
 .text-27-b {
@@ -20,7 +26,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 27px;
-  line-height: 27px;
+  line-height: 30px;
 }
 
 .text-25-b {
@@ -30,7 +36,13 @@
   font-size: 25px;
   line-height: 27px;
 }
-
+.text-25 {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 27px;
+}
 .text-23-b {
   font-family: 'SF UI Display';
   font-style: normal;
