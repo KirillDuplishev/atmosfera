@@ -41,11 +41,11 @@ div
         span(style="font-size:40px; font-weight:900") Что именно мы делаем
       .container-worktype-section-three
         //- WorkType
-        .span-typework-section-three.mg-b-10
+        .span-typework-section-three
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
-        .span-typework-section-three.mg-b-10
+        .span-typework-section-three
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
@@ -300,10 +300,10 @@ export default {
 }
 .text-title-section-three {
   width: 100%;
-  height: 7%;
+  height: 10%;
   color: rgb(0, 118, 169);
-  margin-bottom: 20px;
-  /* padding: 5%; */
+  padding-top: 20px;
+  margin-bottom: 10px;
 }
 .container-worktype-section-three {
   width: 100%;
@@ -319,14 +319,12 @@ export default {
   margin-bottom: 10px;
 }
 .block-type-section-three {
-  border-radius: 20px;
-  border: 2px solid white;
-  box-shadow: 2px 2px 4px black; 
-  width: 33%;
+  /* border-radius: 20px; */
+  border: 1px solid white;
+  box-shadow: 1px 2px 4px black; 
+  width: 33.3%;
   height: 100%;
-  margin: 50px;
 }
-
 .containerFor {
   background: #fff;
   justify-content: space-evenly;
