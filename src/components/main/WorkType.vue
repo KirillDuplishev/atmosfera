@@ -24,14 +24,14 @@ export default {
   background-size: 100%;
 }
 .text-block {
-  position: absolute;
+  position: relative;
   width: 100%;
   bottom: 20%;
   text-align: center;
   color: white
 }
 .shadow-text{
-  position: absolute;
+  position: relative;
   background: linear-gradient(180deg, transparent 30%, rgba(0,0,0, .8) );
   width: 100%;
   height: 100%;

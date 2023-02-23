@@ -79,7 +79,9 @@ span:hover{
   display: flex;
   flex-direction: column;
 }
-
+span{
+  cursor: pointer;
+}
 .box-sm {
   display:flex;
   justify-content:center;

@@ -1,11 +1,11 @@
 <template lang="pug">
 div
-  .preloader-scene()
-    .loading-block
-      .progress
-    .preloader-block(id="preloadBlock")
-      img(src="@/assets/Logo.png" style="width:50%; height:auto")
-  .body1(v-scroll="scroll")
+  .body1#body1(v-scroll="scroll")
+    .preloader-scene
+      .loading-block
+        .progress
+      .preloader-block(id="preloadBlock")
+        img(src="@/assets/Logo.png" style="width:50%; height:auto")
     Header.header#header
     .container 
       .hero
@@ -40,7 +40,6 @@ div
       .text-title-section-three
         span(style="font-size:40px; font-weight:900") Что именно мы делаем
       .container-worktype-section-three
-        //- WorkType
         .span-typework-section-three
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
@@ -88,7 +87,7 @@ export default {
  mounted() {
   let el = document.getElementById('preloadBlock')
   el.addEventListener('animationend', function() { 
-    let sceneDiv = document.querySelector("div.preloader-scene");
+    let sceneDiv = document.querySelector(".preloader-scene");
     sceneDiv.className = "preloader-scene-end"; 
   })
 
@@ -97,7 +96,7 @@ export default {
  methods: {
   scroll() {
     if(window.scrollY > 100){
-      document.getElementById("header").classList.add('scrollAnim')
+      document.getElementById("header").classList.add('headerScrollAnim')
     }
     else{
       document.getElementById("header").style.boxShadow = "5px 5px 15px #000"
@@ -110,14 +109,9 @@ export default {
 <style scoped>
 * {
   --a: linear-gradient(90deg, #040D2C, #462A8B,#8D05D6);
-  perspective: 1000px;
   margin:0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-}
-
-::-webkit-scrollbar {
-  width: 0;
 }
 
 .body1 {
@@ -138,13 +132,14 @@ export default {
 }
 
 .preloader-scene {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
+  position: fixed;
+  display: block;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  overflow-x: hidden;
+  z-index: 999999999999;
 }
 
 .preloader-scene-end {
@@ -192,7 +187,6 @@ export default {
   top: 2px;
   bottom: 2px;
   left: 2px;
-  /* background-color: #163355; */
   background-color: #fff;
   animation: progressLine 1.3s ease forwards;
   border-radius: 4px;
@@ -296,9 +290,9 @@ export default {
 }
 .img-garant{
   position: absolute;
-  top: 18%;
-  left: 54.9%;
-  transform: translate(-60%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-49.5%,-38em);
 }
 .containerThree {
   background: white;
@@ -326,7 +320,6 @@ export default {
   margin-bottom: 10px;
 }
 .block-type-section-three {
-  /* border-radius: 20px; */
   border: 1px solid white;
   box-shadow: 1px 2px 4px black; 
   width: 33.3%;
@@ -427,22 +420,21 @@ export default {
 .hide{
   background: #000;
 }
-.scrollAnim{
-  /* background: rgba(119, 0, 255, 0.5); */
+.headerScrollAnim{
   background: var(--a);
   transition: background 7s;
 }
 .button{
-  position: absolute;
+  position: relative;
   width: auto;
   color: #fff;
   background: linear-gradient(37deg, rgba(127,6,255,1) 40%, rgba(12,12,255,1) 100%, rgba(0,212,255,1) 100%);
   padding: 25px;
   border: 2px solid #fff;
   border-radius: 30px;
-  bottom: 15%;
-  /* transform: scale(1); */
+  bottom: -20%;
   transition: transform .5s, box-shadow .5s;
+  cursor: pointer;
 }
 .button:hover {
   box-shadow: 0 0 15px #000;
