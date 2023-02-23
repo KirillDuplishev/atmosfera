@@ -30,7 +30,7 @@ div
             span.text-14 и нервы на общение с 4-6 разными подрядчиками по 
             span.text-14 каждому этапу строительства вентиляционной системы
           .text-description-block-section-two
-            span.text-14 Вы изначально будете знать смету по всем работу и 
+            span.text-14 Вы изначально будете знать смету по всем работам и 
             span.text-14 эта цена не изменится 
       .blockRight-section-two
         .img-right-section-two  
@@ -102,6 +102,7 @@ export default {
 
 <style scoped>
 * {
+  --a: linear-gradient(90deg, #040D2C, #462A8B,#8D05D6);
   perspective: 1000px;
   margin:0;
   box-sizing: border-box;
@@ -130,14 +131,12 @@ export default {
 }
 
 .preloader-scene {
-  position: fixed;
-  top: 0px;
-  left: 0px;
+  position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1000;
   display: flex;
-  flex-flow: column;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -155,12 +154,10 @@ export default {
   position: absolute;
   display: flex;
   justify-content: center;
-  justify-items: end;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 250%);
+  justify-items: center;
+  margin-top: 60vh;
   z-index: 1001;
-  animation: loading .2s ease forwards;
+  animation: loading 2s ease forwards;
   animation-delay: .5s;
 }
 
@@ -188,8 +185,9 @@ export default {
   top: 2px;
   bottom: 2px;
   left: 2px;
-  background-color: #163355;
-  animation: progressLine .4s ease forwards;
+  /* background-color: #163355; */
+  background-color: #fff;
+  animation: progressLine 1.3s ease forwards;
   border-radius: 4px;
 }
 
@@ -217,16 +215,16 @@ export default {
   height: 100vh;
   background: #000;
   background-position: bottom;
-  animation: opacityBlock 1s linear forwards;
+  animation: opacityBlock 1.5s linear forwards;
   animation-delay: .5s;
 }
 
 .container {
   display: flex;
   flex-flow: column;
-  height: 93vh;
+  height: 100vh;
   color: #000;
-  /* margin-top: -80px; */
+  margin-top: -3vw;
 }
 
 .containerTwo {
@@ -407,7 +405,6 @@ export default {
   background: #000;
 }
 .scrollAnim{
-  --a: linear-gradient(90deg, #040D2C, #462A8B,#8D05D6);
   /* background: rgba(119, 0, 255, 0.5); */
   background: var(--a);
   transition: background 7s;
