@@ -157,14 +157,15 @@ export default {
 }
 
 .preloader-scene-end {
-  position: fixed;
+  display: none;
+  /* position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 100%;
   z-index: 0;
   display: flex;
-  overflow: hidden;
+  overflow: hidden; */
 }
 .loading-block {
   position: absolute;
