@@ -1,6 +1,7 @@
 <template lang="pug">
-.container-work-type
-  .text-block  
+.container-work-type(:class="{}")
+  .shadow-text
+  .text-block
     span.text-17 {{nameBlock}}
 </template>
 
@@ -28,5 +29,13 @@ export default {
   bottom: 20%;
   text-align: center;
   color: white
+}
+.shadow-text{
+  position: absolute;
+  background: linear-gradient(180deg, transparent 30%, rgba(0,0,0, .8) );
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 </style>

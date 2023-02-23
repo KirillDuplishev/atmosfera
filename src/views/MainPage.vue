@@ -64,6 +64,13 @@ div
             span.text-15 Мы несем ответственность за комплексный результат,
             span.text-15 поэтому все этапы работы над вентиляционной системой идут  
             span.text-15 параллельно без задержки:
+          .text-block-ellipse-section-for
+            .text-ellipse-section-for
+              span.text-15 Проект
+            .text-ellipse-section-for
+              span.text-15 Коммуникации
+            .text-ellipse-section-for
+              span.text-15 Строительство
       .blockRight-section-for  
         .img-right-section-for
 </template>
@@ -294,7 +301,7 @@ export default {
   transform: translate(-60%,-50%);
 }
 .containerThree {
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(69,69,83,1) 100%, rgba(0,212,255,1) 100%);
+  background: white;
   height: 93vh;
   width: 100%;
 }
@@ -350,7 +357,7 @@ export default {
   height: 90%;
 }
 .img-right-section-for {
-  background: url("@/assets/KILLMEPLZX2_Large_spaceventilation_air_flow_white_purpleorange__0727ac3a-0c43-4562-8842-6e8eb968b88f.png");
+  background: url("@/assets/KILLMEPLZX2_Factory_ventilationwhite_purple_pastel_colors_high__715fc1d0-c4f6-4996-bb17-49634b6a0580.png");
   background-size: cover;
   margin-right: 5%;
   border-radius: 20px;
@@ -378,6 +385,23 @@ export default {
   color: black;
   margin-top:  20px;
   margin-left: 20%;
+}
+.text-block-ellipse-section-for {
+  text-align: left;
+  display: flex;
+  margin-top:  20px;
+  margin-left: 20%;
+}
+.text-ellipse-section-for {
+  width: 100%;
+  min-height: 30px;
+  background: #0076a9;
+  color: white;
+  box-shadow: 2px 2px 4px black;
+  border-radius: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  text-align: center;
 }
 .hero {
   background: url('@/assets/ventFirst.jpg');
