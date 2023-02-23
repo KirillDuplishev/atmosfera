@@ -1,12 +1,12 @@
 <template lang="pug">
 div
+  .preloader-scene()
+    .loading-block
+      .progress
+    .preloader-block(id="preloadBlock")
+      img(src="@/assets/Logo.png" style="width:50%; height:auto")
   .body1(v-scroll="scroll")
     Header.header#header
-    .preloader-scene()
-      .loading-block
-        .progress
-      .preloader-block(id="preloadBlock")
-        img(src="@/assets/Logo.png" style="width:40%; height:20%")
     .container 
       .hero
         span(style="text-transform:uppercase; font-size:35px; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные 
@@ -41,11 +41,11 @@ div
         span(style="font-size:40px; font-weight:900") Что именно мы делаем
       .container-worktype-section-three
         //- WorkType
-        .span-typework-section-three
+        .span-typework-section-three.mg-b-10
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
-        .span-typework-section-three
+        .span-typework-section-three.mg-b-10
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
@@ -121,7 +121,7 @@ export default {
 .header {
   width: 100%;
   position: sticky;
-  top: 0px;
+  top: 0;
   font-family: 'Inter', sans-serif;
   letter-spacing: -1px;
   text-align: center;
@@ -300,10 +300,10 @@ export default {
 }
 .text-title-section-three {
   width: 100%;
-  height: 10%;
+  height: 7%;
   color: rgb(0, 118, 169);
-  padding-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  /* padding: 5%; */
 }
 .container-worktype-section-three {
   width: 100%;
@@ -319,12 +319,14 @@ export default {
   margin-bottom: 10px;
 }
 .block-type-section-three {
-  /* border-radius: 20px; */
-  border: 1px solid white;
-  box-shadow: 1px 2px 4px black; 
-  width: 33.3%;
+  border-radius: 20px;
+  border: 2px solid white;
+  box-shadow: 2px 2px 4px black; 
+  width: 33%;
   height: 100%;
+  margin: 50px;
 }
+
 .containerFor {
   background: #fff;
   justify-content: space-evenly;
