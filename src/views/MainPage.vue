@@ -284,7 +284,7 @@ export default {
   align-items: flex-start;
   color: rgb(0, 118, 169);
   margin-top: 100px;
-  margin-left: 20%;
+  margin-left: 10%;
 }
 .text-description-block-section-two {
   text-align: left;
@@ -294,7 +294,7 @@ export default {
   align-items: flex-start;
   color: black;
   margin-top:  20px;
-  margin-left: 20%;
+  margin-left: 10%;
 }
 
 .outline-border {
