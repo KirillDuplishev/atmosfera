@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   .body1#body1(v-scroll="scroll")
-    //- .preloader-scene
+    .preloader-scene
       .loading-block
         .progress
       .preloader-block(id="preloadBlock")
