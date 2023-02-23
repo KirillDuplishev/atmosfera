@@ -73,6 +73,20 @@ div
               span.text-15 Строительство
       .blockRight-section-for  
         .img-right-section-for
+    .containerScreenMap
+      .info-block-section-map
+        .text-main-block-section-map
+          .text-block-section-map.mg-b-20
+            span.text-35-b(style="color: rgb(0, 118, 169);text-transform: uppercase") Контакты
+          .text-block-section-map.mg-b-20
+            span.text-19-b 8 800 123 45 67
+            br
+            span.text-15 Ежедневно с 10:00 до 18:00 
+          .text-block-section-map
+            span.text-19-b Ижевск
+            br
+            span.text-15 ул. Максима Горького, 59а
+        v-btn.button-section-map.text-15-b Заказать звонок
 </template>
 
 <script>
@@ -445,6 +459,52 @@ export default {
   transition: transform .5s, box-shadow .5s;
 }
 .button:hover {
+  box-shadow: 0 0 15px #000;
+  transform: scale(1.03);
+}
+.containerScreenMap {
+  background: url('@/assets/screen-map.png');
+  background-size: cover;
+  height: 93vh;
+  width: 100%;
+}
+.info-block-section-map {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  background: white;
+  border-radius: 5%;
+  box-shadow: 3px 3px 20px black;
+  width: 30%;
+  height: 50%;
+}
+.text-main-block-section-map {
+  margin: 4% auto auto auto;
+  height: 70%;
+  width: 60%;
+  background: white;
+}
+.text-block-section-map {
+  height: 20%;
+  width: 100%;
+  text-align: left;
+}
+.mg-b-20 {
+  margin-bottom: 10%;
+}
+.button-section-map{
+  position: relative;
+  width: auto;
+  color: #fff;
+  background: linear-gradient(37deg, rgba(127,6,255,1) 40%, rgba(12,12,255,1) 100%, rgba(0,212,255,1) 100%);
+  padding: 25px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  /* bottom: 15%; */
+  transition: transform .5s, box-shadow .5s;
+  margin: auto;
+}
+.button-section-map:hover {
   box-shadow: 0 0 15px #000;
   transform: scale(1.03);
 }
