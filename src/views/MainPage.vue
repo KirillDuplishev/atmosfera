@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   .body1#body1(v-scroll="scroll")
-    .preloader-scene
+    //- .preloader-scene
       .loading-block
         .progress
       .preloader-block(id="preloadBlock")
@@ -306,7 +306,7 @@ export default {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-49.5%,-38em);
+  transform: translate(-49.5%,-58em);
 }
 .containerThree {
   background: white;
@@ -461,7 +461,7 @@ export default {
   width: 100%;
 }
 .info-block-section-map {
-  position: absolute;
+  position: relative;
   top: 30%;
   left: 15%;
   background: white;
@@ -471,7 +471,8 @@ export default {
   height: 50%;
 }
 .text-main-block-section-map {
-  margin: 4% auto auto auto;
+  padding-top: 20px;
+  margin: auto;
   height: 70%;
   width: 60%;
   background: white;
