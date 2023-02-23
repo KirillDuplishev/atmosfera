@@ -409,11 +409,19 @@ export default {
   transition: background 7s;
 }
 .button{
+  position: absolute;
   width: auto;
   color: #fff;
-  background: #19CBE7;
-  padding: 20px;
+  background: linear-gradient(37deg, rgba(127,6,255,1) 40%, rgba(12,12,255,1) 100%, rgba(0,212,255,1) 100%);
+  padding: 25px;
   border: 2px solid #fff;
   border-radius: 30px;
+  bottom: 15%;
+  /* transform: scale(1); */
+  transition: transform .5s, box-shadow .5s;
+}
+.button:hover {
+  box-shadow: 0 0 15px #000;
+  transform: scale(1.03);
 }
 </style>
