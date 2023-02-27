@@ -35,7 +35,7 @@ div
       .blockRight-section-two
         .img-right-section-two  
       .img-garant
-        img(src="@/assets/quality.png" style="width:30%; height:15%")
+        img(src="@/assets/quality.png" style="width:30%; height:auto")
     .containerThree
       .text-title-section-three
         span(style="font-size:40px; font-weight:900") Что именно мы делаем
@@ -72,6 +72,7 @@ div
               span.text-15 Строительство
       .blockRight-section-for  
         .img-right-section-for
+    CircleElement
     .containerScreenMap
       .info-block-section-map
         .text-main-block-section-map
@@ -90,13 +91,15 @@ div
 
 <script>
 import Header from '../components/main/Header.vue'
-import WorkType from '@/components/main/WorkType.vue';
+import WorkType from '@/components/main/WorkType.vue'
+import CircleElement from '@/components/main/CircleElement.vue'
 
 export default {
  name:"MainPage",
  components: {
   Header,
-  WorkType
+  WorkType,
+  CircleElement
  },
  mounted() {
   let el = document.getElementById('preloadBlock')
@@ -158,14 +161,6 @@ export default {
 
 .preloader-scene-end {
   display: none;
-  /* position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  display: flex;
-  overflow: hidden; */
 }
 .loading-block {
   position: absolute;
@@ -244,6 +239,7 @@ export default {
 }
 
 .containerTwo {
+  position: relative;
   background: #fff;
   justify-content: space-evenly;
   background-size: cover;
@@ -305,9 +301,9 @@ export default {
 }
 .img-garant{
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-49.5%,-58em);
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%,-100%);
 }
 .containerThree {
   background: white;
@@ -444,7 +440,7 @@ export default {
   width: auto;
   color: #fff;
   background: linear-gradient(37deg, rgba(127,6,255,1) 40%, rgba(12,12,255,1) 100%, rgba(0,212,255,1) 100%);
-  padding: 25px;
+  padding: 20px;
   border: 2px solid #fff;
   border-radius: 30px;
   bottom: -20%;
@@ -468,7 +464,7 @@ export default {
   background: white;
   border-radius: 5%;
   box-shadow: 3px 3px 20px black;
-  width: 30%;
+  width: 400px;
   height: 50%;
 }
 .text-main-block-section-map {
@@ -491,7 +487,7 @@ export default {
   width: auto;
   color: #fff;
   background: linear-gradient(37deg, rgba(127,6,255,1) 40%, rgba(12,12,255,1) 100%, rgba(0,212,255,1) 100%);
-  padding: 25px;
+  padding: 20px;
   border: 2px solid #fff;
   border-radius: 30px;
   /* bottom: 15%; */

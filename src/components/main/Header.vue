@@ -1,13 +1,13 @@
 <template lang="pug">
 .header
   .logo
-    //- img.logoImage(src="@/assets/Logo.png" style="width:30%; height:30%")
+    //- img.logoImage(src="@/assets/LogoHeader.png" style="width:7%; height:auto")
     .logo-text Атмосфера
   .box
     .box-sm(@click="$router.push({path:'/'})")
       span Главная
     .box-sm(@click="galleryRout")
-      span Фотогаллерея
+      span Фотогалерея
     .box-sm
       span Контакты
   .otvet
@@ -28,14 +28,17 @@ export default {
 }
 </script>
 <style scoped>
+.logo{
+  display: flex;
+}
 .logo-text {
-  margin-left: 30px;
   font-family: Arial;
   font-size: 40px;
   font-weight: 900;
   text-transform: uppercase;
   color: rgba(255,255,255,.2);
-  background: url(https://kipmu.ru/wp-content/uploads/kobobl.jpg) repeat-x;
+  /* background: url(https://kipmu.ru/wp-content/uploads/kobobl.jpg) repeat-x; */
+  background: url(@/assets/LogoBack.jpg) repeat-x;
   -webkit-background-clip: text;
   background-size: 40%;
   animation: clouds 13s linear infinite alternate;
