@@ -7,6 +7,9 @@ div
       .preloader-block(id="preloadBlock")
         img(src="@/assets/Logo.png" style="width:50%; height:auto")
     Header.header#header
+    //- .container-carousel
+    //-   .body-carousel
+    //-     CarouselMain
     .container 
       .hero
         span(style="text-transform:uppercase; font-size:35px; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные 
@@ -22,16 +25,22 @@ div
             span.text-50-b систему 
             span.text-25 сэкономив свое время
           .text-description-block-section-two.outline-border
-            span.text-15 Мы строим вентиляционные системы от проекта до сдачи
-            span.text-15 в эксплуатацию без привлечения сторонних 
-            span.text-15 компаний и подрядчиков
+            span.text-17 Компания осуществляет комплексный подход
+            span.text-17 к решению задач связанных с проектированием,  
+            span.text-17 поставкой, монтажом, ремонтом и обслуживанием
+            span.text-17 систем вентиляции и кондиционирования любой сложности
+          .text-description-block-section-two.outline-border
+            span.text-17 На сегодняшний день потенциал компании
+            span.text-17 позволяет осуществлять комплексное   
+            span.text-17 обслуживание объектов Заказчика,
+            span.text-17 начиная от разработки проекта
+            span.text-17 или подбора оборудования по готовым проектам,
+            span.text-17 заканчивая доставкой, установкой, 
+            span.text-17 наладкой предлагаемой техники,
+            span.text-17 а так же гарантийное и послегарантийное
+            span.text-17 обслуживание, ремонт. 
           .text-description-block-section-two
-            span.text-14 Это значит что вам не придется тратить свое время
-            span.text-14 и нервы на общение с 4-6 разными подрядчиками по 
-            span.text-14 каждому этапу строительства вентиляционной системы
-          .text-description-block-section-two
-            span.text-14 Вы изначально будете знать смету по всем работам и 
-            span.text-14 эта цена не изменится 
+            span.text-17 Наша компания осуществляет свою деятельность с ноября 2010г.
       .blockRight-section-two
         .img-right-section-two  
       .img-garant
@@ -54,32 +63,117 @@ div
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
     .containerFor
       .blockLeft-section-for
+        .img-right-section-for
+      .blockRight-section-for
         .text-block-main-section-for
           .text-block-section-for
-            span.text-25 Неизменные 
-            span.text-50-b стоимость 
-            span.text-50-b и сроки 
+            span.text-29-b ООО "АТМОСФЕРА" предлагает
+            span.text-29-b лучшее европейское оборудование 
+            //- span.text-50-b стоимость 
+            //- span.text-50-b и сроки 
           .text-description-block-section-for
-            span.text-15 Мы несем ответственность за комплексный результат,
-            span.text-15 поэтому все этапы работы над вентиляционной системой идут  
-            span.text-15 параллельно без задержки:
+            span.text-15 Все оборудование прошло сертификацию ISO 9001,
+            span.text-15 а так же Российскую сертификацию "РОСТЕСТа".  
+            span.text-15 Поставляемое оборудование отличается высокой
+            span.text-15 надежностью и долговечностью его эксплуатации.
+            span.text-15 В настоящее время ООО "АТМОСФЕРА" является 
+            span.text-15 официальным диллером таких известных
+            span.text-15 производителей климатического оборудования как:
           .text-block-ellipse-section-for
             .text-ellipse-section-for
-              span.text-15 Проект
+              span.text-15 LESSAR
             .text-ellipse-section-for
-              span.text-15 Коммуникации
+              span.text-15 Systemair
             .text-ellipse-section-for
               span.text-15 Строительство
       .blockRight-section-for  
         .img-right-section-for
     CircleElement
+              span.text-15 Remak
+            .text-ellipse-section-for
+              span.text-15 Swegon(Gold)
+            .text-ellipse-section-for
+              span.text-15 SHUFT
+            .text-ellipse-section-for
+              span.text-15 Korf
+            .text-ellipse-section-for
+              span.text-15 Dospel
+            .text-ellipse-section-for
+              span.text-15 Vertro
+            .text-ellipse-section-for
+              span.text-15 General
+            .text-ellipse-section-for
+              span.text-15 Mitsubishi Electric
+            .text-ellipse-section-for
+              span.text-15 Dantex
+            .text-ellipse-section-for
+              span.text-15 Panasonic
+            .text-ellipse-section-for
+              span.text-15 DAIKIN
+            .text-ellipse-section-for
+              span.text-15 Ballu
+            .text-ellipse-section-for
+              span.text-15 Royal
+    .containerWorkExamples
+      .text-main-block-section-examples
+        span.text-40-b(style="color: rgb(0, 118, 169)") За 12 лет работы было сделано
+        br          
+        span.text-35-b(style="color: rgb(0, 118, 169)") более 100 объектов
+        br          
+        span.text-17-b Гостиницы, промышленные производства, сети магазинов, школы и т.д 
+      .block-work-examples
+        .span-work-examples
+          .obj-block-work-examples
+            WorkExamples(:numberObject="1")
+          .obj-text-block-work-examples
+            .obj-text-part-work-examples
+              span.text-25-b(style="color: rgb(0, 118, 169)") Школа на Берша
+              br
+              span.text-19-b Произвели монтаж приточно-вытяжной вентиляции согласно проекту. На первом этапе проложили все воздуховоды и протянули кабеля к щиту управления вентиляцией. На втором этапе – произвели монтаж решеток и пуско-наладку системы.   
+        .span-work-examples
+          .obj-text-block-work-examples
+            .obj-text-part-work-examples
+              span.text-25-b(style="color: rgb(0, 118, 169)") Ещё одна школа на Берша(не та же)
+              br
+              span.text-19-b Произвели расчет и закупку воздуховодов и сопутствующих материалов. Осуществили монтаж воздухаводов, вытяжных зонтов и произвели пуско-наладочные работы.
+          .obj-block-work-examples
+            WorkExamples(:numberObject="2")
+    .containerReviews
+      .text-main-block-section-reviews
+        span.text-17 Отзывы
+        br
+        span.text-40-b(style="color: rgb(0, 118, 169)") Мы-Надежные партнеры-профессионалы
+        br
+        span.text-25-b Мы придаем огромное значение прочным отношениям и убедились,
+        br
+        span.text-25-b что они приносят пользу нашему бизнесу. Отзывы клиентов жизненно 
+        br
+        span.text-25-b важны, чтобы помочь нам сделать все правильно.
+      .main-block-reviews
+        .block-reviews.mg-l-6(style="background: #c944b5")
+          .text-block-reviews
+            span.text-15 ООО «Радонеж» выражает благодарность компании ООО «Атмосерера» в лице — директора Дуплищева Ю.В. за добросовестную работу по монтажу, автоматизации и пуско-наладке вентиляционных систем. За время совместной деятельности ООО «Атмосферс» зарекомендовало себя как надежный партнер, способный качественно решать поставленные задачи. Также отмечаем большой опыт и высокую организацию при проведении работ. Мы довольны результатами Вашей работы и надеемся на дальнейшее сотрудничество!
+          .text-description-block-reviews
+            span.text-15 Директор ООО «Радонеж
+        .block-reviews.mg-l-6.mg-r-6(style="background: #d35024")
+          .text-block-reviews
+            span.text-15 ЗАО «Техкрим» выражает благодарность компании ООО «Атмосфера» за плодотворное и взаимовыгодное сотрудничество по поставке и монтажу вентиляционного оборудования и оборудования для кондиционирования. Благодарим всех сотрудников компании за высокий профессионализм, ответственное отношение к своему делу и умение находить верные решения в сложных ситуациях! Надеемся на дальнейшее благотворное сотрудничество с вами!
+          .text-description-block-reviews
+            span.text-17-b Кузьменко О.Л.
+            br
+            span.text-15 Директор ЗАО «Техкрим» 
+        .block-reviews.mg-r-6(style="background: #4a9ec2")
+          .text-block-reviews
+            span.text-15 ООО НПЦ «Пружина» выражает благодарность вентиляционной компании «Атмосфера» за профессионализм, высокое качество исполнения работ с учетом пожеланий заказчика. Следует также отметить высокий уровень организации проведения работ и гибкость, проявляемую при принятии решений, требующих быстроты и оперативности. Выполненные для нас работы компанией «Атмосфера», позволяют характеризовать её как надежного делового партнера. Основываясь на опыте совместной работы надеемся на длительное сотрудничество!
+          .text-description-block-reviews
+            span.text-15 Генеральный директор ООО НПЦ «Пружина»
     .containerScreenMap
       .info-block-section-map
         .text-main-block-section-map
           .text-block-section-map.mg-b-20
             span.text-35-b(style="color: rgb(0, 118, 169);text-transform: uppercase") Контакты
           .text-block-section-map.mg-b-20
-            span.text-19-b 8 800 123 45 67
+            span.text-19-b 8-912-017-44-44
             br
             span.text-15 Ежедневно с 10:00 до 18:00 
           .text-block-section-map
@@ -93,13 +187,17 @@ div
 import Header from '../components/main/Header.vue'
 import WorkType from '@/components/main/WorkType.vue'
 import CircleElement from '@/components/main/CircleElement.vue'
+import WorkExamples from '@/components/main/WorkExamples.vue';
+import CarouselMain from '@/components/main/CarouselMain.vue';
 
 export default {
  name:"MainPage",
  components: {
   Header,
   WorkType,
-  CircleElement
+  CircleElement,
+  WorkExamples,
+  CarouselMain
  },
  mounted() {
   let el = document.getElementById('preloadBlock')
@@ -124,6 +222,25 @@ export default {
 </script>
 
 <style scoped>
+.container-carousel {
+  width: 100%;
+  height: 100vh;
+}
+.body-carousel
+{ 
+	background-image: white;
+	background-repeat: no-repeat;
+	background-position: top center;
+	width:100%;
+	background-size:cover;
+	height:100%;
+	min-height:1000px;
+	overflow:hidden;
+	font-family: 'quicksandlight', Helvetica, Arial;
+	color:#FFFFFF;
+	text-shadow: -1px -1px 4px rgba(0, 0, 0, .35);
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+}
 * {
   --a: linear-gradient(90deg, #040D2C, #462A8B,#8D05D6);
   margin:0;
@@ -294,12 +411,13 @@ export default {
 }
 
 .outline-border {
-  width: 80%;
+  width: max-content;
   border-radius: 15px;
   padding: 20px;
   border: 2px solid rgb(0, 0, 0, 0.2);
 }
 .img-garant{
+  display: none;
   position: absolute;
   top: 50vh;
   left: 50vw;
@@ -335,8 +453,14 @@ export default {
   box-shadow: 1px 2px 4px black; 
   width: 33.3%;
   height: 100%;
+  cursor: pointer;
+  transition: transform .5s, box-shadow .5s;
 }
-
+.block-type-section-three:hover {
+  box-shadow: 0 0 15px #000;
+  transform: scale(1.03);
+  cursor: pointer;
+}
 .containerFor {
   background: #fff;
   justify-content: space-evenly;
@@ -353,12 +477,12 @@ export default {
 
 .blockLeft-section-for {
   width: 50%;
-  height: 100%;
+  height: 90%;
 }
 
 .blockRight-section-for {
   width: 50%;
-  height: 90%;
+  height: 100%;
 }
 .img-right-section-for {
   background: url("@/assets/KILLMEPLZX2_Factory_ventilationwhite_purple_pastel_colors_high__715fc1d0-c4f6-4996-bb17-49634b6a0580.png");
@@ -391,14 +515,16 @@ export default {
   margin-left: 20%;
 }
 .text-block-ellipse-section-for {
+  flex-wrap: wrap;
+  gap: 10px;
   text-align: left;
   display: flex;
   margin-top:  20px;
   margin-left: 20%;
 }
 .text-ellipse-section-for {
-  width: 100%;
-  min-height: 30px;
+  width: 200px;
+  height: min-content;
   background: #0076a9;
   color: white;
   box-shadow: 2px 2px 4px black;
@@ -446,11 +572,90 @@ export default {
   bottom: -20%;
   transition: transform .5s, box-shadow .5s;
   cursor: pointer;
+  text-decoration: none;
 }
 .button:hover {
   box-shadow: 0 0 15px #000;
   transform: scale(1.03);
 }
+.containerWorkExamples {
+  background: #fff;
+  width: 100%;
+  height: 93vh;
+}
+.text-main-block-section-examples {
+  height: 15%;
+  text-align: center;
+}
+.block-work-examples {
+  /* display: flex; */
+  height: 85%;
+  width: 100%;
+}
+.span-work-examples {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  border: 1px solid black;
+}
+.obj-block-work-examples {
+  width: 70%;
+  height: 90%;
+}
+.obj-text-block-work-examples {
+  width: 30%;
+  height: 100%;
+  text-align: center;
+}
+.obj-text-part-work-examples {
+  width: 100%;
+  height: 100%;
+  padding: 20px 10px;
+  text-align: center;
+}
+.containerReviews {
+  background: #fff;
+  width: 100%;
+  height: 93vh;
+}
+.text-main-block-section-reviews {
+  width: 100%;
+  height: 25%;
+  text-align: center;
+}
+.main-block-reviews {
+  height: 65%;
+  width: 100%;
+  display: flex;
+}
+.block-reviews {
+  color: white;
+  height: 100%;
+  width: 25%;
+  border-radius: 5%;
+  padding: 20px;
+  box-shadow: 2px 2px 4px black;
+}
+.mg-l-6 {
+  margin-left: 6.25%;
+}
+.mg-r-6 {
+  margin-right: 6.25%;
+}
+.text-block-reviews {
+  display: flex;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+  text-align: center;
+}
+.text-description-block-reviews {
+  padding-top: 20px;
+  height: 20%;
+  width: 100%;
+  text-align: center;
+}
+
 .containerScreenMap {
   background: url('@/assets/screen-map.png');
   background-size: cover;
