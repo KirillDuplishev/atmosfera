@@ -25,25 +25,13 @@ div
             span.text-50-b систему 
             span.text-25 сэкономив свое время
           .text-description-block-section-two.outline-border
-            span.text-17 Компания осуществляет комплексный подход
-            span.text-17 к решению задач связанных с проектированием,  
-            span.text-17 поставкой, монтажом, ремонтом и обслуживанием
-            span.text-17 систем вентиляции и кондиционирования любой сложности
+            span.text-17 Компания осуществляет комплексный подход к решению задач связанных с проектированием, к решению задач связанных с проектированием, поставкой, монтажом, ремонтом и обслуживанием систем вентиляции и кондиционирования любой сложности
           .text-description-block-section-two.outline-border
-            span.text-17 На сегодняшний день потенциал компании
-            span.text-17 позволяет осуществлять комплексное   
-            span.text-17 обслуживание объектов Заказчика,
-            span.text-17 начиная от разработки проекта
-            span.text-17 или подбора оборудования по готовым проектам,
-            span.text-17 заканчивая доставкой, установкой, 
-            span.text-17 наладкой предлагаемой техники,
-            span.text-17 а так же гарантийное и послегарантийное
-            span.text-17 обслуживание, ремонт. 
-          //- .text-description-block-section-two
-            span.text-17 Наша компания осуществляет свою деятельность с ноября 2010г.
+            span.text-17 На сегодняшний день потенциал компании позволяет осуществлять комплексное обслуживание объектов Заказчика, начиная от разработки проекта или подбора оборудования по готовым проектам, заканчивая доставкой, установкой, наладкой предлагаемой техники, а так же гарантийное и послегарантийное обслуживание, ремонт.  
       .blockRight-section-two
-        .img-right-section-two  
-      .img-garant
+        .img-block-right-section-two
+          img(src="@/assets/KILLMEPLZX2_Large_spaceventilation_air_flow_white_purpleorange__0727ac3a-0c43-4562-8842-6e8eb968b88f.png").img-right-section-two  
+      //- .img-garant
         img(src="@/assets/quality.png" style="width:30%; height:auto")
     .containerThree
       .text-title-section-three
@@ -134,7 +122,7 @@ div
               span.text-19-b Произвели расчет и закупку воздуховодов и сопутствующих материалов. Осуществили монтаж воздухаводов, вытяжных зонтов и произвели пуско-наладочные работы.
           .obj-block-work-examples
             WorkExamples(:numberObject="2")
-    //- .containerReviews
+    .containerReviews
       .text-main-block-section-reviews
         span.text-17 Отзывы
         br
@@ -355,38 +343,72 @@ export default {
 .containerTwo {
   position: relative;
   background: #fff;
-  justify-content: space-evenly;
-  background-size: cover;
-  flex-direction: column;
-  align-items: center;
   display: flex;
   height: 93vh;
   width: 100%;
   text-transform: uppercase;
-  flex-wrap: wrap;
 }
-
+@media screen and (max-width: 1300px) {
+  .containerTwo {
+    min-height: 93vh;
+    height: auto;  
+  }
+}
+@media screen and (max-width: 1000px) {
+  .containerTwo {
+    display: block;
+  }
+}
 
 .blockLeft-section-two {
   width: 50%;
   height: 100%;
+}
+@media screen and (max-width: 1000px) {
+  .blockLeft-section-two {
+    background: url("@/assets/KILLMEPLZX2_Large_spaceventilation_air_flow_white_purpleorange__0727ac3a-0c43-4562-8842-6e8eb968b88f.png");
+    background-size: cover;
+    width: 100%;
+    min-height: 93vh;
+    height: auto;
+    text-align: center;
+  }
 }
 
 .blockRight-section-two {
   width: 50%;
   height: 90%;
 }
+@media screen and (max-width: 1000px) {
+  .blockRight-section-two {
+    display: none;
+  }
+}
+.img-block-right-section-two {
+  width: auto;
+  height: 80%;
+  margin-top: 100px;
+  margin-right: 50px;
+}
 .img-right-section-two {
-  background: url("@/assets/KILLMEPLZX2_Large_spaceventilation_air_flow_white_purpleorange__0727ac3a-0c43-4562-8842-6e8eb968b88f.png");
   background-size: cover;
-  margin-right: 5%;
   border-radius: 20px;
   box-shadow: 5px 5px 20px #000;
   height: 100%;
   width: 100%;
 }
+@media screen and (max-width: 1000px) {
+
+}
 .text-block-main-section-two {
   margin-right: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .text-block-main-section-two {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
 }
 .text-block-section-two{
   display: flex;
@@ -396,22 +418,42 @@ export default {
   margin-top: 100px;
   margin-left: 10%;
 }
+@media screen and (max-width: 1000px) {
+  .text-block-section-two {
+    margin-top: 0px;
+    padding-top: 20px;
+    align-items:center;
+    margin: auto;
+  }
+}
 .text-description-block-section-two {
   text-align: left;
   line-height: 25px;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; */
   color: black;
   margin-top:  20px;
   margin-left: 10%;
 }
-
+@media screen and (max-width: 1000px) {
+  .text-description-block-section-two {
+    text-align: center;
+    color: white;
+    margin: auto;
+  }
+}
 .outline-border {
-  width: max-content;
+  width: auto;
+  height: auto;
   border-radius: 15px;
   padding: 20px;
   border: 2px solid rgb(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 1000px) {
+  .outline-border {
+    width: 80%;
+  }
 }
 .img-garant{
   position: absolute;

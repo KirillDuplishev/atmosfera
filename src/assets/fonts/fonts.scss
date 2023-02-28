@@ -13,6 +13,16 @@
   font-weight: bold;
   font-size: 50px;
 }
+@media screen and (max-width: 1300px) {
+  .text-50-b {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .text-50-b {
+    font-size: 30px;
+  }
+}
 .text-40-b {
   font-family: 'SF UI Display';
   font-style: normal;
@@ -48,12 +58,33 @@
   font-size: 25px;
   line-height: 27px;
 }
+@media screen and (max-width: 1300px) {
+  .text-25-b {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .text-25-b {
+    font-size: 15px;
+  }
+}
 .text-25 {
   font-family: 'SF UI Display';
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
   line-height: 27px;
+}
+
+@media screen and (max-width: 1300px) {
+  .text-25 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .text-25 {
+    font-size: 20px;
+  }
 }
 .text-23-b {
   font-family: 'SF UI Display';
@@ -82,8 +113,12 @@
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
-  line-height: 20px;
-   
+  line-height: 20px;  
+}
+@media screen and (max-width: 1300px) {
+  .text-17 {
+    font-size: 15px;
+  }
 }
 .text-17-b{
   font-family: 'SF UI Display';
