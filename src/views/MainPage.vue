@@ -39,7 +39,7 @@ div
             span.text-17 наладкой предлагаемой техники,
             span.text-17 а так же гарантийное и послегарантийное
             span.text-17 обслуживание, ремонт. 
-          .text-description-block-section-two
+          //- .text-description-block-section-two
             span.text-17 Наша компания осуществляет свою деятельность с ноября 2010г.
       .blockRight-section-two
         .img-right-section-two  
@@ -62,16 +62,16 @@ div
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
     .containerFor
-      .blockLeft-section-for
-        .img-right-section-for
-      .blockRight-section-for
-        .text-block-main-section-for
-          .text-block-section-for
+      .blockLeft-section-four
+        .img-right-section-four
+      .blockRight-section-four
+        .text-block-main-section-four
+          .text-block-section-four
             span.text-29-b ООО "АТМОСФЕРА" предлагает
             span.text-29-b лучшее европейское оборудование 
             //- span.text-50-b стоимость 
             //- span.text-50-b и сроки 
-          .text-description-block-section-for
+          .text-description-block-section-four
             span.text-15 Все оборудование прошло сертификацию ISO 9001,
             span.text-15 а так же Российскую сертификацию "РОСТЕСТа".  
             span.text-15 Поставляемое оборудование отличается высокой
@@ -79,40 +79,36 @@ div
             span.text-15 В настоящее время ООО "АТМОСФЕРА" является 
             span.text-15 официальным диллером таких известных
             span.text-15 производителей климатического оборудования как:
-          .text-block-ellipse-section-for
-            .text-ellipse-section-for
+          .text-block-ellipse-section-four
+            .text-ellipse-section-four
               span.text-15 LESSAR
-            .text-ellipse-section-for
+            .text-ellipse-section-four
               span.text-15 Systemair
-            .text-ellipse-section-for
-              span.text-15 Строительство
-      .blockRight-section-for  
-        .img-right-section-for
-    CircleElement
+            .text-ellipse-section-four
               span.text-15 Remak
-            .text-ellipse-section-for
+            .text-ellipse-section-four
               span.text-15 Swegon(Gold)
-            .text-ellipse-section-for
+            .text-ellipse-section-four
               span.text-15 SHUFT
-            .text-ellipse-section-for
+            .text-ellipse-section-four
               span.text-15 Korf
-            .text-ellipse-section-for
+            .text-ellipse-section-four
               span.text-15 Dospel
-            .text-ellipse-section-for
+            .text-ellipse-section-four
               span.text-15 Vertro
-            .text-ellipse-section-for
+            .text-ellipse-section-four
               span.text-15 General
-            .text-ellipse-section-for
+            .text-ellipse-section-four
               span.text-15 Mitsubishi Electric
-            .text-ellipse-section-for
+            .text-ellipse-section-four
               span.text-15 Dantex
-            .text-ellipse-section-for
+            .text-ellipse-section-four
               span.text-15 Panasonic
-            .text-ellipse-section-for
+            .text-ellipse-section-four
               span.text-15 DAIKIN
-            .text-ellipse-section-for
+            .text-ellipse-section-four
               span.text-15 Ballu
-            .text-ellipse-section-for
+            .text-ellipse-section-four
               span.text-15 Royal
     .containerWorkExamples
       .text-main-block-section-examples
@@ -138,7 +134,7 @@ div
               span.text-19-b Произвели расчет и закупку воздуховодов и сопутствующих материалов. Осуществили монтаж воздухаводов, вытяжных зонтов и произвели пуско-наладочные работы.
           .obj-block-work-examples
             WorkExamples(:numberObject="2")
-    .containerReviews
+    //- .containerReviews
       .text-main-block-section-reviews
         span.text-17 Отзывы
         br
@@ -167,6 +163,7 @@ div
             span.text-15 ООО НПЦ «Пружина» выражает благодарность вентиляционной компании «Атмосфера» за профессионализм, высокое качество исполнения работ с учетом пожеланий заказчика. Следует также отметить высокий уровень организации проведения работ и гибкость, проявляемую при принятии решений, требующих быстроты и оперативности. Выполненные для нас работы компанией «Атмосфера», позволяют характеризовать её как надежного делового партнера. Основываясь на опыте совместной работы надеемся на длительное сотрудничество!
           .text-description-block-reviews
             span.text-15 Генеральный директор ООО НПЦ «Пружина»
+    CircleElement
     .containerScreenMap
       .info-block-section-map
         .text-main-block-section-map
@@ -417,7 +414,6 @@ export default {
   border: 2px solid rgb(0, 0, 0, 0.2);
 }
 .img-garant{
-  display: none;
   position: absolute;
   top: 50vh;
   left: 50vw;
@@ -462,6 +458,7 @@ export default {
   cursor: pointer;
 }
 .containerFor {
+  position: relative;
   background: #fff;
   justify-content: space-evenly;
   background-size: cover;
@@ -475,16 +472,16 @@ export default {
 }
 
 
-.blockLeft-section-for {
-  width: 50%;
+.blockLeft-section-four {
+  width: 40%;
   height: 90%;
 }
 
-.blockRight-section-for {
-  width: 50%;
+.blockRight-section-four {
+  width: 60%;
   height: 100%;
 }
-.img-right-section-for {
+.img-right-section-four {
   background: url("@/assets/KILLMEPLZX2_Factory_ventilationwhite_purple_pastel_colors_high__715fc1d0-c4f6-4996-bb17-49634b6a0580.png");
   background-size: cover;
   margin-right: 5%;
@@ -496,7 +493,7 @@ export default {
 .text-block-main-section-two {
   margin-right: 20px;
 }
-.text-block-section-for{
+.text-block-section-four{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -504,7 +501,7 @@ export default {
   margin-top: 100px;
   margin-left: 20%;
 }
-.text-description-block-section-for {
+.text-description-block-section-four {
   text-align: left;
   line-height: 25px;
   display: flex;
@@ -514,7 +511,7 @@ export default {
   margin-top:  20px;
   margin-left: 20%;
 }
-.text-block-ellipse-section-for {
+.text-block-ellipse-section-four {
   flex-wrap: wrap;
   gap: 10px;
   text-align: left;
@@ -522,7 +519,7 @@ export default {
   margin-top:  20px;
   margin-left: 20%;
 }
-.text-ellipse-section-for {
+.text-ellipse-section-four {
   width: 200px;
   height: min-content;
   background: #0076a9;
@@ -579,6 +576,7 @@ export default {
   transform: scale(1.03);
 }
 .containerWorkExamples {
+  position: relative;
   background: #fff;
   width: 100%;
   height: 93vh;
