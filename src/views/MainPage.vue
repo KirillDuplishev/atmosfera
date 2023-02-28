@@ -7,6 +7,12 @@ div
       .preloader-block(id="preloadBlock")
         img(src="@/assets/Logo.png" style="width:50%; height:auto")
     Header.header#header
+    .burgerIco
+      Burger
+    SideBarLeft.burgerMenu
+      span.burgerHeader Меню
+      button.text-17-b(@click="$router.push({path:'/'})") Главная
+      button.text-17-b(@click="$router.push({path:'/'})") Контакты
     .container 
       .hero
         span(style="text-transform:uppercase; font-size:2em; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные 
@@ -62,7 +68,7 @@ div
         .span-typework-section-three
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
-          //- WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+        //- WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
     .containerFor
       .blockLeft-section-four
         img(src="@/assets/KILLMEPLZX2_Factory_ventilationwhite_purple_pastel_colors_high__715fc1d0-c4f6-4996-bb17-49634b6a0580.png").img-right-section-four
@@ -183,6 +189,8 @@ div
 
 <script>
 import Header from '../components/main/Header.vue'
+import Burger from '../components/Burger.vue'
+import SideBarLeft from '../components/SideBarLeft.vue'
 import WorkType from '@/components/main/WorkType.vue'
 import CircleElement from '@/components/main/CircleElement.vue'
 import WorkExamples from '@/components/main/WorkExamples.vue';
@@ -195,7 +203,9 @@ export default {
   WorkType,
   CircleElement,
   WorkExamples,
-  CarouselMain
+  CarouselMain,
+  Burger,
+  SideBarLeft
  },
  mounted() {
   let el = document.getElementById('preloadBlock')
@@ -247,7 +257,7 @@ export default {
 }
 
 .body1 {
-  background-color: black;
+  /* background-color: black; */
   position: relative;
 }
 
@@ -261,6 +271,26 @@ export default {
   font-size: 20px;
   color: #fff;
   z-index: 1000;
+}
+
+.burgerIco{
+  display: none;
+  position: absolute;
+  margin-left: 90vw;
+  margin-top: 3vh;
+}
+
+@media screen and (max-width: 1000px)  {
+  .header{
+    display: none !important;
+  }
+  .burgerIco{
+    display: block !important;
+  }
+  .container{
+    margin-top: 0 !important;
+  }
+  
 }
 
 .preloader-scene {
@@ -422,13 +452,16 @@ export default {
     width: 100%;
     height: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 .text-block-section-two{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: rgb(0, 118, 169);
+  color: rgb(0, 146, 209);
   margin-top: 100px;
   margin-left: 10%;
 }
@@ -437,7 +470,9 @@ export default {
     margin-top: 0px;
     padding-top: 20px;
     align-items:center;
-    margin: auto;
+    margin: auto; 
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em #000; 
+    /* text-shadow: 5px 5px 10px #000; */
   }
 }
 .text-description-block-section-two {
@@ -468,6 +503,7 @@ export default {
 @media screen and (max-width: 1000px) {
   .outline-border {
     width: 80%;
+    margin: 10px;
   }
 }
 .img-garant{
@@ -486,6 +522,8 @@ export default {
   background: white;
   height: 100vh;
   width: 100%;
+  border-top:2px solid rgba(0, 0, 0, .9) ;
+  border-bottom:20px solid rgba(0, 0, 0, .9) ;
 }
 
 @media screen and (max-width: 1000px) {
@@ -517,7 +555,7 @@ export default {
 
 .span-typework-section-three {
   width: 100%;
-  height: 30%;
+  height: 25%;
   display: flex;
 }
 .mg-b-10 {
@@ -526,8 +564,8 @@ export default {
 .block-type-section-three {
   border: 1px solid white;
   box-shadow: 1px 2px 4px black; 
-  width: 33.3%;
-  height: 100%;
+  /* width: 33.3%;
+  height: 100%; */
   cursor: pointer;
   transition: transform .5s, box-shadow .5s;
 }
@@ -618,10 +656,12 @@ export default {
 
 @media screen and (max-width: 1000px) {
   .text-block-section-four {
-    margin-top: 0px;
-    padding-top: 20px;
+    /* margin-top: 0px; */
+    padding: 20px;
     align-items:center;
-    margin: auto;
+    margin: 15px;
+    border-radius: 10px;
+    background: rgb(0, 0, 0, 0.6);
   }
 }
 .text-description-block-section-four {
@@ -645,7 +685,9 @@ export default {
   .text-description-block-section-four {
     text-align: center;
     color: white;
-    margin: auto;
+    margin: 15px;
+    border-radius: 10px;
+    background: rgb(0, 0, 0, 0.6);
   }
 }
 .text-block-ellipse-section-four {
@@ -822,7 +864,7 @@ export default {
 
 .containerScreenMap {
   background: url('@/assets/screen-map.png');
-  background-size: cover;
+  background-size: 100%;
   height: 93vh;
   width: 100%;
 }
@@ -866,5 +908,25 @@ export default {
 .button-section-map:hover {
   box-shadow: 0 0 15px #000;
   transform: scale(1.03);
+}
+.burgerHeader{
+  font-size: 25px;
+  font-family: monospace;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.burgerMenu{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.burgerMenu button {
+  border-radius: 20px;
+  padding: 10px;
+  background: linear-gradient(37deg, rgba(127,6,255,1) 21%, rgba(0,212,255,1) 52%, rgba(0,0,255,1) 100%);
 }
 </style>

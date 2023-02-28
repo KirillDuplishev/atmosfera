@@ -28,7 +28,8 @@ export default {
   width: 100%;
   bottom: 20%;
   text-align: center;
-  color: white
+  color: white;
+  height: 25vh;
 }
 .shadow-text{
   position: relative;
