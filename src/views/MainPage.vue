@@ -48,14 +48,12 @@ div
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
     .containerFor
       .blockLeft-section-four
-        .img-right-section-four
+        img(src="@/assets/KILLMEPLZX2_Factory_ventilationwhite_purple_pastel_colors_high__715fc1d0-c4f6-4996-bb17-49634b6a0580.png").img-right-section-four
       .blockRight-section-four
         .text-block-main-section-four
           .text-block-section-four
             span.text-29-b ООО "АТМОСФЕРА" предлагает
             span.text-29-b лучшее европейское оборудование 
-            //- span.text-50-b стоимость 
-            //- span.text-50-b и сроки 
           .text-description-block-section-four
             span.text-15 Все оборудование прошло сертификацию ISO 9001,
             span.text-15 а так же Российскую сертификацию "РОСТЕСТа".  
@@ -64,37 +62,38 @@ div
             span.text-15 В настоящее время ООО "АТМОСФЕРА" является 
             span.text-15 официальным диллером таких известных
             span.text-15 производителей климатического оборудования как:
-          .text-block-ellipse-section-four
-            .text-ellipse-section-four
-              span.text-15 LESSAR
-            .text-ellipse-section-four
-              span.text-15 Systemair
-            .text-ellipse-section-four
-              span.text-15 Remak
-            .text-ellipse-section-four
-              span.text-15 Swegon(Gold)
-            .text-ellipse-section-four
-              span.text-15 SHUFT
-            .text-ellipse-section-four
-              span.text-15 Korf
-            .text-ellipse-section-four
-              span.text-15 Dospel
-            .text-ellipse-section-four
-              span.text-15 Vertro
-            .text-ellipse-section-four
-              span.text-15 General
-            .text-ellipse-section-four
-              span.text-15 Mitsubishi Electric
-            .text-ellipse-section-four
-              span.text-15 Dantex
-            .text-ellipse-section-four
-              span.text-15 Panasonic
-            .text-ellipse-section-four
-              span.text-15 DAIKIN
-            .text-ellipse-section-four
-              span.text-15 Ballu
-            .text-ellipse-section-four
-              span.text-15 Royal
+          .main-block-ellipse-section-four
+            .text-block-ellipse-section-four
+              .text-ellipse-section-four
+                span.text-15 LESSAR
+              .text-ellipse-section-four
+                span.text-15 Systemair
+              .text-ellipse-section-four
+                span.text-15 Remak
+              .text-ellipse-section-four
+                span.text-15 Swegon(Gold)
+              .text-ellipse-section-four
+                span.text-15 SHUFT
+              .text-ellipse-section-four
+                span.text-15 Korf
+              .text-ellipse-section-four
+                span.text-15 Dospel
+              .text-ellipse-section-four
+                span.text-15 Vertro
+              .text-ellipse-section-four
+                span.text-15 General
+              .text-ellipse-section-four
+                span.text-15 Mitsubishi Electric
+              .text-ellipse-section-four
+                span.text-15 Dantex
+              .text-ellipse-section-four
+                span.text-15 Panasonic
+              .text-ellipse-section-four
+                span.text-15 DAIKIN
+              .text-ellipse-section-four
+                span.text-15 Ballu
+              .text-ellipse-section-four
+                span.text-15 Royal
     .containerWorkExamples
       .text-main-block-section-examples
         span.text-40-b(style="color: rgb(0, 118, 169)") За 12 лет работы было сделано
@@ -500,31 +499,51 @@ export default {
 .containerFor {
   position: relative;
   background: #fff;
-  justify-content: space-evenly;
-  background-size: cover;
-  flex-direction: column;
-  align-items: center;
   display: flex;
   height: 93vh;
   width: 100%;
   text-transform: uppercase;
-  flex-wrap: wrap;
 }
-
+@media screen and (max-width: 1000px) {
+  .containerFor {
+    min-height: 93vh;
+    height: auto;  
+  }
+}
+@media screen and (max-width: 1300px) {
+  .containerFor {
+    min-height: 93vh;
+    height: auto;
+    /* display: block;   */
+  }
+}
 
 .blockLeft-section-four {
   width: 40%;
   height: 90%;
+}
+@media screen and (max-width: 1000px) {
+  .blockLeft-section-four {
+    display: none;
+  }
 }
 
 .blockRight-section-four {
   width: 60%;
   height: 100%;
 }
+@media screen and (max-width: 1000px) {
+  .blockRight-section-four {
+    background: url("@/assets/KILLMEPLZX2_Factory_ventilationwhite_purple_pastel_colors_high__715fc1d0-c4f6-4996-bb17-49634b6a0580.png");
+    background-size: cover;
+    width: 100%;
+    min-height: 93vh;
+    height: auto;
+    text-align: center;
+  }
+}
 .img-right-section-four {
-  background: url("@/assets/KILLMEPLZX2_Factory_ventilationwhite_purple_pastel_colors_high__715fc1d0-c4f6-4996-bb17-49634b6a0580.png");
   background-size: cover;
-  margin-right: 5%;
   border-radius: 20px;
   box-shadow: 5px 5px 20px #000;
   height: 100%;
@@ -532,6 +551,13 @@ export default {
 }
 .text-block-main-section-two {
   margin-right: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .text-block-main-section-two {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
 }
 .text-block-section-four{
   display: flex;
@@ -541,17 +567,49 @@ export default {
   margin-top: 100px;
   margin-left: 20%;
 }
+@media screen and (max-width: 1300px) {
+  .text-block-section-four {
+    margin-top: 0px;
+    padding-top: 20px;
+    align-items:center;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .text-block-section-four {
+    margin-top: 0px;
+    padding-top: 20px;
+    align-items:center;
+    margin: auto;
+  }
+}
 .text-description-block-section-four {
   text-align: left;
   line-height: 25px;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; */
   color: black;
   margin-top:  20px;
   margin-left: 20%;
 }
+@media screen and (max-width: 1300px) {
+  .text-description-block-section-four {
+    text-align: center;
+    color: black;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .text-description-block-section-four {
+    text-align: center;
+    color: white;
+    margin: auto;
+  }
+}
 .text-block-ellipse-section-four {
+  width: auto;
   flex-wrap: wrap;
   gap: 10px;
   text-align: left;
@@ -559,17 +617,34 @@ export default {
   margin-top:  20px;
   margin-left: 20%;
 }
+@media screen and (max-width: 1000px) {
+  .main-block-ellipse-section-four {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+  }
+  .text-block-ellipse-section-four {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+  }
+}
 .text-ellipse-section-four {
-  width: 200px;
+  width: 180px;
   height: min-content;
   background: #0076a9;
   color: white;
   box-shadow: 2px 2px 4px black;
   border-radius: 10px;
-  margin-right: 10px;
   padding: 10px;
   text-align: center;
 }
+/* @media screen and (max-width: 1000px) {
+  .text-ellipse-section-four {
+    
+  }
+} */
 .hero {
   background: url('@/assets/ventFirst.jpg');
   background-size: cover;
