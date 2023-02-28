@@ -7,13 +7,10 @@ div
       .preloader-block(id="preloadBlock")
         img(src="@/assets/Logo.png" style="width:50%; height:auto")
     Header.header#header
-    //- .container-carousel
-    //-   .body-carousel
-    //-     CarouselMain
     .container 
       .hero
-        span(style="text-transform:uppercase; font-size:35px; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные 
-        span(style="text-transform:uppercase; font-size:60px; font-weight:900; color: white; text-shadow: 2px 2px 4px black") вентиляционные системы
+        span(style="text-transform:uppercase; font-size:2em; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные 
+        span(style="text-transform:uppercase; font-size:5vw; font-weight:900; color: white; text-shadow: 2px 2px 4px black") вентиляционные системы
         v-btn.button.text-15-b Подробнее о нас
     .containerTwo
       .blockLeft-section-two
@@ -348,6 +345,7 @@ export default {
   display: flex;
   flex-flow: column;
   height: 100vh;
+  width: 100%;
   color: #000;
   margin-top: -3vw;
 }
@@ -408,7 +406,7 @@ export default {
 }
 
 .outline-border {
-  width: max-content;
+  width: auto;
   border-radius: 15px;
   padding: 20px;
   border: 2px solid rgb(0, 0, 0, 0.2);
@@ -532,14 +530,25 @@ export default {
 }
 .hero {
   background: url('@/assets/ventFirst.jpg');
-  background-size: 100%;
-  justify-content: center;
   background-size: cover;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   display: flex;
   height: 100vh;
   width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  .hero {
+    background-position-x: 50%;
+  }
+  .hero span:first-child{
+    color: red;
+    font-size: 4.5vw !important;
+  }
+  .hero span:nth-child(2n){
+    font-size: 8vw !important;
+  }
 }
 .heroBlur{
   background: transparent;
