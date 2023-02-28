@@ -46,6 +46,23 @@ div
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+    .containerThreeMobile
+      .text-title-section-three
+        span(style="font-size:40px; font-weight:900") Что именно мы делаем
+      .container-worktype-section-three
+        .span-typework-section-three
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+        .span-typework-section-three
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+        .span-typework-section-three
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+        .span-typework-section-three
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
+          //- WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
     .containerFor
       .blockLeft-section-four
         .img-right-section-four
@@ -439,6 +456,7 @@ export default {
     text-align: center;
     color: white;
     margin: auto;
+    background: rgb(0, 0, 0, 0.4);
   }
 }
 .outline-border {
@@ -463,6 +481,28 @@ export default {
   background: white;
   height: 93vh;
   width: 100%;
+}
+.containerThreeMobile {
+  display: none;
+  background: white;
+  height: 100vh;
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .containerThree{
+    display: none;
+  }
+  .containerThreeMobile{
+    display: block;
+  }
+  .block-type-section-three{
+    width: 50% !important;
+  }
+  .text-title-section-three span{
+    font-size: 30px !important;
+  }
+
 }
 .text-title-section-three {
   width: 100%;
