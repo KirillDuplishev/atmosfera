@@ -117,7 +117,7 @@ div
                 span.text-15 Ballu
               .text-ellipse-section-four
                 span.text-15 Royal
-    .containerWorkExamples
+    //- .containerWorkExamples
       .text-main-block-section-examples
         span.text-40-b(style="color: rgb(0, 118, 169)") За 12 лет работы было сделано
         br          
@@ -162,16 +162,15 @@ div
           .text-block-reviews
             span.text-15 ЗАО «Техкрим» выражает благодарность компании ООО «Атмосфера» за плодотворное и взаимовыгодное сотрудничество по поставке и монтажу вентиляционного оборудования и оборудования для кондиционирования. Благодарим всех сотрудников компании за высокий профессионализм, ответственное отношение к своему делу и умение находить верные решения в сложных ситуациях! Надеемся на дальнейшее благотворное сотрудничество с вами!
           .text-description-block-reviews
-            span.text-17-b Кузьменко О.Л.
-            br
             span.text-15 Директор ЗАО «Техкрим» 
         .block-reviews.mg-r-6(style="background: #4a9ec2")
           .text-block-reviews
             span.text-15 ООО НПЦ «Пружина» выражает благодарность вентиляционной компании «Атмосфера» за профессионализм, высокое качество исполнения работ с учетом пожеланий заказчика. Следует также отметить высокий уровень организации проведения работ и гибкость, проявляемую при принятии решений, требующих быстроты и оперативности. Выполненные для нас работы компанией «Атмосфера», позволяют характеризовать её как надежного делового партнера. Основываясь на опыте совместной работы надеемся на длительное сотрудничество!
           .text-description-block-reviews
             span.text-15 Генеральный директор ООО НПЦ «Пружина»
-    CircleElement
-    .containerScreenMap
+    //- CircleElement
+    //- .containerScreenMap
+      //- img(src="@/assets/screenMapMobile.png").img-map
       .info-block-section-map
         .text-main-block-section-map
           .text-block-section-map.mg-b-20
@@ -555,8 +554,13 @@ export default {
 
 .span-typework-section-three {
   width: 100%;
-  height: 25%;
+  height: 30%;
   display: flex;
+}
+@media screen and (max-width: 1000px) {
+  .span-typework-section-three {
+    height: 25%;
+  }
 }
 .mg-b-10 {
   margin-bottom: 10px;
@@ -564,10 +568,16 @@ export default {
 .block-type-section-three {
   border: 1px solid white;
   box-shadow: 1px 2px 4px black; 
-  /* width: 33.3%;
-  height: 100%; */
+  width: 33.3%;
+  height: 100%;
   cursor: pointer;
   transition: transform .5s, box-shadow .5s;
+}
+@media screen and (max-width: 1000px) {
+  .block-type-section-three {
+    width: auto;
+    height: auto;
+  }
 }
 .block-type-section-three:hover {
   box-shadow: 0 0 15px #000;
@@ -578,7 +588,8 @@ export default {
   position: relative;
   background: #fff;
   display: flex;
-  height: 93vh;
+  min-height: 93vh;
+  height: auto;
   width: 100%;
   text-transform: uppercase;
 }
@@ -824,6 +835,12 @@ export default {
   width: 100%;
   height: 93vh;
 }
+@media screen and (max-width: 1200px) {
+  .containerReviews {
+    min-height: 93vh;
+    height: auto;
+  }
+}
 .text-main-block-section-reviews {
   width: 100%;
   height: 25%;
@@ -832,26 +849,27 @@ export default {
 .main-block-reviews {
   height: 65%;
   width: 100%;
-  display: flex;
+  /* display: flex; */
 }
 .block-reviews {
   color: white;
-  height: 100%;
-  width: 25%;
-  border-radius: 5%;
+  height: auto;
+  width: 80%;
+  border-radius: 15px;
   padding: 20px;
   box-shadow: 2px 2px 4px black;
+  margin: 20px auto 20px auto;
 }
-.mg-l-6 {
+/* .mg-l-6 {
   margin-left: 6.25%;
 }
 .mg-r-6 {
   margin-right: 6.25%;
-}
+} */
 .text-block-reviews {
   display: flex;
   align-items: center;
-  height: 80%;
+  height: auto;
   width: 100%;
   text-align: center;
 }
@@ -864,10 +882,32 @@ export default {
 
 .containerScreenMap {
   background: url('@/assets/screen-map.png');
-  background-size: 100%;
+  background-size: cover;
   height: 93vh;
   width: 100%;
 }
+@media screen and (max-width: 1300px) {
+  .containerScreenMap {
+    background-size: 100%;
+    min-height: 40vh;
+    height: auto;
+    width: 100%;
+    background: none;
+  }
+}
+/* .img-map {
+  display: none;
+}
+@media screen and (max-width: 1300px) {
+  .img-map {
+    min-height: 40vh;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    display: block;
+
+  }
+} */
 .info-block-section-map {
   position: relative;
   top: 30%;
@@ -877,6 +917,11 @@ export default {
   box-shadow: 3px 3px 20px black;
   width: 400px;
   height: 50%;
+}
+@media screen and (max-width: 1300px) {
+  .info-block-section-map {
+    display: none;
+  }
 }
 .text-main-block-section-map {
   padding-top: 20px;
