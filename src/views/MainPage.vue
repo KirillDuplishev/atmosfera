@@ -7,12 +7,21 @@ div
       .preloader-block(id="preloadBlock")
         img(src="@/assets/Logo.png" style="width:50%; height:auto")
     Header.header#header
-    .burgerIco
-      Burger
-    SideBarLeft.burgerMenu
-      span.burgerHeader Меню
-      button.text-17-b(@click="$router.push({path:'/'})") Главная
-      button.text-17-b(@click="$router.push({path:'/'})") Контакты
+    .burgerIco#burgerHeaderMenu
+      .animHeader#animHeader
+        img(src="@/assets/LogoHeader.png" style="width:10%; height:auto")
+        .logo-text Атмосфера
+        div(@click="showMenu")
+          Burger
+      .menuItems#menuItems
+        span.text-17-b asdadasdasdasd
+        span.text-17-b asdadasdasdasd
+        span.text-17-b asdadasdasdasd
+        span.text-17-b asdadasdasdasd
+    //- SideBarLeft.burgerMenu
+      //- span.burgerHeader Меню
+      //- button.text-17-b(@click="$router.push({path:'/'})") Главная
+      //- button.text-17-b(@click="$router.push({path:'/'})") Контакты
     .container 
       .hero
         span(style="text-transform:uppercase; font-size:2em; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные 
@@ -194,6 +203,7 @@ import WorkType from '@/components/main/WorkType.vue'
 import CircleElement from '@/components/main/CircleElement.vue'
 import WorkExamples from '@/components/main/WorkExamples.vue';
 import CarouselMain from '@/components/main/CarouselMain.vue';
+import { store } from "@/store.js";
 
 export default {
  name:"MainPage",
@@ -206,6 +216,11 @@ export default {
   Burger,
   SideBarLeft
  },
+ data(){
+  return {
+    show:false
+  }
+ },
  mounted() {
   let el = document.getElementById('preloadBlock')
   el.addEventListener('animationend', function() { 
@@ -214,7 +229,11 @@ export default {
   })
 
  },
- computed: {},
+ computed: {
+  isPanelOpen() {
+    return store.isNavOpen;
+  },
+ },
  methods: {
   scroll() {
     if(window.scrollY > 100){
@@ -224,6 +243,21 @@ export default {
       document.getElementById("header").style.boxShadow = "5px 5px 15px #000"
     }
   },
+  showMenu(){
+    this.show = !this.show
+    if(this.show){
+      document.getElementById("animHeader").style.background = "#000"
+      document.getElementById("burgerHeaderMenu").classList.add("maxHeightMenu")
+      document.getElementById("burgerHeaderMenu").style.justifyContent = "normal"
+      document.getElementById("menuItems").classList.add("menuItemsNew")
+    }
+    else{
+      document.getElementById("animHeader").style.background = "transparent"
+      document.getElementById("burgerHeaderMenu").classList.remove("maxHeightMenu")
+      document.getElementById("burgerHeaderMenu").style.justifyContent = "center"
+      document.getElementById("menuItems").classList.remove("menuItemsNew")
+    }
+  }
  }
 }
 </script>
@@ -246,7 +280,7 @@ export default {
 	font-family: 'quicksandlight', Helvetica, Arial;
 	color:#FFFFFF;
 	text-shadow: -1px -1px 4px rgba(0, 0, 0, .35);
-    filter: dropshadow(color=#000000, offx=1, offy=1);
+  filter: dropshadow(color=#000000, offx=1, offy=1);
 }
 * {
   --a: linear-gradient(90deg, #040D2C, #462A8B,#8D05D6);
@@ -272,11 +306,34 @@ export default {
   z-index: 1000;
 }
 
+.menuItems{
+  display: none;
+}
+
+.menuItemsNew{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.animHeader{
+  width:100%;
+  height:10%; 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-evenly; 
+  align-items: center; 
+  background:transparent
+}
+.maxHeightMenu{
+  height: 100vh !important;
+  background: #000 !important;
+  transition: height .5s, background 0s;
+}
+
 .burgerIco{
   display: none;
   position: absolute;
-  margin-left: 90vw;
-  margin-top: 3vh;
 }
 
 @media screen and (max-width: 1000px)  {
@@ -284,7 +341,18 @@ export default {
     display: none !important;
   }
   .burgerIco{
-    display: block !important;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: column;
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 60px;
+    background: #2C0133;
+    box-shadow: 5px 5px 15px #000;
+    transition: all .5s;
   }
   .container{
     margin-top: 0 !important;
@@ -470,7 +538,7 @@ export default {
     padding-top: 20px;
     align-items:center;
     margin: auto; 
-    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em #000; 
+    text-shadow: 2px 2px 4px black 
     /* text-shadow: 5px 5px 10px #000; */
   }
 }
@@ -578,10 +646,12 @@ export default {
     width: auto;
     height: auto;
   }
+  .block-type-section-three:hover{
+    transform: scale(1);
+  }
 }
 .block-type-section-three:hover {
   box-shadow: 0 0 15px #000;
-  transform: scale(1.03);
   cursor: pointer;
 }
 .containerFor {
@@ -962,16 +1032,29 @@ export default {
   display: flex;
   justify-content: center;
 }
-.burgerMenu{
+/* .burgerMenu{
   display: flex;
   flex-direction: column;
   align-content: center;
   flex-wrap: wrap;
   gap: 10px;
-}
+} */
 .burgerMenu button {
   border-radius: 20px;
   padding: 10px;
   background: linear-gradient(37deg, rgba(127,6,255,1) 21%, rgba(0,212,255,1) 52%, rgba(0,0,255,1) 100%);
+}
+.logo-text {
+  margin-left: 5vw;
+  font-family: Arial;
+  font-size: 25px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.2);
+  /* background: url(https://kipmu.ru/wp-content/uploads/kobobl.jpg) repeat-x; */
+  background: url(@/assets/LogoBack.jpg) repeat-x;
+  -webkit-background-clip: text;
+  background-size: 40%;
+  animation: clouds 13s linear infinite alternate;
 }
 </style>

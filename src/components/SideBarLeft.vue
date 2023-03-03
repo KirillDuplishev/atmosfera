@@ -25,46 +25,38 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  /* width: 100%; */
-  /* height: 100%; */
-}
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: transform 0.2s ease;
+  transition: transform 0.6s ease;
 }
 
 .slide-enter,
 .slide-leave-to {
-  transform: translateX(-100%);
+  transform: translateY(-100%);
   transition: all 150ms ease-in 0s;
 }
 
-/* .sidebar-backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-} */
-
 .sidebar-panel {
-  border-radius: 0 10px 10px 0 ;
   overflow-y: auto;
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgba(0,0,0, 1);
+  /* background: linear-gradient(90deg, #040D2C, #462A8B,#8D05D6); */
   position: fixed;
   left: 0;
   top: 0;
-  height: 100vh;
+  height: 89vh;
+  margin-top: 6.5vh;
+  /* margin-left: 4vw; */
   z-index: 999;
   padding: 6rem 20px 2rem 20px;
-  width: 60vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 10px;
+}
+.containerSideBarLeft{
+  display: flex;
+  justify-content: center;
 }
 </style>
