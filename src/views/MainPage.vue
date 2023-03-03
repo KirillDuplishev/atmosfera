@@ -117,7 +117,7 @@ div
                 span.text-15 Ballu
               .text-ellipse-section-four
                 span.text-15 Royal
-    //- .containerWorkExamples
+    .containerWorkExamples
       .text-main-block-section-examples
         span.text-40-b(style="color: rgb(0, 118, 169)") За 12 лет работы было сделано
         br          
@@ -802,37 +802,58 @@ export default {
   position: relative;
   background: #fff;
   width: 100%;
-  height: 93vh;
+  min-height: 93vh;
+  height: auto;
 }
 .text-main-block-section-examples {
   height: 15%;
   text-align: center;
 }
 .block-work-examples {
-  /* display: flex; */
-  height: 85%;
+  min-height: 85%;
+  height: auto;
   width: 100%;
 }
 .span-work-examples {
-  height: 50%;
+  min-height: 50%;
+  height: auto;
   width: 100%;
   display: flex;
   border: 1px solid black;
 }
+
+@media screen and (max-width: 900px) {
+  .span-work-examples {
+    display: block;
+  }
+}
 .obj-block-work-examples {
   width: 70%;
-  height: 90%;
+  min-height: 90%;
+  height: auto;
+}
+@media screen and (max-width: 900px) {
+  .obj-block-work-examples {
+    width: 100%;
+    min-height: 50%;
+  }
 }
 .obj-text-block-work-examples {
   width: 30%;
   height: 100%;
   text-align: center;
 }
+@media screen and (max-width: 900px) {
+  .obj-text-block-work-examples {
+    width: 100%;
+    min-height: 50%;
+    height: auto;
+  }
+}
 .obj-text-part-work-examples {
   width: 100%;
-  height: 100%;
+  height: min-content;
   padding: 20px 10px;
-  text-align: center;
 }
 .containerReviews {
   background: #fff;
