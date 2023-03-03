@@ -22,6 +22,9 @@ export default {
   max-width: 100%;
   background: url('@/assets/ventThree.jpg');
   background-size: 100%;
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
 }
 .text-block {
   position: relative;

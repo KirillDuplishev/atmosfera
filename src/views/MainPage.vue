@@ -47,7 +47,7 @@ div
         img(src="@/assets/quality.png" style="width:30%; height:auto")
     .containerThree
       .text-title-section-three
-        span(style="font-size:40px; font-weight:900") Что именно мы делаем
+        span.text-40-b Что именно мы делаем
       .container-worktype-section-three
         .span-typework-section-three
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
@@ -63,7 +63,7 @@ div
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
     .containerThreeMobile
       .text-title-section-three
-        span(style="font-size:40px; font-weight:900") Что именно мы делаем
+        span.text-40-b Что именно мы делаем
       .container-worktype-section-three
         .span-typework-section-three
           WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
@@ -126,7 +126,7 @@ div
                 span.text-15 Ballu
               .text-ellipse-section-four
                 span.text-15 Royal
-    //- .containerWorkExamples
+    .containerWorkExamples
       .text-main-block-section-examples
         span.text-40-b(style="color: rgb(0, 118, 169)") За 12 лет работы было сделано
         br          
@@ -178,7 +178,7 @@ div
           .text-description-block-reviews
             span.text-15 Генеральный директор ООО НПЦ «Пружина»
     //- CircleElement
-    //- .containerScreenMap
+    .containerScreenMap
       //- img(src="@/assets/screenMapMobile.png").img-map
       .info-block-section-map
         .text-main-block-section-map
@@ -445,7 +445,8 @@ export default {
 .container {
   display: flex;
   flex-flow: column;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   width: 100%;
   color: #000;
   margin-top: -3vw;
@@ -455,7 +456,8 @@ export default {
   position: relative;
   background: #fff;
   display: flex;
-  height: 93vh;
+  min-height: 93vh;
+  height: auto;
   width: 100%;
   text-transform: uppercase;
 }
@@ -488,7 +490,12 @@ export default {
 
 .blockRight-section-two {
   width: 50%;
-  height: 90%;
+  min-height: 90%;
+  padding: 20px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 1000px) {
   .blockRight-section-two {
@@ -497,9 +504,6 @@ export default {
 }
 .img-block-right-section-two {
   width: auto;
-  height: 80%;
-  margin-top: 100px;
-  margin-right: 50px;
 }
 .img-right-section-two {
   background-size: cover;
@@ -581,16 +585,18 @@ export default {
 }
 .containerThree {
   background: white;
-  height: 93vh;
+  min-height: 93vh;
+  height: auto;
   width: 100%;
 }
 .containerThreeMobile {
   display: none;
   background: white;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   width: 100%;
   border-top:2px solid rgba(0, 0, 0, .9) ;
-  border-bottom:20px solid rgba(0, 0, 0, .9) ;
+  /* border-bottom:20px solid rgba(0, 0, 0, .9); */
 }
 
 @media screen and (max-width: 1000px) {
@@ -663,23 +669,15 @@ export default {
   width: 100%;
   text-transform: uppercase;
 }
-@media screen and (max-width: 1000px) {
-  .containerFor {
-    min-height: 93vh;
-    height: auto;  
-  }
-}
-@media screen and (max-width: 1300px) {
-  .containerFor {
-    min-height: 93vh;
-    height: auto;
-    /* display: block;   */
-  }
-}
 
 .blockLeft-section-four {
   width: 40%;
-  height: 90%;
+  min-height: 90%;
+  padding: 20px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 1000px) {
   .blockLeft-section-four {
@@ -782,7 +780,7 @@ export default {
 }
 @media screen and (max-width: 1000px) {
   .main-block-ellipse-section-four {
-    margin: auto;
+    margin: 0 auto 15px auto;
     width: 80%;
     text-align: center;
   }
@@ -803,11 +801,16 @@ export default {
   padding: 10px;
   text-align: center;
 }
-/* @media screen and (max-width: 1000px) {
+@media screen and (max-width: 463px) {
   .text-ellipse-section-four {
-    
+    width: 150px;   
   }
-} */
+}
+@media screen and (max-width: 388px) {
+  .text-ellipse-section-four {
+    width: 135px;   
+  }
+}
 .hero {
   background: url('@/assets/ventFirst.jpg');
   background-size: cover;
@@ -815,7 +818,8 @@ export default {
   flex-direction: column;
   align-items: center;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   width: 100%;
 }
 @media screen and (max-width: 1000px) {
@@ -868,46 +872,68 @@ export default {
   position: relative;
   background: #fff;
   width: 100%;
-  height: 93vh;
+  min-height: 93vh;
+  height: auto;
 }
 .text-main-block-section-examples {
   height: 15%;
   text-align: center;
 }
 .block-work-examples {
-  /* display: flex; */
-  height: 85%;
+  min-height: 85%;
+  height: auto;
   width: 100%;
 }
 .span-work-examples {
-  height: 50%;
+  min-height: 50%;
+  height: auto;
   width: 100%;
   display: flex;
   border: 1px solid black;
 }
+
+@media screen and (max-width: 900px) {
+  .span-work-examples {
+    display: block;
+  }
+}
 .obj-block-work-examples {
   width: 70%;
-  height: 90%;
+  min-height: 90%;
+  height: auto;
+}
+@media screen and (max-width: 900px) {
+  .obj-block-work-examples {
+    width: 100%;
+    min-height: 50%;
+  }
 }
 .obj-text-block-work-examples {
   width: 30%;
   height: 100%;
   text-align: center;
 }
+@media screen and (max-width: 900px) {
+  .obj-text-block-work-examples {
+    width: 100%;
+    min-height: 50%;
+    height: auto;
+  }
+}
 .obj-text-part-work-examples {
   width: 100%;
-  height: 100%;
+  height: min-content;
   padding: 20px 10px;
-  text-align: center;
 }
 .containerReviews {
   background: #fff;
   width: 100%;
-  height: 93vh;
+  min-height: 93vh;
+  height: auto;
 }
 @media screen and (max-width: 1200px) {
   .containerReviews {
-    min-height: 93vh;
+    min-height: 77vh;
     height: auto;
   }
 }
@@ -953,57 +979,72 @@ export default {
 .containerScreenMap {
   background: url('@/assets/screen-map.png');
   background-size: cover;
-  height: 93vh;
+  min-height: 93vh;
+  height: auto;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 1300px) {
   .containerScreenMap {
-    background-size: 100%;
-    min-height: 40vh;
-    height: auto;
-    width: 100%;
-    background: none;
-  }
-}
-/* .img-map {
-  display: none;
-}
-@media screen and (max-width: 1300px) {
-  .img-map {
-    min-height: 40vh;
-    width: 100%;
-    height: auto;
     background-size: cover;
-    display: block;
-
+    min-height: 93vh;
+    height: auto;
+    width: 100%;
   }
-} */
+}
+@media screen and (max-width: 950px) {
+  .containerScreenMap {
+    background: url('@/assets/screenMapMobileTwo.png');
+  }
+}
+@media screen and (max-width: 590px) {
+  .containerScreenMap {
+    background: url('@/assets/screenMapMobile.png');
+  }
+}
 .info-block-section-map {
   position: relative;
-  top: 30%;
-  left: 15%;
   background: white;
   border-radius: 5%;
   box-shadow: 3px 3px 20px black;
   width: 400px;
-  height: 50%;
+  height: 300px;
 }
 @media screen and (max-width: 1300px) {
   .info-block-section-map {
-    display: none;
+    top: 20px;
+    left: 20px;
+    width: 30%;
+    min-height: 50%;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 590px) {
+  .info-block-section-map {
+    top: auto;
+    left: auto;
+    width: 60%;
+    min-height: 50%;
+    height: auto;
   }
 }
 .text-main-block-section-map {
   padding-top: 20px;
   margin: auto;
-  height: 70%;
-  width: 60%;
+  min-height: 70%;
+  height: auto;
+  min-width: 60%;
+  max-width: 80%;
   background: white;
 }
 .text-block-section-map {
-  height: 20%;
+  min-height: 20%;
+  height: auto;
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 .mg-b-20 {
   margin-bottom: 10%;
@@ -1018,7 +1059,7 @@ export default {
   border-radius: 30px;
   /* bottom: 15%; */
   transition: transform .5s, box-shadow .5s;
-  margin: auto;
+  margin: 10px auto 10px auto;
 }
 .button-section-map:hover {
   box-shadow: 0 0 15px #000;
