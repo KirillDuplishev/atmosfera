@@ -14,10 +14,10 @@ div
         div(@click="showMenu")
           Burger
       .menuItems#menuItems
-        span.text-17-b asdadasdasdasd
-        span.text-17-b asdadasdasdasd
-        span.text-17-b asdadasdasdasd
-        span.text-17-b asdadasdasdasd
+        span.text-35-b Главная
+        span.text-35-b Фотогалерея
+        span.text-35-b Контакты
+        span.text-35-b О нас
     //- SideBarLeft.burgerMenu
       //- span.burgerHeader Меню
       //- button.text-17-b(@click="$router.push({path:'/'})") Главная
@@ -254,7 +254,7 @@ export default {
     else{
       document.getElementById("animHeader").style.background = "transparent"
       document.getElementById("burgerHeaderMenu").classList.remove("maxHeightMenu")
-      document.getElementById("burgerHeaderMenu").style.justifyContent = "center"
+      // document.getElementById("burgerHeaderMenu").style.alignContent = "flex-start"
       document.getElementById("menuItems").classList.remove("menuItemsNew")
     }
   }
@@ -311,9 +311,12 @@ export default {
 }
 
 .menuItemsNew{
+  color: #fff;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
+
 }
 
 .animHeader{
@@ -323,12 +326,16 @@ export default {
   flex-direction: row; 
   justify-content: space-evenly; 
   align-items: center; 
-  background:transparent
+  background:transparent;
+  margin-top: 5%;
 }
 .maxHeightMenu{
   height: 100vh !important;
   background: #000 !important;
   transition: height .5s, background 0s;
+  /* margin-top: 100px; */
+  /* display: flex; */
+
 }
 
 .burgerIco{
@@ -350,7 +357,8 @@ export default {
     z-index: 100;
     width: 100vw;
     height: 60px;
-    background: #2C0133;
+    /* background: #2C0133; */
+    background: #1D1D1F;
     box-shadow: 5px 5px 15px #000;
     transition: all .5s;
   }
