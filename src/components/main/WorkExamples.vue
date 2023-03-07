@@ -27,7 +27,11 @@ carousel-3d(:autoplay="true" :autoplayTimeout="3000" :autoplayHoverPause="true" 
 </template>
 
 <script>
+
+const deviceWidth = window.screen.width
+
 import { Carousel3d, Slide } from 'vue-carousel-3d';
+
 export default {
   name: "WorkExamples",
   components: {
@@ -37,40 +41,43 @@ export default {
   props: {
     numberObject: null
   },
+  watch: {
+    
+  },  
   computed: {
     returnCountSlide() {
-      if(window.innerWidth <= 1300) {
+      if(deviceWidth <= 1300) {
         return 3
       }
       return 5 
     },
     returnWidthSlide() {
-      if(window.innerWidth <= 420) {
+      if(deviceWidth <= 420) {
         return 200
       }
-      if(window.innerWidth <= 520) {
+      if(deviceWidth <= 520) {
         return 240
       }
-      if(window.innerWidth <= 620) {
+      if(deviceWidth <= 620) {
         return 300
       }
       return 360
     },
     returnHeightSlide() {
-      if(window.innerWidth <= 420) {
+      if(deviceWidth <= 420) {
         return 120
       }
-      if(window.innerWidth <= 520) {
+      if(deviceWidth <= 520) {
         return 150
       }
-      if(window.innerWidth <= 620) {
+      if(deviceWidth <= 620) {
         return 210
       }
       return 270
     }
   },
   methods: { 
-  }
+  },
 }
 </script>
 
