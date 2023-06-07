@@ -4,17 +4,17 @@
       span.text-40-b Что именно мы делаем
     .container-worktype-section-three
       .span-typework-section-three
-        WorkType.block-type-section-three(nameBlock="Поставка и монтаж систем вентиляции" imgSrc="Logo")
-        WorkType.block-type-section-three(nameBlock="Поставка и монтаж систем дымоудаления" imgSrc="Logo")
-        WorkType.block-type-section-three(nameBlock="Поставка и монтаж систем кондиционирования" imgSrc="Logo")
+        WorkType.block-type-section-three(nameBlock="Поставка и монтаж систем вентиляции" imgSrc="close-up-ventilation-system (2)")
+        WorkType.block-type-section-three(nameBlock="Поставка и монтаж систем дымоудаления" imgSrc="3d-rendering-ventilation-system (1)")
+        WorkType.block-type-section-three(nameBlock="Поставка и монтаж систем кондиционирования" imgSrc="close-up-ventilation-system (1)")
       .span-typework-section-three
-        WorkType.block-type-section-three(nameBlock="Поставка и монтаж воздушного отопления" imgSrc="Logo")
-        WorkType.block-type-section-three(nameBlock="Диагностика и устранение неисправностей существующих систем вентиляций и кондиционирования." imgSrc="Logo")
-        WorkType.block-type-section-three(nameBlock=" Обслуживание систем кондиционирования, кондиционеров." imgSrc="Logo")
+        WorkType.block-type-section-three(nameBlock="Поставка и монтаж воздушного отопления" imgSrc="ventThree")
+        WorkType.block-type-section-three(nameBlock="Диагностика и устранение неисправностей существующих систем вентиляций и кондиционирования." imgSrc="ventThree")
+        WorkType.block-type-section-three(nameBlock=" Обслуживание систем кондиционирования, кондиционеров." imgSrc="close-up-ventilation-system")
       .span-typework-section-three
-        WorkType.block-type-section-three(nameBlock="Поставка и монтаж систем автоматизации вентиляции." imgSrc="Logo")
-        WorkType.block-type-section-three(nameBlock="Настройка и пусконаладочные работы систем автоматизации, вентиляции кондиционирования. " imgSrc="Logo")
-        WorkType.block-type-section-three(nameBlock="Реконструкция систем вентиляции и кондиционирования, демонтажные работы." imgSrc="Logo")
+        WorkType.block-type-section-three(nameBlock="Поставка и монтаж систем автоматизации вентиляции." imgSrc="close-up-ventilation-system (3)")
+        WorkType.block-type-section-three(nameBlock="Настройка и пусконаладочные работы систем автоматизации, вентиляции кондиционирования. " imgSrc="3d-rendering-ventilation-system")
+        WorkType.block-type-section-three(nameBlock="Реконструкция систем вентиляции и кондиционирования, демонтажные работы." imgSrc="close-up-ventilation-system (7)")
 </template>
 
 <script>

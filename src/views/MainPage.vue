@@ -55,21 +55,9 @@ div
     FifthSection 
     
     SixthSection
-    
-    .containerScreenMap
-      .info-block-section-map
-        .text-main-block-section-map
-          .text-block-section-map.mg-b-20
-            span.text-35-b(style="color: rgb(0, 118, 169);text-transform: uppercase") Контакты
-          .text-block-section-map.mg-b-20
-            span.text-19-b 8-912-017-44-44
-            br
-            span.text-15 Ежедневно с 10:00 до 18:00 
-          .text-block-section-map
-            span.text-19-b Ижевск
-            br
-            span.text-15 ул. Максима Горького, 59а
-        v-btn.button-section-map.text-15-b Заказать звонок
+
+    SeventhSection
+    Footer
 </template>
 
 <script>
@@ -84,12 +72,15 @@ import ThirdSection from '@/components/main/ThirdSection'
 import FourthSection from '@/components/main/FourthSection'
 import FifthSection from '@/components/main/FifthSection'
 import SixthSection from '@/components/main/SixthSection'
+import SeventhSection from '@/components/main/SeventhSection'
+import Footer from '@/components/main/Footer'
 
 export default {
  name:"MainPage",
 
  components: {
   Header,
+  Footer,
   WorkType,
   WorkExamples,
   Burger,
@@ -98,7 +89,8 @@ export default {
   ThirdSection,
   FourthSection,
   FifthSection,
-  SixthSection
+  SixthSection,
+  SeventhSection
  },
 
  data(){
@@ -142,7 +134,6 @@ export default {
     else {
       document.getElementById("animHeader").style.background = "transparent"
       document.getElementById("burgerHeaderMenu").classList.remove("maxHeightMenu")
-      // document.getElementById("burgerHeaderMenu").style.alignContent = "flex-start"
       document.getElementById("menuItems").classList.remove("menuItemsNew")
     }
 
@@ -548,61 +539,6 @@ export default {
   }
 }
 
-.containerScreenMap {
-  background: url('@/assets/screen-map.png');
-  background-size: cover;
-  min-height: 93vh;
-  height: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-}
-@media screen and (max-width: 1300px) {
-  .containerScreenMap {
-    background-size: cover;
-    min-height: 93vh;
-    height: auto;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 950px) {
-  .containerScreenMap {
-    background: url('@/assets/screenMapMobileTwo.png');
-  }
-}
-@media screen and (max-width: 590px) {
-  .containerScreenMap {
-    background: url('@/assets/screenMapMobile.png');
-  }
-}
-.info-block-section-map {
-  position: relative;
-  background: white;
-  border-radius: 5%;
-  box-shadow: 3px 3px 20px black;
-  width: 400px;
-  height: 300px;
-}
-@media screen and (max-width: 1300px) {
-  .info-block-section-map {
-    top: 20px;
-    left: 20px;
-    width: 30%;
-    min-height: 50%;
-    height: 300px;
-  }
-}
-@media screen and (max-width: 590px) {
-  .info-block-section-map {
-    top: auto;
-    left: auto;
-    width: 60%;
-    min-height: 50%;
-    height: auto;
-  }
-}
 .text-main-block-section-map {
   padding-top: 20px;
   margin: auto;
@@ -612,29 +548,8 @@ export default {
   max-width: 80%;
   background: white;
 }
-.text-block-section-map {
-  min-height: 20%;
-  height: auto;
-  width: 100%;
-  text-align: center;
-}
 .mg-b-20 {
   margin-bottom: 10%;
-}
-.button-section-map{
-  position: relative;
-  width: auto;
-  color: #fff;
-  background: linear-gradient(37deg, rgba(127,6,255,1) 40%, rgba(12,12,255,1) 100%, rgba(0,212,255,1) 100%);
-  padding: 20px;
-  border: 2px solid #fff;
-  border-radius: 30px;
-  transition: transform .5s, box-shadow .5s;
-  margin: 10px auto 10px auto;
-}
-.button-section-map:hover {
-  box-shadow: 0 0 15px #000;
-  transform: scale(1.03);
 }
 .burgerHeader{
   font-size: 25px;

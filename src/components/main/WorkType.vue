@@ -1,7 +1,8 @@
 <template lang="pug">
-.container-work-type(:class="{}")
+.container-work-type
+  div
+    img(:src="require(`@/assets/WorkExaple/${imgSrc}.jpg`)" width="100%" height="auto")
   .shadow-text
-  //- .text-block
   span.text-17.text-block {{nameBlock}}
 </template>
 
@@ -12,7 +13,10 @@ export default {
   props: {
     nameBlock: null,
     imgSrc: null,
-  }
+  },
+
+  data: () => ({
+  })
 }
 </script>
 
@@ -20,11 +24,12 @@ export default {
 .container-work-type {
   max-height: 100%;
   max-width: 100%;
-  background: url('@/assets/ventThree.jpg');
-  background-size: 100%;
+  /* background: url('@/assets/WorkExaple/close-up-ventilation-system (2).jpg');
+  background-size: 100%; */
   display: flex;
   justify-content:center;
   flex-wrap: wrap;
+  padding-bottom: -200px;
 }
 .text-block {
   position: relative;

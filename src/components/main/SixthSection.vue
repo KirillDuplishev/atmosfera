@@ -1,25 +1,26 @@
 <template lang="pug">
   .containerReviews
     .text-main-block-section-reviews
-      span.text-17 Отзывы
-      br
-      span.text-40-b(style="color: rgb(0, 118, 169)") Мы-Надежные партнеры-профессионалы
-      br
-      span.text-25-b Мы придаем огромное значение прочным отношениям и убедились,
-      br
-      span.text-25-b что они приносят пользу нашему бизнесу. Отзывы клиентов жизненно 
-      br
-      span.text-25-b важны, чтобы помочь нам сделать все правильно.
+      .header-title
+        span.text-19-b Отзывы
+      div
+        span.text-40-b(style="color: #452132") Мы-Надежные партнеры-профессионалы
+      div(style="color:#000; padding: 30px 0 0 0")
+        span.text-19-b Мы придаем огромное значение прочным отношениям и убедились,что они приносят пользу нашему бизнесу. 
+      div(style="color:#000; padding: 0 0 80px 0")
+        span.text-19-b Отзывы клиентов жизненно важны, чтобы помочь нам сделать все правильно.
+    
     .main-block-reviews
-      //- img(src="@/assets/reviewsQuotes.svg" style="width: 5%; position: fixed; height: auto; top: 50%; left: 50%;нtransform: translate(-19em, -20em);")
-      //- img(src="@/assets/reviewsQuotes.svg" style="width:15%; height:auto")
       .block-reviews(v-for="(el, index) in store.reviewsInfo" v-if="index < 2" :style="{ background: reviewsBackground(el), border:'2px solid rgba(0, 0, 0, 0.2)'}")
+        //- .img-quotes
+          img(src="@/assets/reviewsQuotes.svg" style="width:20%; height:auto")
         .text-block-reviews
           span.text-15 {{el.text}}
+    
     .main-block-reviews
-      //- img(src="@/assets/reviewsQuotes.svg" style="width:15%; height:auto")
-      //- img(src="@/assets/reviewsQuotes.svg" style="width:15%; height:auto")
       .block-reviews(v-for="(el, index) in store.reviewsInfo" v-if="index >= 2" :style="{ background: reviewsBackground(el), border:'2px solid rgba(0, 0, 0, 0.2)'}")
+        //- .img-quotes  
+          img(src="@/assets/reviewsQuotes.svg" style="width:20%; height:auto")
         .text-block-reviews
           span.text-15 {{el.text}} 
 </template>
@@ -54,17 +55,22 @@ export default {
 </script>
 
 <style scoped>
-.containerReviews {
-  background: #fff;
-  width: 100%;
-  min-height: 93vh;
-  height: auto;
-}
 @media screen and (max-width: 1200px) {
   .containerReviews {
     min-height: 77vh;
     height: auto;
   }
+  .block-reviews {
+    width: 50% !important;
+    margin: 10px 20px !important;
+    height: 400px;
+  }
+}
+.containerReviews {
+  background: #fff;
+  width: 100%;
+  min-height: 93vh;
+  height: auto;
 }
 .text-main-block-section-reviews {
   width: 100%;
@@ -80,18 +86,32 @@ export default {
 }
 .block-reviews {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
   height: 300px;
   width: 25%;
   border-radius: 15px;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   margin: 20px 40px;
 }
 .text-block-reviews {
   height: auto;
   width: 100%;
   text-align: center;
+}
+.img-quotes{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  left: 0;
+  top: 0;
+  margin-left: -15%;
+  margin-top: -8%;
+}
+.header-title{
+  color: #000;
+  padding: 25px 0;
 }
 </style>

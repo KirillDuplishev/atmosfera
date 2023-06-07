@@ -18,13 +18,54 @@
         div  
           //- span.text-19 Произвели монтаж приточно-вытяжной вентиляции согласно проекту. На первом этапе проложили все воздуховоды и протянули кабеля к щиту управления вентиляцией. На втором этапе – произвели монтаж решеток и пуско-наладку системы.   
           span.text-19 На данном объекте была установлена вентиляция, кондиционирование, произведена автоматизация и теплоснабжение приточных установок.
+    
     .span-work-examples
       .obj-block-work-examples
         WorkExamples(:numberObject="2")
     .obj-text-block-work-examples
       .obj-text-part-work-examples(style="color: #FFFFFF;")
         div(style="padding-bottom:20px")
-          span.text-25-b(style="color: #452132;") Ещё одна школа на Берша(не та же)
+          span.text-25-b(style="color: #452132;") «Поликлиника БУЗ УР "Воткинская районная больница МЗ УР" в г. Воткинске Удмуртской Республики
+        div  
+          span.text-19 Произвели расчет и закупку воздуховодов и сопутствующих материалов. Осуществили монтаж воздухаводов, вытяжных зонтов и произвели пуско-наладочные работы.
+    
+    .span-work-examples
+      .obj-block-work-examples
+        WorkExamples(:numberObject="2")
+    .obj-text-block-work-examples
+      .obj-text-part-work-examples(style="color: #FFFFFF;")
+        div(style="padding-bottom:20px")
+          span.text-25-b(style="color: #452132;") ЖК «Атмосфера» по ул. Новая Восьмая г. Ижевск
+        div  
+          span.text-19 Произвели расчет и закупку воздуховодов и сопутствующих материалов. Осуществили монтаж воздухаводов, вытяжных зонтов и произвели пуско-наладочные работы.
+    
+    .span-work-examples
+      .obj-block-work-examples
+        WorkExamples(:numberObject="2")
+    .obj-text-block-work-examples
+      .obj-text-part-work-examples(style="color: #FFFFFF;")
+        div(style="padding-bottom:20px")
+          span.text-25-b(style="color: #452132;") АО « Ижевский механический завод»
+        div  
+          span.text-19 Произвели расчет и закупку воздуховодов и сопутствующих материалов. Осуществили монтаж воздухаводов, вытяжных зонтов и произвели пуско-наладочные работы.
+    
+    .span-work-examples
+      .obj-block-work-examples
+        WorkExamples(:numberObject="2")
+    .obj-text-block-work-examples
+      .obj-text-part-work-examples(style="color: #FFFFFF;")
+        div(style="padding-bottom:20px")
+          span.text-25-b(style="color: #452132;") Детский сад в п. Малая Пурга Удмуртской Республики
+        div  
+          span.text-19 Произвели расчет и закупку воздуховодов и сопутствующих материалов. Осуществили монтаж воздухаводов, вытяжных зонтов и произвели пуско-наладочные работы.
+    
+    .span-work-examples
+      .obj-block-work-examples
+        WorkExamples(:numberObject="2")
+    .obj-text-block-work-examples
+      .obj-text-part-work-examples(style="color: #FFFFFF;")
+        div(style="padding-bottom:20px")
+          span.text-25-b(style="color: #452132;") Детский сад в с. Каменное удмуртская Республика.
         div  
           span.text-19 Произвели расчет и закупку воздуховодов и сопутствующих материалов. Осуществили монтаж воздухаводов, вытяжных зонтов и произвели пуско-наладочные работы.
 </template>
@@ -65,7 +106,13 @@ components:{
   border-radius: 15px;
   margin: 20px auto;
   padding: 20px 0;
-  /* border: 1px solid black; */
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow .5s ;
+}
+
+.span-work-examples:hover{
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+  transition: box-shadow .5s ;
 }
 
 @media screen and (max-width: 900px) {

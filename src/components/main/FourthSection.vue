@@ -5,8 +5,8 @@ v-row.containerFor
   v-col.blockRight-section-four(md="5")
     .text-block-main-section-four
       .text-block-section-four
-        span.text-29-b ООО "АТМОСФЕРА" предлагает
-        span.text-29-b лучшее европейское оборудование 
+        span.text-29-b ООО "АТМОСФЕРА" предлагает лучшее европейское оборудование
+        //- span.text-29-b лучшее европейское оборудование 
       .text-description-block-section-four.outline-border
         span.text-17 Все оборудование прошло сертификацию ISO 9001,
         span.text-17 а так же Российскую сертификацию "РОСТЕСТа".  

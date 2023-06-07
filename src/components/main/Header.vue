@@ -66,7 +66,6 @@ export default {
   align-items: center;
   width: 100%;
   height: 7vh;
-  /* background: rgb(77, 189, 253, 0.5); */
   background: transparent;
   backdrop-filter: blur(20px);
   border-radius: 0 0 30px 30px;
