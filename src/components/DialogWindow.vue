@@ -1,5 +1,5 @@
 <template lang="pug">
-v-app
+//- v-app
   v-dialog(v-model="activeFlag" )
     template(v-slot:activator="{ on }")
       //- slot(v-if="$slots.activator" name="activator" v-on="on")
