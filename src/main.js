@@ -6,6 +6,8 @@ import fonts from './assets/fonts/fonts.scss'
 import Carousel3d from 'vue-carousel-3d';
 
 import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.css'
+
 
 Vue.use(Carousel3d);
 Vue.use(VueRouter)

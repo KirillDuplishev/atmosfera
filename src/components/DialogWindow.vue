@@ -1,7 +1,7 @@
 <template lang="pug">
 v-app  
   div.text-center.dialog
-    v-dialog(v-model="dialog" :persistent="true" width="90%")
+    v-dialog(v-model="dialog" modal :persistent="true" width="90%")
       v-card()
         v-card-title.title
           div.text-title
