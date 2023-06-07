@@ -1,7 +1,6 @@
 <template lang="pug">
 .header
   .logo
-    //- img.logoImage(src="@/assets/LogoHeader.png" style="width:7%; height:auto")
     .logo-text Атмосфера
   .box
     .box-sm(@click="$router.push({path:'/'})")
@@ -14,9 +13,6 @@
     .flex-block-header
       span.text-15(style="margin-right: 10px") 8-912-017-44-44
       span.text-15 vent444@mail.ru
-    //- .flex-block-header
-    //-   span.text-15(style="margin-right: 10px") 8-950-810-04-04
-    //-   span.text-15 mr_ivan@mail.ru
     span.text-15 Ежедневно с 10:00 до 18:00      
 </template>
 <script>

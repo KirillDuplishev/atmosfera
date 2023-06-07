@@ -1,8 +1,8 @@
 <template lang="pug">
 .container-work-type(:class="{}")
   .shadow-text
-  .text-block
-    span.text-17 {{nameBlock}}
+  //- .text-block
+  span.text-17.text-block {{nameBlock}}
 </template>
 
 <script>
@@ -32,7 +32,6 @@ export default {
   bottom: 20%;
   text-align: center;
   color: white;
-  height: 25vh;
 }
 .shadow-text{
   position: relative;
