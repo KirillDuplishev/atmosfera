@@ -11,10 +11,17 @@ Vue.use(Carousel3d);
 Vue.use(VueRouter)
 Vue.use(Vuetify)
 
+const vuetify = new Vuetify({
+  theme: {
+    dark: true
+  }
+})
+
 Vue.config.productionTip = false
 
 new Vue({
   Vuetify,
+  vuetify,
   router,
   fonts,
   render: h => h(App)

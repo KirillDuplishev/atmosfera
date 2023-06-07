@@ -9,16 +9,14 @@ div
         span Соглашение на обработку персональных данных
       .footer-menu-text(@click="licenseShow = true")
         span Лицензия
-  DialogWindow(:activeFlag="licenseShow")
 </template>
 
 <script>
-import DialogWindow from '../DialogWindow'
 export default {
   name:"FooterMain",
   
   components:{
-    DialogWindow
+    
   },
   
   data: () => ({

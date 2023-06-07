@@ -57,7 +57,12 @@ div
     SixthSection
 
     SeventhSection
+
     Footer
+    
+  div.panel-hide
+    DialogWindow(:activeFlag="true")
+
 </template>
 
 <script>
@@ -74,6 +79,7 @@ import FifthSection from '@/components/main/FifthSection'
 import SixthSection from '@/components/main/SixthSection'
 import SeventhSection from '@/components/main/SeventhSection'
 import Footer from '@/components/main/Footer'
+import DialogWindow from '@/components/DialogWindow'
 
 export default {
  name:"MainPage",
@@ -90,7 +96,8 @@ export default {
   FourthSection,
   FifthSection,
   SixthSection,
-  SeventhSection
+  SeventhSection,
+  DialogWindow
  },
 
  data(){
@@ -576,5 +583,9 @@ export default {
   -webkit-background-clip: text;
   background-size: 40%;
   animation: clouds 13s linear infinite alternate;
+}
+.panel-hide {
+  z-index: 999;
+  position: absolute;
 }
 </style>

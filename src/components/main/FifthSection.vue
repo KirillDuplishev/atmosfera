@@ -120,6 +120,6 @@ components:{
 .obj-text-part-work-examples {
   width: 70%;
   height: min-content;
-  padding: 20px 10px;
+  padding: 0px 10px;
 }
 </style>
