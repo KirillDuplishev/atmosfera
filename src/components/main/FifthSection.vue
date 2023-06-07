@@ -8,6 +8,7 @@
     div(style="margin:20px 0 60px 0")
       span.text-17(style="color: #FFFFFF;") Гостиницы, промышленные производства, сети магазинов, школы и т.д 
   .block-work-examples
+
     .span-work-examples
       .obj-block-work-examples
         WorkExamples(:numberObject="1")
@@ -27,47 +28,18 @@
         div(style="padding-bottom:20px")
           span.text-25-b(style="color: #452132;") «Поликлиника БУЗ УР "Воткинская районная больница МЗ УР" в г. Воткинске Удмуртской Республики
         div  
-          span.text-19 Произвели расчет и закупку воздуховодов и сопутствующих материалов. Осуществили монтаж воздухаводов, вытяжных зонтов и произвели пуско-наладочные работы.
+          span.text-19 Монтаж вентиляционного оборудования, проточно-вытяжных установок. Монтаж систем кондиционирования, ККБ 
     
     .span-work-examples
       .obj-block-work-examples
-        WorkExamples(:numberObject="2")
+        WorkExamples(:numberObject="3")
     .obj-text-block-work-examples
       .obj-text-part-work-examples(style="color: #FFFFFF;")
         div(style="padding-bottom:20px")
-          span.text-25-b(style="color: #452132;") ЖК «Атмосфера» по ул. Новая Восьмая г. Ижевск
+          span.text-25-b(style="color: #452132;") Мебельсон 
         div  
-          span.text-19 Произвели расчет и закупку воздуховодов и сопутствующих материалов. Осуществили монтаж воздухаводов, вытяжных зонтов и произвели пуско-наладочные работы.
-    
-    .span-work-examples
-      .obj-block-work-examples
-        WorkExamples(:numberObject="2")
-    .obj-text-block-work-examples
-      .obj-text-part-work-examples(style="color: #FFFFFF;")
-        div(style="padding-bottom:20px")
-          span.text-25-b(style="color: #452132;") АО « Ижевский механический завод»
-        div  
-          span.text-19 Произвели расчет и закупку воздуховодов и сопутствующих материалов. Осуществили монтаж воздухаводов, вытяжных зонтов и произвели пуско-наладочные работы.
-    
-    .span-work-examples
-      .obj-block-work-examples
-        WorkExamples(:numberObject="2")
-    .obj-text-block-work-examples
-      .obj-text-part-work-examples(style="color: #FFFFFF;")
-        div(style="padding-bottom:20px")
-          span.text-25-b(style="color: #452132;") Детский сад в п. Малая Пурга Удмуртской Республики
-        div  
-          span.text-19 Произвели расчет и закупку воздуховодов и сопутствующих материалов. Осуществили монтаж воздухаводов, вытяжных зонтов и произвели пуско-наладочные работы.
-    
-    .span-work-examples
-      .obj-block-work-examples
-        WorkExamples(:numberObject="2")
-    .obj-text-block-work-examples
-      .obj-text-part-work-examples(style="color: #FFFFFF;")
-        div(style="padding-bottom:20px")
-          span.text-25-b(style="color: #452132;") Детский сад в с. Каменное удмуртская Республика.
-        div  
-          span.text-19 Произвели расчет и закупку воздуховодов и сопутствующих материалов. Осуществили монтаж воздухаводов, вытяжных зонтов и произвели пуско-наладочные работы.
+          span.text-19 Монтаж воздушного отопления
+  
 </template>
 
 <script>
