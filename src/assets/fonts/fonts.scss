@@ -7,6 +7,22 @@
   font-style: normal;
 }
 
+.text-75-b {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 75px;
+}
+@media screen and (max-width: 1300px) {
+  .text-75-b {
+    font-size: 65px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .text-75-b {
+    font-size: 65px;
+  }
+}
 .text-50-b {
   font-family: 'Nunito';
   font-style: normal;

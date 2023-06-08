@@ -11,6 +11,8 @@
       span Контакты
     .box-sm(@click="productRout()")
       span Товары
+    .box-sm(@click="$router.push({path:'/aboutUs'})")
+      span О нас
   .otvet
     .flex-block-header
       span.text-15(style="margin-right: 10px") 8-912-017-44-44

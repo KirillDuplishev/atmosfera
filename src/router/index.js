@@ -4,6 +4,7 @@ import MainPage from '../views/MainPage.vue'
 import PhotoGallery from '../views/PhotoGallery.vue'
 import ProductsPage from '../views/ProductsPage.vue'
 
+import AboutUs from '../views/AboutUs.vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
@@ -24,10 +25,15 @@ const routes = [
     name: 'products',
     component: ProductsPage
   },
+  {
+    path: '/aboutUs',
+    name: 'aboutUs',
+    component: AboutUs
+  },
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes
 })
