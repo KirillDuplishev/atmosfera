@@ -26,7 +26,7 @@ div
       .hero
         span(style="text-transform:uppercase; font-size:2em; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные 
         span(style="text-transform:uppercase; font-size:5vw; font-weight:900; color: white; text-shadow: 2px 2px 4px black") вентиляционные системы
-        v-btn.button.text-15-b Подробнее о нас
+        v-btn.button.text-15-b(@click="$router.push({path:'/aboutUs'})") Подробнее о нас
 
     SecondSection
 
