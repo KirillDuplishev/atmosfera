@@ -49,7 +49,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @media screen and (max-width: 463px) {
   .text-ellipse-section-four {
     width: 150px;   

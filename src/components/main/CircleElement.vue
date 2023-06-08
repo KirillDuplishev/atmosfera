@@ -65,7 +65,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .circleSection{
   overflow: hidden;
   border-top: 1px solid;

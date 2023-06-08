@@ -22,7 +22,7 @@ div
         span.text-35-b Контакты
         span.text-35-b О нас
     
-    .container 
+    .containerFirst
       .hero
         span(style="text-transform:uppercase; font-size:2em; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные 
         span(style="text-transform:uppercase; font-size:5vw; font-weight:900; color: white; text-shadow: 2px 2px 4px black") вентиляционные системы
@@ -58,10 +58,10 @@ div
 
     SeventhSection
 
-    Footer
+    Footer(@openDialog="openDialog")
     
   div.panel-hide
-    DialogWindow(:activeFlag="true")
+    DialogWindow(:activeFlag="true" :title="title")
 
 </template>
 
@@ -102,7 +102,8 @@ export default {
 
  data(){
   return {
-    show:false
+    show: false,
+    title: null
   }
  },
 
@@ -111,6 +112,10 @@ export default {
   isPanelOpen() {
     return store.isNavOpen;
   },
+
+  isDialogOpen() {
+    return store.openDialog;
+  }
 
  },
 
@@ -144,6 +149,10 @@ export default {
       document.getElementById("menuItems").classList.remove("menuItemsNew")
     }
 
+  },
+
+  openDialog(title) {
+    this.title = title
   }
 
  },
@@ -201,7 +210,7 @@ export default {
   text-align: center;
   font-size: 20px;
   color: #fff;
-  z-index: 1000;
+  z-index: 998;
 }
 
 .menuItems{
@@ -256,7 +265,7 @@ export default {
     box-shadow: 5px 5px 15px #000;
     transition: all .5s;
   }
-  .container{
+  .containerFirst{
     margin-top: 0 !important;
   }
   
@@ -344,7 +353,7 @@ export default {
   animation-delay: .5s;
 }
 
-.container {
+.containerFirst {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
@@ -368,28 +377,9 @@ export default {
   width: 100%;
   border-top:2px solid rgba(0, 0, 0, .9) ;
 }
-
-.text-title-section-three {
-  width: 100%;
-  height: 10%;
-  color: rgb(0, 118, 169);
-  padding-top: 20px;
-  margin-bottom: 10px;
-}
 .container-worktype-section-three {
   width: 100%;
   height: 90%;
-}
-
-.span-typework-section-three {
-  width: 100%;
-  height: 30%;
-  display: flex;
-}
-@media screen and (max-width: 1000px) {
-  .span-typework-section-three {
-    height: 25%;
-  }
 }
 .mg-b-10 {
   margin-bottom: 10px;

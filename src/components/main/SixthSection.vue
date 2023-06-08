@@ -15,14 +15,14 @@
         //- .img-quotes
           img(src="@/assets/reviewsQuotes.svg" style="width:20%; height:auto")
         .text-block-reviews
-          span.text-15 {{el.text}}
+          span.text-19 {{el.text}}
     
     .main-block-reviews
       .block-reviews(v-for="(el, index) in store.reviewsInfo" v-if="index >= 2" :style="{ background: reviewsBackground(el), border:'2px solid rgba(0, 0, 0, 0.2)'}")
         //- .img-quotes  
           img(src="@/assets/reviewsQuotes.svg" style="width:20%; height:auto")
         .text-block-reviews
-          span.text-15 {{el.text}} 
+          span.text-19 {{el.text}} 
 </template>
 
 <script>
