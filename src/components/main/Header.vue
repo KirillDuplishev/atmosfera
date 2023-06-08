@@ -9,6 +9,8 @@
       span Фотогалерея
     .box-sm
       span Контакты
+    .box-sm(@click="productRout()")
+      span Товары
   .otvet
     .flex-block-header
       span.text-15(style="margin-right: 10px") 8-912-017-44-44
@@ -20,11 +22,17 @@ export default {
   name:"HeaderTest",
 
   methods: {
+
     galleryRout() {
       this.$router.push({path: '/photoGallery'}).then(() => {
         location.reload()
       })
+    },
+
+    productRout() {
+      this.$router.push({path: '/products'})
     }
+
   }
 }
 </script>

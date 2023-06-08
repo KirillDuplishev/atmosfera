@@ -2,6 +2,7 @@ import Vue from 'vue'
 
 import MainPage from '../views/MainPage.vue'
 import PhotoGallery from '../views/PhotoGallery.vue'
+import ProductsPage from '../views/ProductsPage.vue'
 
 import VueRouter from 'vue-router'
 
@@ -17,6 +18,11 @@ const routes = [
     path: '/photoGallery',
     name: 'photoGallery',
     component: PhotoGallery
+  },
+  {
+    path: '/products',
+    name: 'products',
+    component: ProductsPage
   },
 ]
 
