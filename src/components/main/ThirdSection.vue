@@ -32,9 +32,9 @@ export default {
     width: 50% !important;
     height: auto;
   }
-  .block-type-section-three:hover{
+  /* .block-type-section-three:hover{
     transform: scale(1);
-  }
+  } */
   .span-typework-section-three {
     height: 25%;
   }
@@ -78,10 +78,10 @@ export default {
   cursor: pointer;
   transition: transform .5s, box-shadow .5s;
 }
-.block-type-section-three:hover {
+/* .block-type-section-three:hover {
   box-shadow: 0 0 15px #000;
   cursor: pointer;
   transform: scale(1.001);
   transition: transform .5s;
-}
+} */
 </style>
