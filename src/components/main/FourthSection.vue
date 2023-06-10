@@ -1,8 +1,8 @@
 <template lang="pug">
-v-row.containerFor
-  v-col.blockLeft-section-four(md="5")
+.containerFor
+  .blockLeft-section-four
     img.img-right-section-four(src="@/assets/KILLMEPLZX2_Factory_ventilationwhite_purple_pastel_colors_high__715fc1d0-c4f6-4996-bb17-49634b6a0580.png")
-  v-col.blockRight-section-four(md="5")
+  .blockRight-section-four
     .text-block-main-section-four
       .text-block-section-four
         span.text-29-b ООО "АТМОСФЕРА" предлагает лучшее европейское оборудование
@@ -51,16 +51,16 @@ export default {
 
 <style scoped>
 @media screen and (max-width: 463px) {
-  .text-ellipse-section-four {
-    width: 150px;   
   }
-}
 @media screen and (max-width: 388px) {
   .text-ellipse-section-four {
     width: 135px;   
   }
 }
 @media screen and (max-width: 1000px) {
+  .text-ellipse-section-four {
+    width: 135px;   
+  }
   .blockLeft-section-four {
     display: none !important;
   }
@@ -73,18 +73,21 @@ export default {
     text-align: center;
   }
   .text-block-section-four {
-    padding: 20px;
-    align-items:center;
-    margin: 15px;
-    border-radius: 10px;
-    color: #fff !important;
+    text-align:center !important;
+    margin-left: 0 !important;
   }
   .text-description-block-section-four {
-    text-align: center;
+    text-align: center !important;
     color: white !important;
     margin: 15px !important;
-    border-radius: 10px;
-    background: rgb(0, 0, 0, 0.6);
+    background: rgba(217, 217, 217, 0.1);
+    backdrop-filter: blur(50px);
+  }
+  .text-block-main-section-four{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .main-block-ellipse-section-four {
     width: 100%;
@@ -94,8 +97,8 @@ export default {
     align-items: center;
     text-align: center;
     justify-content: center;
-    /* margin: auto; */
     margin-left: 0% !important;
+    padding: 0 10px 50px 10px;
   }
 }
 @media screen and (max-width: 1300px) {
@@ -115,7 +118,7 @@ export default {
   position: relative;
   background: #fff;
   display: flex;
-  min-height: 93vh;
+  min-height: 100vh;
   height: auto;
   width: 100%;
 }
@@ -131,7 +134,7 @@ export default {
 
 .blockRight-section-four {
   width: 60%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .text-block-section-four{
