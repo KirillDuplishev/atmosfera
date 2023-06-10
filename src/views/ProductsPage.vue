@@ -46,19 +46,25 @@
                 span.text-11 Гарантийный срок
               .value-characteristic
                 span.text-11 {{product.guaranteePeriod}}
-</template>
   
+  Footer
+
+  div.panel-hide
+    DialogWindow(:activeFlag="true" title="Лицензия")
 </template>
 
 <script>
 import Header from '../components/main/Header'
 import { store } from "@/store.js";
-
+import Footer from '@/components/main/Footer';
+import DialogWindow from '@/components/DialogWindow';
 export default {
   name: "ProductsPage",
 
   components: {
-    Header
+    Header,
+    Footer,
+    DialogWindow
   },
 
   data() {
@@ -152,5 +158,9 @@ export default {
 .value-characteristic {
   text-align: right;
   width: 20%;
+}
+.panel-hide {
+  z-index: 999;
+  position: absolute;
 }
 </style>
