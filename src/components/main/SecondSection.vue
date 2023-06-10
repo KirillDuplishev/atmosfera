@@ -96,7 +96,7 @@ export default {
   display: flex;
   min-height: 93vh;
   height: auto;
-  width: 100%;
+  /* width: 100%; */
 }
 
 /*  */
