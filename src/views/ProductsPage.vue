@@ -107,7 +107,6 @@ export default {
 .card-products {
   min-width: 45%;
   max-width: 45%;
-  height: 250px;
   padding: 3%;
   margin: 0 0 5% 0;
   background: #FFFFFF;
@@ -120,11 +119,15 @@ export default {
   height: auto;
 }
 .name-product { 
-  width: 80%;
+  width: 70%;
+  color: #452132;
+  font-weight: 600;
   text-align: left;
 }
 .summ-product { 
-  width: 20%;
+  width: 30%;
+  color: #452132;
+  font-weight: 700;
   text-align: right;
 }
 .main-info-card {
@@ -146,10 +149,14 @@ export default {
   color: #6D6D6D;
 }
 .name-characteristic {
+  color: #6D6D6D;
+  font-weight: 600;
   text-align: left;
   width: 80%;
 }
 .value-characteristic {
+  color: #6D6D6D;
+  font-weight: 600;
   text-align: right;
   width: 20%;
 }
