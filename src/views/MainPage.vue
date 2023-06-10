@@ -21,12 +21,8 @@ div
         span.text-35-b Фотогалерея
         span.text-35-b Контакты
         span.text-35-b О нас
-    
-    .containerFirst
-      .hero
-        span(style="text-transform:uppercase; font-size:2em; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные 
-        span(style="text-transform:uppercase; font-size:5vw; font-weight:900; color: white; text-shadow: 2px 2px 4px black") вентиляционные системы
-        v-btn.button.text-15-b(@click="$router.push({path:'/aboutUs'})") Подробнее о нас
+
+    FirstSection
 
     SecondSection
 
@@ -72,6 +68,7 @@ import SideBarLeft from '../components/SideBarLeft'
 import WorkType from '@/components/main/WorkType'
 import WorkExamples from '@/components/main/WorkExamples';
 import { store } from "@/store.js";
+import FirstSection from '@/components/main/FirstSection';
 import SecondSection from '@/components/main/SecondSection'
 import ThirdSection from '@/components/main/ThirdSection'
 import FourthSection from '@/components/main/FourthSection'
@@ -91,6 +88,7 @@ export default {
   WorkExamples,
   Burger,
   SideBarLeft,
+  FirstSection,
   SecondSection,
   ThirdSection,
   FourthSection,
@@ -265,10 +263,7 @@ export default {
     box-shadow: 5px 5px 15px #000;
     transition: all .5s;
   }
-  .containerFirst{
-    margin-top: 0 !important;
-  }
-  
+
 }
 
 .preloader-scene {
@@ -406,87 +401,6 @@ export default {
   cursor: pointer;
 }
 
-.blockRight-section-four {
-  width: 60%;
-  height: 100%;
-}
-@media screen and (max-width: 1000px) {
-  .blockRight-section-four {
-    background: url("@/assets/KILLMEPLZX2_Factory_ventilationwhite_purple_pastel_colors_high__715fc1d0-c4f6-4996-bb17-49634b6a0580.png");
-    background-size: cover;
-    width: 100%;
-    min-height: 93vh;
-    height: auto;
-    text-align: center;
-  }
-}
-.img-right-section-four {
-  background-size: cover;
-  border-radius: 20px;
-  box-shadow: 5px 5px 20px #000;
-  height: 100%;
-  width: 100%;
-}
-
-.text-block-section-four{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: rgb(0, 118, 169);
-  margin-top: 100px;
-  margin-left: 20%;
-}
-@media screen and (max-width: 1300px) {
-  .text-block-section-four {
-    margin-top: 0px;
-    padding-top: 20px;
-    align-items:center;
-    margin: auto;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .text-block-section-four {
-    padding: 20px;
-    align-items:center;
-    margin: 15px;
-    border-radius: 10px;
-    background: rgb(0, 0, 0, 0.6);
-  }
-}
-.hero {
-  background: url('@/assets/ventFirst.jpg');
-  background-size: cover;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-  min-height: 100vh;
-  height: auto;
-  width: 100%;
-}
-@media screen and (max-width: 1000px) {
-  .hero {
-    background-position-x: 50%;
-  }
-  .hero span:first-child{
-    color: red;
-    font-size: 4.5vw !important;
-  }
-  .hero span:nth-child(2n){
-    font-size: 8vw !important;
-  }
-}
-.heroBlur{
-  background: transparent;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(3px);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 .hide{
   background: #000;
 }
@@ -494,24 +408,6 @@ export default {
   background: var(--a);
   transition: background 7s;
 }
-.button{
-  position: relative;
-  width: auto;
-  color: #fff;
-  background: linear-gradient(37deg, rgba(127,6,255,1) 40%, rgba(12,12,255,1) 100%, rgba(0,212,255,1) 100%);
-  padding: 20px;
-  border: 2px solid #fff;
-  border-radius: 30px;
-  bottom: -20%;
-  transition: transform .5s, box-shadow .5s;
-  cursor: pointer;
-  text-decoration: none;
-}
-.button:hover {
-  box-shadow: 0 0 15px #000;
-  transform: scale(1.03);
-}
-
 .obj-block-work-examples {
   width: 70%;
   min-height: 90%;
