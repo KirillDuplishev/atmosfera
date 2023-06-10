@@ -28,24 +28,6 @@ div
 
     ThirdSection
     
-    .containerThreeMobile
-      .text-title-section-three
-        span.text-40-b Что именно мы делаем
-      .container-worktype-section-three
-        .span-typework-section-three
-          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
-          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
-        .span-typework-section-three
-          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
-          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
-        .span-typework-section-three
-          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
-          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
-        .span-typework-section-three
-          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
-          WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
-        //- WorkType.block-type-section-three(nameBlock="Демонтаж" imgSrc="Logo")
-    
     FourthSection
     
     FifthSection 
@@ -348,57 +330,8 @@ export default {
   animation-delay: .5s;
 }
 
-.containerFirst {
-  display: flex;
-  flex-flow: column;
-  min-height: 100vh;
-  height: auto;
-  width: 100%;
-  color: #000;
-  margin-top: -3vw;
-}
-
-.containerThree {
-  background: white;
-  min-height: 93vh;
-  height: auto;
-  width: 100%;
-}
-.containerThreeMobile {
-  display: none;
-  background: white;
-  min-height: 100vh;
-  height: auto;
-  width: 100%;
-  border-top:2px solid rgba(0, 0, 0, .9) ;
-}
-.container-worktype-section-three {
-  width: 100%;
-  height: 90%;
-}
 .mg-b-10 {
   margin-bottom: 10px;
-}
-.block-type-section-three {
-  border: 1px solid white;
-  box-shadow: 1px 2px 4px black; 
-  width: 33.3%;
-  height: 100%;
-  cursor: pointer;
-  transition: transform .5s, box-shadow .5s;
-}
-@media screen and (max-width: 1000px) {
-  .block-type-section-three {
-    width: auto;
-    height: auto;
-  }
-  .block-type-section-three:hover{
-    transform: scale(1);
-  }
-}
-.block-type-section-three:hover {
-  box-shadow: 0 0 15px #000;
-  cursor: pointer;
 }
 
 .hide{
@@ -412,34 +345,6 @@ export default {
   width: 70%;
   min-height: 90%;
   height: auto;
-}
-@media screen and (max-width: 900px) {
-  .obj-block-work-examples {
-    width: 100%;
-    min-height: 50%;
-  }
-}
-.obj-text-block-work-examples {
-  width: 30%;
-  height: 100%;
-  text-align: center;
-}
-@media screen and (max-width: 900px) {
-  .obj-text-block-work-examples {
-    width: 100%;
-    min-height: 50%;
-    height: auto;
-  }
-}
-
-.text-main-block-section-map {
-  padding-top: 20px;
-  margin: auto;
-  min-height: 70%;
-  height: auto;
-  min-width: 60%;
-  max-width: 80%;
-  background: white;
 }
 .mg-b-20 {
   margin-bottom: 10%;
