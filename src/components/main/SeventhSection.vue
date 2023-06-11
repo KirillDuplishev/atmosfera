@@ -30,14 +30,6 @@ export default {
     height: auto;
     width: 100%;
   }
-
-  .info-block-section-map {
-    top: 20px;
-    left: 20px;
-    width: 30%;
-    min-height: 50%;
-    height: 300px;
-  }
 }
 
 @media screen and (max-width: 950px) {
@@ -50,13 +42,10 @@ export default {
   .containerScreenMap {
     background: url('@/assets/screenMapMobile.png');
   }
-
+}
+@media screen and (max-width: 450px) {
   .info-block-section-map {
-    top: auto;
-    left: auto;
-    width: 60%;
-    min-height: 50%;
-    height: auto;
+    width: 300px !important;
   }
 }
 
@@ -78,7 +67,7 @@ export default {
   justify-content: center;
   align-items: center;
   background: white;
-  border-radius: 5%;
+  border-radius: 17.5px;
   box-shadow: 3px 3px 20px black;
   width: 400px;
   height: 300px;
@@ -93,14 +82,17 @@ export default {
 }
 .button-section-map{
   position: relative;
+  text-transform: none;
   width: auto;
-  color: #fff;
+  color: #fff !important;
   background: linear-gradient(37deg, rgba(127,6,255,1) 40%, rgba(12,12,255,1) 100%, rgba(0,212,255,1) 100%);
-  padding: 20px;
+  padding: 29px  14px !important;
   border: 2px solid #fff;
+  margin: 10px 0 10px 0;
   border-radius: 30px;
   transition: transform .5s, box-shadow .5s;
-  margin: 10px auto 10px auto;
+  cursor: pointer;
+  text-decoration: none;
 }
 .button-section-map:hover {
   box-shadow: 0 0 15px #000;
