@@ -88,7 +88,6 @@ export default {
   background: linear-gradient(37deg, rgba(127,6,255,1) 40%, rgba(12,12,255,1) 100%, rgba(0,212,255,1) 100%);
   padding: 29px  14px !important;
   border: 2px solid #fff;
-  margin: 10px 0 10px 0;
   border-radius: 30px;
   transition: transform .5s, box-shadow .5s;
   cursor: pointer;
