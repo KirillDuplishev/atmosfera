@@ -81,19 +81,36 @@ export default {
   backdrop-filter: blur(20px);
   border-radius: 0 0 30px 30px;
 }
-span:hover{
-  transform: scale(1.1);
-  transition: transform 0.5s;
+.box-sm span{
+  position: relative;
+  cursor: pointer;
 }
+.box-sm span::after {
+	position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+.box-sm span::after {
+  width: 0;
+  transition: width 0.35s;
+}
+
+.box-sm span:hover:after {
+	width: 100%;
+}
+
 .box {
   display: flex;
 }
 
 .otvet{
   display: flex;
-}
-span{
-  cursor: pointer;
 }
 .box-sm {
   display:flex;

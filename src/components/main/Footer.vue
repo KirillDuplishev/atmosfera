@@ -4,34 +4,35 @@ div
     .footer-block
       img.img(src="@/assets/LogoHeader.png" width="5%" height="auto")
       .footer-menu-text(@click="showLicenseWindow('Политика конфиденциальности')")
-        span Политика конфиденциальности
+        span.text-15-b Политика конфиденциальности
       .footer-menu-text(@click="showLicenseWindow('Соглашение на обработку персональных данных')")
-        span Соглашение на обработку персональных данных
+        span.text-15-b Соглашение на обработку персональных данных
       .footer-menu-text(@click="showLicenseWindow('Лицензия')")
-        span Лицензия
-  
-  //- DialogWindow(:activeFlag="true" :title="title")
+        span.text-15-b Лицензия
+    
+    .footer-block-mobile
+      img.img-mobile(src="@/assets/LogoHeader.png" width="15%" height="auto")
+      .footer-text-block-mobile
+        .footer-menu-text-mobile(@click="showLicenseWindow('Политика конфиденциальности')")
+          span.text-15-b Политика конфиденциальности
+        .footer-menu-text-mobile(@click="showLicenseWindow('Соглашение на обработку персональных данных')")
+          span.text-15-b Соглашение на обработку персональных данных
+        .footer-menu-text-mobile(@click="showLicenseWindow('Лицензия')")
+          span.text-15-b Лицензия
   
 </template>
 
 <script>
 import {mutations} from "@/store.js"
-// import DialogWindow from '@/components/DialogWindow'
 
 export default {
   name:"FooterMain",
   
-  components:{
-    // DialogWindow
-  },
-  
   data: () => ({
-    // title:null
   }),
 
   methods:{
     showLicenseWindow(name){
-      // this.title = name
       mutations.openDialogWindow()
       this.$emit('openDialog', name)
     }
@@ -40,9 +41,44 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (max-width: 1000px)  {
+  .img{
+    width: 10%;
+  }
+  .img-mobile {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 800px){
+  .footer-block{
+    display: none !important;
+  }
+  .footer-block-mobile{
+    display: flex !important;
+    align-items: center
+  }
+  .footer-text-block-mobile{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-menu-text-mobile{
+    color: #452132;
+    display: flex;
+    text-align: left;
+    width: 100% !important;
+    padding: 15px 0;
+  }
+  .img-mobile{
+    padding-right: 20px;
+  }
+}
+.footer-block-mobile{
+  display: none;
+}
 footer{
   background: #DCDDE0;
-  height: 15vh;
+  min-height: 15vh;
+  height: auto;
   display: flex;
   align-items: center;
 }
@@ -53,11 +89,33 @@ footer{
   align-items: center;
 }
 .footer-menu-text{
-  text-decoration: underline;
   width: 25%;
   color: #452132;
 }
 .img{
   margin: 0 0 0 10%;
+}
+.footer-menu-text span{
+  position: relative;
+  cursor: pointer;
+}
+.footer-menu-text span::after {
+	position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #452132;
+}
+
+.footer-menu-text span::after {
+  width: 0;
+  transition: width 0.35s;
+}
+
+.footer-menu-text span:hover:after {
+	width: 100%;
 }
 </style>

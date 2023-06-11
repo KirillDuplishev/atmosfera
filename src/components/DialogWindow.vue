@@ -40,7 +40,7 @@ export default {
 
 <style scoped>
   .title {
-    background-color: #5b36d6;
+    background-color: #1d1d1F;
   }
   .text-title {
     display: flex;

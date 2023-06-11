@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style scoped>
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .containerFirst {
     margin-top: 0 !important;
   }
@@ -25,7 +25,7 @@ export default {
   height: auto;
   width: 100%;
   color: #000;
-  margin-top: -3vw;
+  margin-top: -7vw;
 }
 .hero {
   background: url('@/assets/ventFirst.jpg');

@@ -6,13 +6,13 @@ div
       .loading-block
         .progress
       .preloader-block(id="preloadBlock")
-        img(src="@/assets/Logo.png" style="width:50%; height:auto")
+        img(src="@/assets/Logo.png" width="50%" height="auto")
     
     Header.header#header
     
     .burgerIco#burgerHeaderMenu
       .animHeader#animHeader
-        img.anim-header-img(src="@/assets/LogoHeader.png" style="width:10%; height:auto")
+        img.anim-header-img(src="@/assets/LogoHeader.png" width="10%" height="auto")
         .logo-text Атмосфера
         .burger(@click="showMenu")
           Burger
@@ -118,14 +118,16 @@ export default {
     document.getElementById("burgerHeaderMenu").style.justifyContent = "center"
 
     if(this.show) {
-      document.getElementById("animHeader").style.background = "#000"
+      document.getElementById("burgerHeaderMenu").style.background = "#000"
+      document.getElementById("animHeader").style.borderBottom = "1px solid rgba(65, 65, 65, 0.5)"
       document.getElementById("burgerHeaderMenu").classList.add("maxHeightMenu")
       document.getElementById("burgerHeaderMenu").style.justifyContent = "flex-start"
       document.getElementById("menuItems").classList.add("menuItemsNew")
     }
 
     else {
-      document.getElementById("animHeader").style.background = "transparent"
+      document.getElementById("burgerHeaderMenu").style.background = "#1D1D1F"
+      document.getElementById("animHeader").style.borderBottom = "none"
       document.getElementById("burgerHeaderMenu").classList.remove("maxHeightMenu")
       document.getElementById("menuItems").classList.remove("menuItemsNew")
     }
@@ -213,30 +215,40 @@ export default {
   display: none;
 }
 .menuItems span {
-  text-decoration: underline;
+  
 }
 
 .menuItemsNew{
+  padding-top: 60px;
   color: #fff;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-
+  align-items: flex-start;
+  width: 80%;
+  margin: 0 10%;
 }
-
+.menuItemsNew span{
+  text-align: right;
+  width: 100%;
+  padding-right: 20px;
+  border-bottom: 1px solid rgba(65, 65, 65, 0.5);
+}
 .animHeader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width:100%;
-  height:10%; 
+  height:60px; 
   display: flex; 
   justify-content: space-around; 
   align-items: center; 
-  background:transparent;
 }
 .maxHeightMenu{
   height: 100vh !important;
   background: #000 !important;
-  transition: height .5s, background 0s;
+  transition: height 1s, background 2s;
 }
 
 .burgerIco{
@@ -244,7 +256,7 @@ export default {
   position: absolute;
 }
 
-@media screen and (max-width: 1000px)  {
+@media screen and (max-width: 1200px)  {
   .header{
     display: none !important;
   }
@@ -261,7 +273,12 @@ export default {
     transition: all .5s;
   }
   .anim-header-img{
-    width: 7% !important;
+    width: 5% !important;
+  }
+}
+@media screen and (max-width: 800px)  {
+  .anim-header-img {
+    width: 8% !important;
   }
 }
 
@@ -283,7 +300,7 @@ export default {
   position: absolute;
   display: flex;
   justify-content: center;
-  justify-items: center;
+  align-items: center;
   margin-top: 60vh;
   z-index: 1001;
   animation: loading 2s ease forwards;
@@ -356,7 +373,7 @@ export default {
 }
 .headerScrollAnim{
   background: var(--a);
-  transition: background 7s;
+  transition: background 7s !important;
 }
 .obj-block-work-examples {
   width: 70%;
