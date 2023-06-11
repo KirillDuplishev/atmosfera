@@ -1,15 +1,15 @@
 <template lang="pug">
-  .containerReviews
-    .text-main-block-section-reviews
-      .header-title
-        span.text-19-b Отзывы
-      div
-        span.text-40-b(style="color: #452132") Мы-Надежные партнеры-профессионалы
-      div(style="color:#000; padding: 30px 0 0 0")
-        span.text-19-b Мы придаем огромное значение прочным отношениям и убедились,что они приносят пользу нашему бизнесу. 
-      div(style="color:#000; padding: 0 0 80px 0")
-        span.text-19-b Отзывы клиентов жизненно важны, чтобы помочь нам сделать все правильно.
-    
+.containerReviews
+  .text-main-block-section-reviews
+    .header-title
+      span.text-19-b Отзывы
+    div
+      span.text-40-b(style="color: #452132") Мы-Надежные партнеры-профессионалы
+    div(style="color:#000; padding: 30px 0 0 0")
+      span.text-19-b Мы придаем огромное значение прочным отношениям и убедились,что они приносят пользу нашему бизнесу. 
+    div(style="color:#000;")
+      span.text-19-b Отзывы клиентов жизненно важны, чтобы помочь нам сделать все правильно.
+  .desktop-version
     .main-block-reviews
       .block-reviews(v-for="(el, index) in store.reviewsInfo" v-if="index < 2" :style="{ background: reviewsBackground(el), border:'2px solid rgba(0, 0, 0, 0.2)'}")
         //- .img-quotes
@@ -22,7 +22,12 @@
         //- .img-quotes  
           img(src="@/assets/reviewsQuotes.svg" style="width:20%; height:auto")
         .text-block-reviews
-          span.text-19 {{el.text}} 
+          span.text-19 {{el.text}}
+  .mobile-version
+    .main-block-reviews-mobile
+      .block-reviews(v-for="(el, index) in store.reviewsInfo" :style="{ background: reviewsBackground(el), border:'2px solid rgba(0, 0, 0, 0.2)'}")
+        .text-block-reviews
+          span.text-19 {{el.text}}
 </template>
 
 <script>
@@ -56,14 +61,47 @@ export default {
 
 <style scoped>
 @media screen and (max-width: 1200px) {
-  .containerReviews {
-    min-height: 77vh;
-    height: auto;
+  .block-reviews {
+    height: 400px !important;
+    margin: 10px 20px !important;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .block-reviews {
+    height: 450px !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .desktop-version {
+    display: none !important;
+  }
+  .mobile-version {
+    display: block !important;
   }
   .block-reviews {
-    width: 50% !important;
-    margin: 10px 20px !important;
-    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 244px !important;
+    width: 80% !important;
+    border-radius: 15px;
+    padding: 12px 15px;
+    margin: 0 0 50px 0 !important;
+  }
+  .text-main-block-section-reviews {
+    padding-bottom: 50px !important;
+  }
+}
+@media screen and (max-width: 520px) {
+  .block-reviews {
+    height: 350px !important;
+  }
+}
+@media screen and (max-width: 380px) {
+  .block-reviews {
+    height: 450px !important;
   }
 }
 .containerReviews {
@@ -74,8 +112,12 @@ export default {
 }
 .text-main-block-section-reviews {
   width: 100%;
+  padding-bottom: 80px;
   height: 25%;
   text-align: center;
+}
+.mobile-version {
+  display: none;
 }
 .main-block-reviews {
   height: 65%;
@@ -84,16 +126,24 @@ export default {
   justify-content: center;
   align-items: center;
 }
+.main-block-reviews-mobile {
+  height: 65%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .block-reviews {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
-  height: 300px;
+  height: 350px;
   width: 25%;
   border-radius: 15px;
-  padding: 0 20px 20px 20px;
+  padding: 12px 15px;
   margin: 20px 40px;
 }
 .text-block-reviews {

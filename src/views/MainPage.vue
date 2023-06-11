@@ -32,7 +32,7 @@ div
     
     FifthSection 
     
-    //- SixthSection
+    SixthSection
 
     SeventhSection
 
