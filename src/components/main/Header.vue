@@ -17,7 +17,9 @@
     .flex-block-header
       span.text-15(style="margin-right: 10px") 8-912-017-44-44
       span.text-15 vent444@mail.ru
-    span.text-15 Ежедневно с 10:00 до 18:00      
+    .flex-block-header
+      span.text-15 Ежедневно 
+      span.text-15 с 10:00 до 18:00      
 </template>
 <script>
 export default {
@@ -48,7 +50,6 @@ export default {
   font-weight: 900;
   text-transform: uppercase;
   color: rgba(255,255,255,.2);
-  /* background: url(https://kipmu.ru/wp-content/uploads/kobobl.jpg) repeat-x; */
   background: url(@/assets/LogoBack.jpg) repeat-x;
   -webkit-background-clip: text;
   background-size: 40%;
@@ -90,7 +91,6 @@ span:hover{
 
 .otvet{
   display: flex;
-  flex-direction: column;
 }
 span{
   cursor: pointer;
@@ -102,5 +102,12 @@ span{
   height: 50px;
   margin: 20px;
   cursor: pointer;
+}
+.flex-block-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left:20px;
 }
 </style>

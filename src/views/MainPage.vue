@@ -12,15 +12,15 @@ div
     
     .burgerIco#burgerHeaderMenu
       .animHeader#animHeader
-        img(src="@/assets/LogoHeader.png" style="width:10%; height:auto")
+        img.anim-header-img(src="@/assets/LogoHeader.png" style="width:10%; height:auto")
         .logo-text Атмосфера
         .burger(@click="showMenu")
           Burger
       .menuItems#menuItems
-        span.text-35-b Главная
-        span.text-35-b Фотогалерея
+        span.text-35-b(@click="generalPageRout()") Главная
         span.text-35-b Контакты
-        span.text-35-b О нас
+        span.text-35-b(@click="productRout()") Товары
+        span.text-35-b(@click="abouUsRout()") О нас
 
     FirstSection
 
@@ -115,11 +115,12 @@ export default {
   
   showMenu(){
     this.show = !this.show
+    document.getElementById("burgerHeaderMenu").style.justifyContent = "center"
 
     if(this.show) {
       document.getElementById("animHeader").style.background = "#000"
       document.getElementById("burgerHeaderMenu").classList.add("maxHeightMenu")
-      document.getElementById("burgerHeaderMenu").style.justifyContent = "normal"
+      document.getElementById("burgerHeaderMenu").style.justifyContent = "flex-start"
       document.getElementById("menuItems").classList.add("menuItemsNew")
     }
 
@@ -133,6 +134,21 @@ export default {
 
   openDialog(title) {
     this.title = title
+  },
+
+  productRout(){
+    this.show = false
+    this.$router.push({path: '/products'})
+  },
+
+  abouUsRout(){
+    this.show = false
+    this.$router.push({path: '/aboutUs'})
+  },
+
+  generalPageRout() {
+    this.show = false
+    this.$router.push({path:'/'})
   }
 
  },
@@ -196,6 +212,9 @@ export default {
 .menuItems{
   display: none;
 }
+.menuItems span {
+  text-decoration: underline;
+}
 
 .menuItemsNew{
   color: #fff;
@@ -210,7 +229,7 @@ export default {
   width:100%;
   height:10%; 
   display: flex; 
-  justify-content: center; 
+  justify-content: space-around; 
   align-items: center; 
   background:transparent;
 }
@@ -234,14 +253,16 @@ export default {
     justify-content: center;
     flex-direction: column;
     position: fixed;
-    z-index: 100;
+    z-index: 100; 
     width: 100vw;
     height: 60px;
     background: #1D1D1F;
     box-shadow: 5px 5px 15px #000;
     transition: all .5s;
   }
-
+  .anim-header-img{
+    width: 7% !important;
+  }
 }
 
 .preloader-scene {
