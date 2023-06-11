@@ -14,7 +14,7 @@ div
       .animHeader#animHeader
         img(src="@/assets/LogoHeader.png" style="width:10%; height:auto")
         .logo-text Атмосфера
-        div(@click="showMenu")
+        .burger(@click="showMenu")
           Burger
       .menuItems#menuItems
         span.text-35-b Главная
@@ -24,7 +24,7 @@ div
 
     FirstSection
 
-    //- SecondSection
+    SecondSection
 
     ThirdSection
     
@@ -32,7 +32,7 @@ div
     
     FifthSection 
     
-    SixthSection
+    //- SixthSection
 
     SeventhSection
 
@@ -210,11 +210,9 @@ export default {
   width:100%;
   height:10%; 
   display: flex; 
-  flex-direction: row; 
-  justify-content: space-evenly; 
+  justify-content: center; 
   align-items: center; 
   background:transparent;
-  margin-top: 5%;
 }
 .maxHeightMenu{
   height: 100vh !important;
@@ -234,8 +232,6 @@ export default {
   .burgerIco{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    align-content: flex-start;
     flex-direction: column;
     position: fixed;
     z-index: 100;

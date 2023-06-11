@@ -47,6 +47,7 @@ export default {
     border-radius: 0;
     background-color: transparent;
     pointer-events: all;
+    margin-left: 5vw;
     transition: transform .6s cubic-bezier(.165,.84,.44,1);
   }
 
@@ -58,7 +59,7 @@ export default {
     left: 6px;
     height: 2px;
     width: auto;
-    margin-top: -15px;
+    /* margin-top: -15px; */
     transition: transform .6s cubic-bezier(.165,.84,.44,1),opacity .3s cubic-bezier(.165,.84,.44,1),background-color .6s cubic-bezier(.165,.84,.44,1);
   }
 
