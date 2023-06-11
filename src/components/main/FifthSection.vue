@@ -5,7 +5,7 @@
       span.text-40-b(style="color: #452132;") За 12 лет работы было сделано
     div  
       span.text-35-b(style="color: #452132;") более 100 объектов   
-    div(style="margin:20px 0 60px 0")
+    div(style="margin: 15px 0 60px 0")
       span.text-17(style="color: #FFFFFF;") Гостиницы, промышленные производства, сети магазинов, школы и т.д 
   .block-work-examples
 
@@ -110,11 +110,12 @@ components:{
   align-items: center;
   padding-bottom: 150px ;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .obj-text-block-work-examples {
     width: 100%;
     min-height: 50%;
     height: auto;
+    padding-bottom: 50px !important;
   }
 }
 .obj-text-part-work-examples {

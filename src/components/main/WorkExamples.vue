@@ -84,32 +84,43 @@ export default {
       return 5 
     },
     returnWidthSlide() {
-      if(deviceWidth <= 420) {
+      if(deviceWidth <= 400) {
+        return 120
+      }
+      if(deviceWidth <= 490) {
+        return 160
+      }
+      if(deviceWidth <= 580) {
         return 200
       }
-      if(deviceWidth <= 520) {
+      if(deviceWidth <= 700) {
         return 240
       }
-      if(deviceWidth <= 620) {
+      if(deviceWidth <= 850) {
         return 300
       }
       return 360
     },
     returnHeightSlide() {
-      if(deviceWidth <= 420) {
+      if(deviceWidth <= 400) {
+        return 60
+      }
+      if(deviceWidth <= 490) {
+        return 90
+      }
+      if(deviceWidth <= 580) {
         return 120
       }
-      if(deviceWidth <= 520) {
+      if(deviceWidth <= 700) {
         return 150
       }
-      if(deviceWidth <= 620) {
+      if(deviceWidth <= 850) {
         return 210
       }
       return 270
     }
-  },
-  methods: { 
-  },
+  }
+
 }
 </script>
 
