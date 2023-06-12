@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  .header
+  .header(:class="{'shadow' : shadow, 'colored' : background}")
     .logo
       .logo-text Атмосфера
     .box
@@ -39,6 +39,10 @@ import Burger from '../Burger.vue'
 
 export default {
   name:"HeaderTest",
+  props: {
+    background: Boolean,
+    shadow: Boolean
+  },
   components: {
     Burger
   },
@@ -206,7 +210,7 @@ export default {
   text-align: center;
   font-size: 20px;
   color: #fff;
-  z-index: 1001;
+  z-index: 999;
   
 }
 .box-sm span{
@@ -254,5 +258,11 @@ export default {
   justify-content: center;
   align-items: center;
   padding-left:20px;
+}
+.colored {
+  background: linear-gradient(90deg, #040D2C, #462A8B,#8D05D6);
+}
+shadow {
+  padding: 50px;
 }
 </style>

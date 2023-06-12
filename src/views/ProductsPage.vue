@@ -1,6 +1,6 @@
 <template lang="pug">
 .container-products
-  Header.header-color
+  Header(:background="true")
   
   .main-block
     .title-block  
@@ -113,11 +113,8 @@ export default {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 60px 0 0 0;
   background: linear-gradient(180deg, rgba(163, 143, 193, 0) 0%, rgba(163, 143, 193, 0.74) 56.19%);;
-}
-.header-color {
-  background: linear-gradient(90deg, #040D2C, #462A8B,#8D05D6);
 }
 .main-block {
   padding: 0 10%;

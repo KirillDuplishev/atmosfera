@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  Header.header-color
+  Header(:background="true")
   .desktop-version
     .containerTwo
       .blockLeft-section-two
@@ -134,8 +134,9 @@ export default {
 .container-two-mobile {
   display: flex;
   flex-direction: column;
-  min-height: 93vh;
+  min-height: 100vh;
   height: auto;
+  margin-top:60px ;
   width: 100%;
 }
 .mobile-version {
@@ -234,9 +235,6 @@ export default {
   left: 50%;
   top: 50%;
   transform: translate(-65%, -50%);
-}
-.header-color {
-  background: linear-gradient(90deg, #040D2C, #462A8B,#8D05D6) !important;
 }
 .our-advantages-block{
   height: 45vh;

@@ -8,7 +8,7 @@ div
       .preloader-block(id="preloadBlock")
         img(src="@/assets/Logo.png" width="50%" height="auto")
     
-    Header(id="header")
+    Header(:background="headerColored" :shadow="headerShadow")
     
     FirstSection
 
@@ -68,7 +68,9 @@ export default {
 
  data(){
   return {
-    title: null
+    title: null,
+    headerColored: false,
+    headerShadow: false
   }
  },
 
@@ -87,15 +89,13 @@ export default {
  methods: {
 
   scroll() {
+    if(window.scrollY > 20) {
+      this.headerShadow = true
+    }
 
     if(window.scrollY > 100){
-      document.getElementById("header").classList.add('headerScrollAnim')
+      this.headerColored = true
     }
-
-    else{
-      document.getElementById("header").style.boxShadow = "5px 5px 15px #000"
-    }
-
   },
 
   openDialog(title) {
@@ -105,6 +105,8 @@ export default {
  },
 
  mounted() {
+  this.headerShadow = false
+  this.headerColored = false
   let el = document.getElementById('preloadBlock')
 
   el.addEventListener('animationend', function() { 
@@ -137,7 +139,6 @@ export default {
   filter: dropshadow(color=#000000, offx=1, offy=1);
 }
 * {
-  --a: linear-gradient(90deg, #040D2C, #462A8B,#8D05D6);
   margin:0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
@@ -277,10 +278,6 @@ export default {
 
 .hide{
   background: #000;
-}
-.headerScrollAnim{
-  background: var(--a);
-  transition: background 7s !important;
 }
 .obj-block-work-examples {
   width: 70%;

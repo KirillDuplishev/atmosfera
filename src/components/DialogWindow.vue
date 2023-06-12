@@ -6,7 +6,7 @@ v-app
         v-card-title.title
           div.text-title
             span.h4 {{title}}
-            span.h4(@click="closeDialog") Закрыть
+            i.material-icons(@click="closeDialog") close
         v-card-text.card
           div(v-if="title == 'Лицензия'")
             img(src="@/assets/license/licenseFirstPage.jpg" width="100%")
@@ -14,7 +14,8 @@ v-app
             img(src="@/assets/license/licenseSecondPage.jpg" width="100%")
 
 </template>
-  
+
+
 <script>
 import {store, mutations} from "@/store.js"
 export default {
@@ -39,6 +40,11 @@ export default {
 </script>
 
 <style scoped>
+  @media screen and (max-width: 1200px) {
+    v-dialog v-dialog--active v-dialog--persistent {
+      width: 80% !important;
+    }
+  }
   .title {
     background-color: #1d1d1F;
   }

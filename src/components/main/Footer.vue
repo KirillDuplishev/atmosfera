@@ -84,6 +84,7 @@ footer{
   align-items: center;
 }
 .background-white {
+  border-top: 2px solid #6D6D6D;
   background: #FBFCFF !important;
 }
 .footer-block{
