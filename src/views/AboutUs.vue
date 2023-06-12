@@ -1,22 +1,20 @@
 <template lang="pug">
 div
-  Header.header
+  Header.header-color
   .desktop-version
-    v-row.containerTwo
-      v-col.column-width(md="5")
-        .blockLeft-section-two
-          .text-block-main-section-two
-            .text-block-section-two
-              span.text-75-b О нас
-            .text-description-block-section-two.outline-border
-              span.text-17 Наша компания начала свое развитие в 2010-х годах. Начиналось все с простой идеи, которая обрела со временем более чёткие представления и формы.
-            .text-description-block-section-two.outline-border
-              span.text-17 Для нас очень важен каждый наш клиент, будь это крупные заводы, больницы, школы, либо муниципальные и федеральные заказчики, или обычные физические лица – ко всем нашим клиентам абсолютно одинаковый подход.
-            .text-description-block-section-two.outline-border
-              span.text-17 Для нас важны и качество выполняемых нами работ и наша репутация.
-      v-col.column-width(md="5")
-        .blockRight-section-two
-          img.img-right-section-two(src="@/assets/ManAboutUs.svg")
+    .containerTwo
+      .blockLeft-section-two
+        .text-block-main-section-two
+          .text-block-section-two
+            span.text-75-b О нас
+          .text-description-block-section-two.outline-border
+            span.text-17 Наша компания начала свое развитие в 2010-х годах. Начиналось все с простой идеи, которая обрела со временем более чёткие представления и формы.
+          .text-description-block-section-two.outline-border
+            span.text-17 Для нас очень важен каждый наш клиент, будь это крупные заводы, больницы, школы, либо муниципальные и федеральные заказчики, или обычные физические лица – ко всем нашим клиентам абсолютно одинаковый подход.
+          .text-description-block-section-two.outline-border
+            span.text-17 Для нас важны и качество выполняемых нами работ и наша репутация.
+      .blockRight-section-two
+        img.img-right-section-two(src="@/assets/ManAboutUs-edit.jpg" width="70%" height="auto")
     
     .our-advantages-block
       .title-advantages
@@ -35,10 +33,10 @@ div
           img(src="@/assets/aboutUs/icon_4.svg")
           span Динамичность и гибкость
     
-    v-row.container-left
-      v-col.blockLeft-section(md="5")
-        img.right-section-img(src="@/assets/manWorking.svg")
-      v-col.blockRight-section(md="5")
+    .container-left
+      .blockLeft-section
+        img.right-section-img(src="@/assets/manWorking.svg"  width="70%" height="auto")
+      .blockRight-section
         .text-block-main
           .text-description-block-section.outline-border
             span.text-17 Выполнение всех «договорных» обязательств, а порой и устных договорённостей является одним из важнейших приоритетов нашей компании. Многое в компании зависит от того, кто находится в управлении, и все сотрудники стараются также транслировать и выполнять данную политику, которая задаётся руководителем.
@@ -125,11 +123,13 @@ export default {
   width: 50%;
 }
 .containerTwo {
+  position: relative;
   background: #fff;
   display: flex;
-  min-height: 93vh;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh + 60px);
   height: auto;
-  width: 100%;
 }
 .container-two-mobile {
   display: flex;
@@ -142,16 +142,21 @@ export default {
   display: none;
 }
 .blockLeft-section-two {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-95%, -45%);
-  height: 100%;
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
-.text-block-main-section-two {
-  margin-right: 20px;
+.text-block-main-section-two{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20% 10%;
 }
 .text-block-main-section-two-mobile {
   display: flex;
@@ -162,12 +167,12 @@ export default {
   width: 100%;
 }
 .text-block-section-two{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left ;
   color: #452132;
-  margin-top: 100px;
-  margin-left: 10%;
 }
 
 .text-block-section-two-mobile {
@@ -178,11 +183,11 @@ export default {
   color: #452132;
 }
 .text-description-block-section-two {
+  width: 575px;
+  margin-top: 5%;
   text-align: left;
   line-height: 25px;
   color: black;
-  margin-top:  20px;
-  margin-left: 10%;
 }
 .text-description-block-section-two-mobile {
   width: 80%;
@@ -197,8 +202,6 @@ export default {
 
 
 .outline-border {
-  width: auto;
-  height: auto;
   border-radius: 15px;
   padding: 20px;
   border: 2px solid rgb(0, 0, 0, 0.2);
@@ -212,20 +215,17 @@ export default {
 
 
 .blockRight-section-two {
-  min-height: 90%;
-  padding-top: 20%;
-  height: auto;
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .img-right-section-two {
-  position: absolute;
-  /* border-radius: 20px; */
-  /* box-shadow: 5px 5px 20px #000; */
-  left: 50%;
-  top: 50%;
-  transform: translate(15%, -50%);
-  width: 40%;
-  height: auto;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px #000;
 }
 .img-left-section-two{
   position: absolute;
@@ -235,17 +235,8 @@ export default {
   top: 50%;
   transform: translate(-65%, -50%);
 }
-.header {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: -1px;
-  text-align: center;
-  font-size: 20px;
-  color: #fff;
-  background: linear-gradient(90deg, #040D2C, #462A8B,#8D05D6);
-  z-index: 998;
+.header-color {
+  background: linear-gradient(90deg, #040D2C, #462A8B,#8D05D6) !important;
 }
 .our-advantages-block{
   height: 45vh;
@@ -279,33 +270,31 @@ export default {
   position: absolute;
 }
 .container-left {
+  position: relative;
   background: #fff;
   display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 93vh;
   height: auto;
 }
 .blockLeft-section {
-  width: 40%;
+  width: 50%;
   min-height: 90%;
-  padding: 20px;
   height: auto;
-  /* display: flex;
-  justify-content: center;
-  flex-wrap: wrap; */
 }
+
 .blockRight-section {
-  width: 60%;
-  height: 100%;
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .right-section-img {
-  position: absolute;
   /* border-radius: 20px;
   box-shadow: 5px 5px 20px #000; */
-  left: 50%;
-  top: 50%;
-  transform: translate(-105%, 120%);
-  width: 45%;
-  height: auto;
 }
 .text-block-section{
   text-align:left;
@@ -314,14 +303,18 @@ export default {
   margin-left: 20%;
 }
 .text-description-block-section {
+  width: 575px;
+  margin-top: 5%;
   text-align: left;
   line-height: 25px;
   color: black;
-  margin-top:  20px;
-  margin-left: 20%;
 }
 .text-block-main{
-  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20% 10%;
 }
 .advantages-block {
   background: #BBACD1;

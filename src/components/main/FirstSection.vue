@@ -25,16 +25,17 @@ export default {
   height: auto;
   width: 100%;
   color: #000;
-  margin-top: -7vw;
+  margin-top: -60px;
 }
 .hero {
   background: url('@/assets/ventFirst.jpg');
+  /* background: red; */
   background-size: cover;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   display: flex;
-  min-height: 100vh;
+  min-height: calc(100vh + 60px);
   height: auto;
   width: 100%;
 }

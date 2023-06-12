@@ -1,6 +1,6 @@
 <template lang="pug">
 .container-products
-  Header.header
+  Header.header-color
   
   .main-block
     .title-block  
@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import Header from '../components/main/Header'
+import Header from '@/components/main/Header'
 import { store } from "@/store.js";
 import Footer from '@/components/main/Footer';
 import DialogWindow from '@/components/DialogWindow';
@@ -116,17 +116,8 @@ export default {
   padding: 0;
   background: linear-gradient(180deg, rgba(163, 143, 193, 0) 0%, rgba(163, 143, 193, 0.74) 56.19%);;
 }
-.header {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: -1px;
-  text-align: center;
-  font-size: 20px;
-  color: #fff;
+.header-color {
   background: linear-gradient(90deg, #040D2C, #462A8B,#8D05D6);
-  z-index: 998;
 }
 .main-block {
   padding: 0 10%;

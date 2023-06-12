@@ -8,20 +8,8 @@ div
       .preloader-block(id="preloadBlock")
         img(src="@/assets/Logo.png" width="50%" height="auto")
     
-    Header.header#header
+    Header(id="header")
     
-    .burgerIco#burgerHeaderMenu
-      .animHeader#animHeader
-        img.anim-header-img(src="@/assets/LogoHeader.png" width="10%" height="auto")
-        .logo-text Атмосфера
-        .burger(@click="showMenu")
-          Burger
-      .menuItems#menuItems
-        span.text-35-b(@click="generalPageRout()") Главная
-        span.text-35-b Контакты
-        span.text-35-b(@click="productRout()") Товары
-        span.text-35-b(@click="abouUsRout()") О нас
-
     FirstSection
 
     SecondSection
@@ -45,7 +33,6 @@ div
 
 <script>
 import Header from '../components/main/Header'
-import Burger from '../components/Burger'
 import SideBarLeft from '../components/SideBarLeft'
 import WorkType from '@/components/main/WorkType'
 import WorkExamples from '@/components/main/WorkExamples';
@@ -68,7 +55,6 @@ export default {
   Footer,
   WorkType,
   WorkExamples,
-  Burger,
   SideBarLeft,
   FirstSection,
   SecondSection,
@@ -82,7 +68,6 @@ export default {
 
  data(){
   return {
-    show: false,
     title: null
   }
  },
@@ -112,46 +97,10 @@ export default {
     }
 
   },
-  
-  showMenu(){
-    this.show = !this.show
-    document.getElementById("burgerHeaderMenu").style.justifyContent = "center"
-
-    if(this.show) {
-      document.getElementById("burgerHeaderMenu").style.background = "#000"
-      document.getElementById("animHeader").style.borderBottom = "1px solid rgba(65, 65, 65, 0.5)"
-      document.getElementById("burgerHeaderMenu").classList.add("maxHeightMenu")
-      document.getElementById("burgerHeaderMenu").style.justifyContent = "flex-start"
-      document.getElementById("menuItems").classList.add("menuItemsNew")
-    }
-
-    else {
-      document.getElementById("burgerHeaderMenu").style.background = "#1D1D1F"
-      document.getElementById("animHeader").style.borderBottom = "none"
-      document.getElementById("burgerHeaderMenu").classList.remove("maxHeightMenu")
-      document.getElementById("menuItems").classList.remove("menuItemsNew")
-    }
-
-  },
 
   openDialog(title) {
     this.title = title
   },
-
-  productRout(){
-    this.show = false
-    this.$router.push({path: '/products'})
-  },
-
-  abouUsRout(){
-    this.show = false
-    this.$router.push({path: '/aboutUs'})
-  },
-
-  generalPageRout() {
-    this.show = false
-    this.$router.push({path:'/'})
-  }
 
  },
 
@@ -173,8 +122,7 @@ export default {
   width: 100%;
   height: 100vh;
 }
-.body-carousel
-{ 
+.body-carousel { 
 	background-image: white;
 	background-repeat: no-repeat;
 	background-position: top center;
@@ -199,23 +147,8 @@ export default {
   position: relative;
 }
 
-.header {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: -1px;
-  text-align: center;
-  font-size: 20px;
-  color: #fff;
-  z-index: 998;
-}
-
 .menuItems{
   display: none;
-}
-.menuItems span {
-  
 }
 
 .menuItemsNew{
@@ -231,7 +164,7 @@ export default {
 .menuItemsNew span{
   text-align: left;
   width: 100%;
-  padding-right: 20px;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(65, 65, 65, 0.5);
 }
 .animHeader{
@@ -254,32 +187,6 @@ export default {
 .burgerIco{
   display: none;
   position: absolute;
-}
-
-@media screen and (max-width: 1200px)  {
-  .header{
-    display: none !important;
-  }
-  .burgerIco{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: fixed;
-    z-index: 100; 
-    width: 100vw;
-    height: 60px;
-    background: #1D1D1F;
-    box-shadow: 5px 5px 15px #000;
-    transition: all .5s;
-  }
-  .anim-header-img{
-    width: 5% !important;
-  }
-}
-@media screen and (max-width: 800px)  {
-  .anim-header-img {
-    width: 8% !important;
-  }
 }
 
 .preloader-scene {
