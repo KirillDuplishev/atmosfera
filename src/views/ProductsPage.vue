@@ -77,6 +77,38 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (max-width: 1000px) {
+  .block-products {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+  }
+  .card-products {
+    min-width: 80% !important;
+    max-width: 80% !important;   
+  }
+  .title-block {
+    text-align: center !important;
+    color: #452132;
+    margin: 60px 0 50px 0 
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-block {
+    padding: 0 !important;
+  }
+  .card-products {
+    min-width: 90% !important;
+    max-width: 90% !important;   
+  }
+}
+@media screen and (max-width: 400px) {
+  .card-products {
+    min-width: 95% !important;
+    max-width: 95% !important;   
+  }
+}
 .container-products {
   width: 100%;
   height: 100%;
