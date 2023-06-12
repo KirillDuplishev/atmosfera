@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  footer
+  footer(:class="{'background-white' : backgroundWhite}")
     .footer-block
       img.img(src="@/assets/LogoHeader.png" width="5%" height="auto")
       .footer-menu-text(@click="showLicenseWindow('Политика конфиденциальности')")
@@ -28,8 +28,9 @@ import {mutations} from "@/store.js"
 export default {
   name:"FooterMain",
   
-  data: () => ({
-  }),
+  props: {
+    backgroundWhite: Boolean
+  },
 
   methods:{
     showLicenseWindow(name){
@@ -81,6 +82,9 @@ footer{
   height: auto;
   display: flex;
   align-items: center;
+}
+.background-white {
+  background: #FBFCFF !important;
 }
 .footer-block{
   width: 100%;
