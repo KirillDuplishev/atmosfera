@@ -1,12 +1,11 @@
 <template lang="pug">
 .containerFor
   .blockLeft-section-four
-    img.img-right-section-four(src="@/assets/KILLMEPLZX2_Factory_ventilationwhite_purple_pastel_colors_high__715fc1d0-c4f6-4996-bb17-49634b6a0580.png")
+    img.img-right-section-four(src="@/assets/FourthSectionImg.png" width="70%" height="auto")
   .blockRight-section-four
     .text-block-main-section-four
       .text-block-section-four
         span.text-29-b ООО "АТМОСФЕРА" предлагает лучшее европейское оборудование
-        //- span.text-29-b лучшее европейское оборудование 
       .text-description-block-section-four.outline-border
         span.text-17 Все оборудование прошло сертификацию ISO 9001,
         span.text-17 а так же Российскую сертификацию "РОСТЕСТа".  
@@ -65,7 +64,7 @@ export default {
     display: none !important;
   }
   .blockRight-section-four {
-    background: url("@/assets/KILLMEPLZX2_Factory_ventilationwhite_purple_pastel_colors_high__715fc1d0-c4f6-4996-bb17-49634b6a0580.png");
+    background: url("@/assets/FourthSectionImg.png");
     background-size: cover;
     width: 100% !important;
     min-height: 93vh;
@@ -118,47 +117,52 @@ export default {
   position: relative;
   background: #fff;
   display: flex;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  min-height: 93vh;
   height: auto;
-  width: 100%;
 }
 .blockLeft-section-four {
-  width: 40%;
+  width: 50%;
   min-height: 90%;
-  padding: 20px;
   height: auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
-
+.text-block-main-section-four {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20% 10%;
+}
 .blockRight-section-four {
-  width: 60%;
-  /* height: 100%; */
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-block-section-four{
-  text-align:left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left ;
   color: #452132;
-  margin-top: 100px;
-  margin-left: 20%;
 }
 
 .text-description-block-section-four {
+  margin-top: 5%;
   text-align: left;
   line-height: 25px;
   color: black;
-  margin-top:  20px;
-  margin-left: 20%;
 }
 .text-block-ellipse-section-four {
-  width: auto;
   flex-wrap: wrap;
   gap: 10px;
-  text-align: left;
   display: flex;
   margin-top:  20px;
-  margin-left: 20%;
+  justify-content: center;
 }
 .text-ellipse-section-four {
   width: 180px;
@@ -171,21 +175,12 @@ export default {
   text-align: center;
 }
 .img-right-section-four {
-  position: absolute;
   border-radius: 20px;
   box-shadow: 5px 5px 20px #000;
-  left: 50%;
-  top: 50%;
-  transform: translate(-110%, -50%);
-  width: 40%;
-  height: auto;
 }
 .outline-border {
-  width: auto;
-  height: auto;
   border-radius: 15px;
   padding: 20px;
   border: 2px solid rgb(0, 0, 0, 0.2);
-  margin-right: 20px;
 }
 </style>
