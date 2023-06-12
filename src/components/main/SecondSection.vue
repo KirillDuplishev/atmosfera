@@ -1,19 +1,17 @@
 <template lang="pug">
   .containerTwo
-    .column-width
       .blockLeft-section-two
         .text-block-main-section-two
           .text-block-section-two
-            span.text-40-b Получите готовую вентиляционную систему сэкономив свое время
+            span.text-40-b Получите готовую вентиляционную систему, сэкономив свое время
           .text-description-block-section-two.outline-border
             span.text-17 Наша компания осуществляет комплексный подход к решению задач, связанных с проектированием, поставкой, монтажом, запуском и наладкой систем вентиляции и кондиционирования любой сложности.
           .text-description-block-section-two.outline-border
             span.text-17 Потенциал нашей компании позволяет осуществлять полное комплектование объектов заказчика «под ключ». Мы сопровождаем проекты любой сложности. Для нас важен каждый заказчик – будь это кондиционер в жилом доме или системы вентиляции на региональных и федеральных объектах капитального строительства, такие как школы, больницы.
           .text-description-block-section-two.outline-border
             span.text-17 В зависимости от запросов и задач заказчика наша компания также выполняет подбор и замену оборудвания уже по готовым проектам.
-    .column-width
       .blockRight-section-two
-        img.img-right-section-two(src="@/assets/KILLMEPLZX2_Large_spaceventilation_air_flow_white_purpleorange__0727ac3a-0c43-4562-8842-6e8eb968b88f.png")
+        img.img-right-section-two(src="@/assets/SecondSectionImg.png" width="70%" height="auto")
 </template>
 
 <script>
@@ -28,16 +26,17 @@ export default {
     min-height: 93vh;
     height: auto;  
   }
+  .text-block-section-two span {
+    font-size: 35px !important;
+  }
 }
 @media screen and (max-width: 1000px) {
   .containerTwo {
     position: static !important;
     display: block !important;
-    /* width: 100% !important; */
   }
   .blockLeft-section-two {
-    position: relative !important;
-    background: url("@/assets/KILLMEPLZX2_Large_spaceventilation_air_flow_white_purpleorange__0727ac3a-0c43-4562-8842-6e8eb968b88f.png");
+    background: url("@/assets/SecondSectionImg.png");
     background-size: cover;
     width: 100% !important;
     min-height: 93vh;
@@ -65,7 +64,6 @@ export default {
     text-align: center;
     color: white;
     margin: 10px 10px !important;
-    /* background: rgb(0, 0, 0, 0.4); */
     background: rgba(217, 217, 217, 0.1);
     backdrop-filter: blur(50px);
   }
@@ -77,45 +75,35 @@ export default {
   .blockRight-section-two {
     display: none;
   }
-  .column-width:nth-child(1){
-    width: 100% !important
-  }
-  .column-width:nth-child(2){
-    display: none;
-  }
-}
-.row {
-  margin: -12px !important;
-}
-.column-width{
-  width: 50%;
 }
 .containerTwo {
   position: relative;
   background: #fff;
   display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 93vh;
   height: auto;
 }
 
-/*  */
+.text-block-main-section-two{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20% 10%;
+}
 
 .blockLeft-section-two {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-95%, -45%);
-  /* padding-top: 20%; */
-  height: 100%;
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/*  */
 
-.text-block-main-section-two {
-  margin-right: 20px;
-}
-
-/*  */
 
 .text-block-section-two{
   display: flex;
@@ -123,46 +111,38 @@ export default {
   align-items: flex-start;
   text-align: left ;
   color: #452132;
-  margin-top: 100px;
-  margin-left: 10%;
 }
 
-/*  */
+
+.text-description-block-section-two:nth-child(1) {
+  margin-top: 10%;
+}
 
 .text-description-block-section-two {
+  margin-top: 5%;
   text-align: left;
   line-height: 25px;
   color: black;
-  margin-top:  20px;
-  margin-left: 10%;
 }
 
-/*  */
+
 
 .outline-border {
-  width: auto;
-  height: auto;
   border-radius: 15px;
   padding: 20px;
   border: 2px solid rgb(0, 0, 0, 0.2);
 }
 
-/*  */
+
 
 .blockRight-section-two {
+  width: 50%;
   min-height: 90%;
-  padding-top: 20%;
   height: auto;
 }
 
 .img-right-section-two {
-  position: absolute;
   border-radius: 20px;
   box-shadow: 5px 5px 20px #000;
-  left: 50%;
-  top: 50%;
-  transform: translate(15%, -50%);
-  width: 40%;
-  height: auto;
 }
 </style>

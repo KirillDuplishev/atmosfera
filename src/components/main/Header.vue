@@ -76,7 +76,7 @@ export default {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: 7vh;
+  height: 60px;
   background: transparent;
   backdrop-filter: blur(20px);
   border-radius: 0 0 30px 30px;

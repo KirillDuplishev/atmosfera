@@ -219,7 +219,7 @@ export default {
 }
 
 .menuItemsNew{
-  padding-top: 60px;
+  padding-top: 100px;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -229,7 +229,7 @@ export default {
   margin: 0 10%;
 }
 .menuItemsNew span{
-  text-align: right;
+  text-align: left;
   width: 100%;
   padding-right: 20px;
   border-bottom: 1px solid rgba(65, 65, 65, 0.5);
