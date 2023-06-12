@@ -342,7 +342,7 @@ export default {
 }
 .advantages-card {
   width: 70%;
-  height: 175px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
