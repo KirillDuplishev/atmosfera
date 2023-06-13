@@ -20,10 +20,13 @@ div
         .footer-menu-text-mobile(@click="showLicenseWindow('Лицензия')")
           span.text-15-b Лицензия
   
+  div.panel-hide
+    DialogWindow(:activeFlag="true" :title="title")
 </template>
 
 <script>
 import {mutations} from "@/store.js"
+import DialogWindow from '@/components/DialogWindow'
 
 export default {
   name:"FooterMain",
@@ -31,11 +34,17 @@ export default {
   props: {
     backgroundWhite: Boolean
   },
+  
+  data: () => ({
+    title: null
+  }),
+
+  components: {DialogWindow},
 
   methods:{
     showLicenseWindow(name){
       mutations.openDialogWindow()
-      this.$emit('openDialog', name)
+      this.title = name
     }
   }
 }
@@ -122,5 +131,10 @@ footer{
 
 .footer-menu-text span:hover:after {
 	width: 100%;
+}
+
+.panel-hide {
+  z-index: 999;
+  position: absolute;
 }
 </style>
