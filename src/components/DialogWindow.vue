@@ -1,7 +1,7 @@
 <template lang="pug">
 v-app  
   div.text-center.dialog
-    v-dialog(v-model="store.openDialog" modal :persistent="true" transition="dialog-bottom-transition" width="50%")
+    v-dialog(v-model="store.openDialog" modal :scrollable="true" :persistent="true" :fullscreen="fullscreen" transition="dialog-bottom-transition" :width="dialogWidth")
       v-card
         v-card-title.title
           div.text-title
@@ -23,12 +23,22 @@ export default {
   data () {
     return {
       dialog: false,
-      store
+      store,
     }
   },
 
   props: {
     title: null
+  },
+
+  computed: {
+    fullscreen() {
+      return this.title == 'Лицензия' ? false : true 
+    },
+
+    dialogWidth() {
+      return window.innerWidth <= 800 ? '90%' : '70%'
+    }
   },
 
   methods: {
@@ -67,6 +77,9 @@ export default {
   }
   v-card{
     z-index: 999;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
   }
 </style>
   
