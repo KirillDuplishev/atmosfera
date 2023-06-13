@@ -3,10 +3,10 @@ div
   .body1#body1(v-scroll="scroll")
     
     .preloader-scene
-      .loading-block
-        .progress
       .preloader-block(id="preloadBlock")
         img(src="@/assets/Logo.png" width="50%" height="auto")
+      .loading-block
+        .progress
     
     Header(:background="headerColored" :shadow="headerShadow")
     
@@ -24,10 +24,7 @@ div
 
     SeventhSection
 
-    Footer(@openDialog="openDialog")
-    
-  div.panel-hide
-    DialogWindow(:activeFlag="true" :title="title")
+    Footer
 
 </template>
 
@@ -45,7 +42,6 @@ import FifthSection from '@/components/main/FifthSection'
 import SixthSection from '@/components/main/SixthSection'
 import SeventhSection from '@/components/main/SeventhSection'
 import Footer from '@/components/main/Footer'
-import DialogWindow from '@/components/DialogWindow'
 
 export default {
  name:"MainPage",
@@ -63,7 +59,6 @@ export default {
   FifthSection,
   SixthSection,
   SeventhSection,
-  DialogWindow
  },
 
  data(){
@@ -80,10 +75,6 @@ export default {
     return store.isNavOpen;
   },
 
-  isDialogOpen() {
-    return store.openDialog;
-  }
-
  },
 
  methods: {
@@ -96,10 +87,6 @@ export default {
     if(window.scrollY > 100){
       this.headerColored = true
     }
-  },
-
-  openDialog(title) {
-    this.title = title
   },
 
  },
@@ -191,26 +178,25 @@ export default {
 }
 
 .preloader-scene {
-  position: fixed;
-  display: block;
   width: 100vw;
   height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
-  overflow-x: hidden;
-  z-index: 999999999999;
+  align-items: center;
+  z-index: 1000;
+  background: #000;
 }
 
 .preloader-scene-end {
   display: none;
 }
 .loading-block {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 60vh;
-  z-index: 1001;
   animation: loading 2s ease forwards;
   animation-delay: .5s;
 }
@@ -264,10 +250,6 @@ export default {
 }
 
 .preloader-block {
-  width: 100vw;
-  height: 100vh;
-  background: #000;
-  background-position: bottom;
   animation: opacityBlock 1.5s linear forwards;
   animation-delay: .5s;
 }
@@ -312,9 +294,5 @@ export default {
   -webkit-background-clip: text;
   background-size: 40%;
   animation: clouds 13s linear infinite alternate;
-}
-.panel-hide {
-  z-index: 999;
-  position: absolute;
 }
 </style>
