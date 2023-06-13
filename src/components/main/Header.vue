@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  .header(:class="{'shadow' : shadow, 'colored' : background}")
+  .header(:class="{'shadow':shadow, 'colored':background}")
     .logo
       .logo-text Атмосфера
     .box
@@ -113,7 +113,7 @@ export default {
     height: 60px;
     background: #1D1D1F;
     box-shadow: 5px 5px 15px #000;
-    transition: all .5s;
+    transition: all .5s, height 1s;
   }
   .anim-header-img{
     width: 5% !important;
@@ -143,6 +143,15 @@ export default {
   width: 100%;
   padding: 10px 0;
   border-bottom: 1px solid rgba(65, 65, 65, 0.5);
+  animation: showMenu 1s linear alternate ;
+}
+@keyframes showMenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .animHeader{
   position: fixed;
@@ -262,7 +271,7 @@ export default {
 .colored {
   background: linear-gradient(90deg, #040D2C, #462A8B,#8D05D6);
 }
-shadow {
-  padding: 50px;
+.shadow {
+  box-shadow: 5px 5px 15px #000;
 }
 </style>
