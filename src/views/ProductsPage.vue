@@ -48,9 +48,6 @@
                 span.text-11 {{product.guaranteePeriod}}
   
   Footer
-
-  div.panel-hide
-    DialogWindow(:activeFlag="true" title="Лицензия")
 </template>
 
 <script>

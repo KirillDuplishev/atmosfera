@@ -30,7 +30,6 @@ div
 
 <script>
 import Header from '../components/main/Header'
-import SideBarLeft from '../components/SideBarLeft'
 import WorkType from '@/components/main/WorkType'
 import WorkExamples from '@/components/main/WorkExamples';
 import { store } from "@/store.js";
@@ -51,7 +50,6 @@ export default {
   Footer,
   WorkType,
   WorkExamples,
-  SideBarLeft,
   FirstSection,
   SecondSection,
   ThirdSection,

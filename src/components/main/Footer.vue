@@ -3,22 +3,18 @@ div
   footer(:class="{'background-white' : backgroundWhite}")
     .footer-block
       img.img(src="@/assets/LogoHeader.png" width="5%" height="auto")
-      .footer-menu-text(@click="showLicenseWindow('Политика конфиденциальности')")
+      .footer-menu-text(@click="showDocumentWindow('Политика конфиденциальности')")
         span.text-15-b Политика конфиденциальности
-      .footer-menu-text(@click="showLicenseWindow('Соглашение на обработку персональных данных')")
-        span.text-15-b Соглашение на обработку персональных данных
-      .footer-menu-text(@click="showLicenseWindow('Лицензия')")
-        span.text-15-b Лицензия
+      .footer-menu-text(@click="showDocumentWindow('Лицензия МЧС')")
+        span.text-15-b Лицензия МЧС
     
     .footer-block-mobile
       img.img-mobile(src="@/assets/LogoHeader.png" width="15%" height="auto")
       .footer-text-block-mobile
-        .footer-menu-text-mobile(@click="showLicenseWindow('Политика конфиденциальности')")
+        .footer-menu-text-mobile(@click="showDocumentWindow('Политика конфиденциальности')")
           span.text-15-b Политика конфиденциальности
-        .footer-menu-text-mobile(@click="showLicenseWindow('Соглашение на обработку персональных данных')")
-          span.text-15-b Соглашение на обработку персональных данных
-        .footer-menu-text-mobile(@click="showLicenseWindow('Лицензия')")
-          span.text-15-b Лицензия
+        .footer-menu-text-mobile(@click="showDocumentWindow('Лицензия МЧС')")
+          span.text-15-b Лицензия МЧС
   
   div.panel-hide
     DialogWindow(:activeFlag="true" :title="title")
@@ -42,9 +38,24 @@ export default {
   components: {DialogWindow},
 
   methods:{
-    showLicenseWindow(name){
-      mutations.openDialogWindow()
-      this.title = name
+    showDocumentWindow(name){
+      
+      if(name == "Лицензия МЧС") {
+        mutations.openDialogWindow()
+        this.title = name
+      }
+
+      else if (name == "Политика конфиденциальности") {
+        
+        if(this.$route.name != "PrivacyPage") {
+          this.$router.push({path: '/privacy'})
+        }
+
+        else {
+          location.reload()
+        }
+
+      }
     }
   }
 }
@@ -126,7 +137,7 @@ footer{
 
 .footer-menu-text span::after {
   width: 0;
-  transition: width 0.35s;
+  transition: width .5s;
 }
 
 .footer-menu-text span:hover:after {

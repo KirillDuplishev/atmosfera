@@ -1,6 +1,6 @@
 <template lang="pug">
 .container-work-type
-  v-img.background(:src="require(`@/assets/WorkExaple/svg/${imgSrc}.svg`)")
+  v-img.background(:src="require(`@/assets/WorkExaple/jpg/${imgSrc}.jpg`)")
   .shadow-text
   span.text-17.text-block {{nameBlock}}
 </template>

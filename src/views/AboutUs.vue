@@ -14,7 +14,7 @@ div
           .text-description-block-section-two.outline-border
             span.text-17 Для нас важны и качество выполняемых нами работ и наша репутация.
       .blockRight-section-two
-        img.img-right-section-two(src="@/assets/ManAboutUs-edit.jpg" width="70%" height="auto")
+        img.img-right-section-two(src="@/assets/aboutUs/ManAboutUs-edit.jpg" width="70%" height="auto")
     
     .our-advantages-block
       .title-advantages
@@ -35,7 +35,7 @@ div
     
     .container-left
       .blockLeft-section
-        img.right-section-img(src="@/assets/manWorking.svg"  width="70%" height="auto")
+        img.right-section-img(src="@/assets/aboutUs/MenWorkingAboutUs.jpg"  width="70%" height="auto")
       .blockRight-section
         .text-block-main
           .text-description-block-section.outline-border
@@ -291,8 +291,8 @@ export default {
   align-items: center;
 }
 .right-section-img {
-  /* border-radius: 20px;
-  box-shadow: 5px 5px 20px #000; */
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px #000;
 }
 .text-block-section{
   text-align:left;

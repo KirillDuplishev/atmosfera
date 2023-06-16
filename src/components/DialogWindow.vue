@@ -8,7 +8,7 @@ v-app
             span.h4 {{title}}
             i.material-icons(@click="closeDialog") close
         v-card-text.card
-          div(v-if="title == 'Лицензия'")
+          div(v-if="title == 'Лицензия МЧС'")
             img(src="@/assets/license/licenseFirstPage.jpg" width="100%")
             hr
             img(src="@/assets/license/licenseSecondPage.jpg" width="100%")
@@ -33,7 +33,7 @@ export default {
 
   computed: {
     fullscreen() {
-      return this.title == 'Лицензия' ? false : true 
+      return this.title == 'Лицензия МЧС' ? false : true 
     },
 
     dialogWidth() {

@@ -1,7 +1,6 @@
 <template lang="pug">
 div
-
-  div(v-if="numberObject == 1")
+  div(v-if="numberObject == 1" v-resize='onResize')
 
     carousel-3d(:autoplay="true" :autoplayTimeout="3000" :autoplayHoverPause="true" :count="8" :display="returnCountSlide" :width="returnWidthSlide" :height="returnHeightSlide" :controlsVisible="true")
  
@@ -60,8 +59,6 @@ div
 
 <script>
 
-const deviceWidth = window.screen.width
-
 import { Carousel3d, Slide } from 'vue-carousel-3d';
 
 export default {
@@ -73,51 +70,58 @@ export default {
   props: {
     numberObject: null
   },
-  watch: {
-    
-  },  
+  data: () => ({
+    deviceWidth: window.innerWidth
+  }),
+  
   computed: {
     returnCountSlide() {
-      if(deviceWidth <= 1300) {
+      if(this.deviceWidth <= 1300) {
         return 3
       }
       return 5 
     },
     returnWidthSlide() {
-      if(deviceWidth <= 400) {
+      if(this.deviceWidth <= 400) {
         return 120
       }
-      if(deviceWidth <= 490) {
+      if(this.deviceWidth <= 490) {
         return 160
       }
-      if(deviceWidth <= 580) {
+      if(this.deviceWidth <= 580) {
         return 200
       }
-      if(deviceWidth <= 700) {
+      if(this.deviceWidth <= 700) {
         return 240
       }
-      if(deviceWidth <= 850) {
+      if(this.deviceWidth <= 850) {
         return 300
       }
       return 360
     },
     returnHeightSlide() {
-      if(deviceWidth <= 400) {
+      if(this.deviceWidth <= 400) {
         return 60
       }
-      if(deviceWidth <= 490) {
+      if(this.deviceWidth <= 490) {
         return 90
       }
-      if(deviceWidth <= 580) {
+      if(this.deviceWidth <= 580) {
         return 120
       }
-      if(deviceWidth <= 700) {
+      if(this.deviceWidth <= 700) {
         return 150
       }
-      if(deviceWidth <= 850) {
+      if(this.deviceWidth <= 850) {
         return 210
       }
       return 270
+    }
+  },
+
+  methods: {
+    onResize() {
+      this.deviceWidth = window.innerWidth
     }
   }
 

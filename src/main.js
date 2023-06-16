@@ -13,6 +13,11 @@ Vue.use(Carousel3d);
 Vue.use(VueRouter)
 Vue.use(Vuetify)
 
+Vue.mixin({
+  methods: {
+  }
+})
+
 const vuetify = new Vuetify({
   theme: {
     dark: true

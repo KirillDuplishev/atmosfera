@@ -85,7 +85,7 @@
   font-family: 'SF UI Display';
   font-style: normal;
   font-weight: bold;
-  
+  font-size: 35px;
 }
 @media screen and (max-width: 1000px) {
   .text-35-b {
@@ -210,6 +210,11 @@
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
+}
+@media screen and (max-width: 450px) {
+  .text-20-b {
+    font-size: 13px;
+  }
 }
 .text-19-b {
   font-family: 'SF UI Display';

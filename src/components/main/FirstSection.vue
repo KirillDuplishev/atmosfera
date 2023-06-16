@@ -28,8 +28,7 @@ export default {
   margin-top: -60px;
 }
 .hero {
-  background: url('@/assets/ventFirst.jpg');
-  /* background: red; */
+  background: url('@/assets/FirstSection.jpg');
   background-size: cover;
   justify-content: center;
   flex-direction: column;

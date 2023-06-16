@@ -4,15 +4,15 @@ div
     .logo
       .logo-text Атмосфера
     .box
-      .box-sm(@click="$router.push({path:'/'})")
+      .box-sm(@click="generalPageRout()" :class="{'activate': checkRouterName('mainPage')}")
         span.text-18 Главная
-      .box-sm(@click="galleryRout")
+      .box-sm(@click="galleryRout()" :class="{'activate': checkRouterName('photoGallery')}")
         span.text-18 Фотогалерея
-      .box-sm
+      .box-sm(@click="contactsRoute()")
         span.text-18 Контакты
-      .box-sm(@click="productRout()")
+      .box-sm(@click="productRout()" :class="{'activate': checkRouterName('products')}")
         span.text-18 Товары
-      .box-sm(@click="$router.push({path:'/aboutUs'})")
+      .box-sm(@click="abouUsRout()" :class="{'activate': checkRouterName('aboutUs')}")
         span.text-18 О нас
     .otvet
       .flex-block-header
@@ -25,50 +25,123 @@ div
   .burgerIco#burgerHeaderMenu
     .animHeader#animHeader
       img.anim-header-img(src="@/assets/LogoHeader.png" width="10%" height="auto")
-      .logo-text Атмосфера
+      .logo-text-mobile.text-50-b Атмосфера
       .burger(@click="showMenu")
         Burger
     .menuItems#menuItems
       span.text-27(@click="generalPageRout()") Главная
-      span.text-27 Контакты
+      span.text-27(@click="contactsRoute()") Контакты
       span.text-27(@click="productRout()") Товары
       span.text-27(@click="abouUsRout()") О нас
 </template>
 <script>
 import Burger from '../Burger.vue'
+import { mutations } from '@/store.js'
 
 export default {
   name:"HeaderTest",
+  
+  mixin: [],
+
   props: {
     background: Boolean,
     shadow: Boolean
   },
+
   components: {
     Burger
   },
+
   data:() => ({
     show: false,
   }),
+
+  computed: {
+  },
+
   methods: {
+    checkRouterName(name) {
+      return this.$route.name == name
+    },
 
     galleryRout() {
-      this.$router.push({path: '/photoGallery'}).then(() => {
+
+      if(this.$route.name == "photoGallery") {
+        mutations.toggleNav()
+        this.showMenu()
         location.reload()
-      })
+      }
+
+      else {
+        this.$router.push({path: '/photoGallery'}).then(() => {
+          location.reload()
+        })
+      }
+
+    },
+
+    contactsRoute() {
+      mutations.toggleNav()
+      this.showMenu()
+
+      if(this.$route.name != "mainPage") {
+        this.$router.push({path:'/'}).then(() => {
+          let link = document.createElement('a');
+          link.setAttribute('href', "/#screenMapSection");
+          link.click();
+        })
+      }
+      
+      else {
+        let link = document.createElement('a');
+        link.setAttribute('href', "/#screenMapSection");
+        link.click();
+      }
+
     },
 
     productRout() {
-      this.$router.push({path: '/products'})
+
+      if(this.$route.name == "products") {
+        mutations.toggleNav()
+        this.showMenu()
+        location.reload()
+      }
+
+      else {
+        mutations.toggleNav()
+        this.$router.push({path: '/products'})
+      }
     },
     
-    abouUsRout(){
-      this.show = false
-      this.$router.push({path: '/aboutUs'})
+    abouUsRout() {
+
+      if(this.$route.name == "aboutUs") {
+        mutations.toggleNav()
+        this.showMenu()
+        location.reload()
+      }
+
+      else {
+        mutations.toggleNav()
+        this.$router.push({path: '/aboutUs'})
+      }
+
     },
 
     generalPageRout() {
-      this.show = false
-      this.$router.push({path:'/'})
+      
+      if(this.$route.name == "mainPage") {
+        mutations.toggleNav()
+        this.showMenu()
+        location.reload()
+      }
+
+      else {
+        mutations.toggleNav()
+        this.$router.push({path:'/'})
+      }
+      
     },
 
     showMenu(){
@@ -108,7 +181,7 @@ export default {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100; 
+    z-index: 500; 
     width: 100vw;
     height: 60px;
     background: #1D1D1F;
@@ -165,7 +238,7 @@ export default {
   align-items: center; 
 }
 .maxHeightMenu{
-  height: 100vh !important;
+  height: 150vh !important;
   background: #000 !important;
   transition: height 1s, background 2s;
 }
@@ -176,6 +249,14 @@ export default {
 }
 .logo{
   display: flex;
+}
+.logo-text-mobile {
+  text-transform: uppercase;
+  color: rgba(255,255,255,.2);
+  background: url(@/assets/LogoBack.jpg) repeat-x;
+  -webkit-background-clip: text;
+  background-size: 40%;
+  animation: clouds 13s linear infinite alternate;
 }
 .logo-text {
   font-family: Arial;
@@ -239,7 +320,7 @@ export default {
 
 .box-sm span::after {
   width: 0;
-  transition: width 0.35s;
+  transition: width .5s;
 }
 
 .box-sm span:hover:after {
@@ -274,4 +355,27 @@ export default {
 .shadow {
   box-shadow: 5px 5px 15px #000;
 }
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.activate { 
+  position: relative;
+  cursor: pointer;
+}
+
+
+.activate::after {
+	position: absolute;
+  content: '';
+  left: 0;
+  bottom: 15px;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #ffffff;
+}
+
+
 </style>
