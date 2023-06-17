@@ -86,6 +86,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width: 450px) { 
+  .input {
+    width: 70% !important;
+  }
+}
 .container-castom{
   display: flex;
   flex-direction: column;

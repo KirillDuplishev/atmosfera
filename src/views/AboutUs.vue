@@ -90,22 +90,17 @@ div
         .text-description-block-section-two-mobile.outline-border-mobile
           span.text-17 Если вы разделяете наши ценности и приоритеты, мы с радостью готовы предположить вам сотрудничать с нашей компанией.
   Footer(:backgroundWhite="true")
-  
-  div.panel-hide
-    DialogWindow(:activeFlag="true" title="Лицензия")
 </template>
 
 <script>
 import Header from '@/components/main/Header'
 import Footer from '@/components/main/Footer'
-import DialogWindow from '@/components/DialogWindow'
 export default {
   name:"AboutUs",
 
   components: {
     Header,
     Footer,
-    DialogWindow,
   }
 }
 </script>

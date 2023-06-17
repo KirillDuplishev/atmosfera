@@ -7,7 +7,7 @@
         .text-block-section-map
           span.text-19-b 8-912-017-44-44
           br
-          span.text-19-b Ежедневно с 10:00 до 18:00 
+          span.text-19-b Ежедневно с 8:30 до 17:30 
         .text-block-section-map
           span.text-19-b Ижевск
           br
@@ -28,7 +28,7 @@
           input(v-model="privacyConfirm" type="checkbox" @click="privacyConfirm = !privacyConfirm")
           div(style="text-align: left; padding-left: 5px")
             span.text-15-b Нажимая на кнопку, Вы соглашаетесь на 
-            span.text-15-b( @click="privacyRout" style="color:#7F06FF") обработку персональных данных
+            span.text-15-b( @click="privacyRout" style="color:#7F06FF; cursor: pointer") обработку персональных данных
     
     .info-block-section-map(v-show="callBackResponse") 
       .text-main-block-section-map-call-back
@@ -146,6 +146,10 @@ export default {
   .info-block-section-map-call-back {
     width: 300px !important;
     height: 500px !important;
+  }
+
+  .button-section-map-call-back {
+    width: 70% !important;
   }
 }
 input {

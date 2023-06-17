@@ -20,7 +20,7 @@ div
         span.text-15 vent444@mail.ru
       .flex-block-header
         span.text-15 Ежедневно 
-        span.text-15 с 10:00 до 18:00      
+        span.text-15 с 8:30 до 17:30      
   
   .burgerIco#burgerHeaderMenu
     .animHeader#animHeader

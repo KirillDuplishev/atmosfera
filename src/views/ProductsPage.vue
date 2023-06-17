@@ -54,14 +54,12 @@
 import Header from '@/components/main/Header'
 import { store } from "@/store.js";
 import Footer from '@/components/main/Footer';
-import DialogWindow from '@/components/DialogWindow';
 export default {
   name: "ProductsPage",
 
   components: {
     Header,
     Footer,
-    DialogWindow
   },
 
   data() {
