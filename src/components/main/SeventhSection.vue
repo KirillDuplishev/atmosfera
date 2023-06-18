@@ -20,7 +20,7 @@
         CastomInput.input(v-model="clientName" placeholder="Имя" :name="true")
         CastomInput.input(v-model="clientPhoneNumber" placeholder="Номер телефона" mask="+0 (000)-000-00-00" type="num")
     
-      v-btn.button-section-map-call-back.text-15-b.mg-b-20( @click="callBack()" :disabled="!checkDataInput") Оставить заявку
+      v-btn.button-section-map-call-back.text-15-b.mg-b-20( @click="callBack()" :class="{'disableColor':!checkDataInput}" :disabled="!checkDataInput") Оставить заявку
       v-btn.button-section-map-call-back.text-15-b( @click="callBack('return')") Назад
       
       .call-back-text
@@ -43,7 +43,7 @@
 
 <script>
 import CastomInput from '../CastomInput';
-
+import axios from 'axios'
 export default {
   
   components: {
@@ -89,9 +89,11 @@ export default {
         this.showContacts = false
         this.showFormCallBack = false
         this.callBackResponse = true
+        
+        axios.post(`http://localhost:8080/feedback/${this.clientPhoneNumber}`, {clientName: this.clientName})
         this.clientName = ''
         this.clientPhoneNumber = ''
-        //- Запрос
+      
       }
 
     },
@@ -266,5 +268,8 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.disableColor {
+  background: grey;
 }
 </style>
