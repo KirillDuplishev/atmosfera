@@ -4,7 +4,7 @@ div
     
     .preloader-scene
       .preloader-block(id="preloadBlock")
-        img(src="@/assets/Logo.png" width="50%" height="auto")
+        img(src="@/assets/logo.png" width="50%" height="auto")
       .loading-block
         .progress
     
