@@ -2,11 +2,11 @@
 .containerWorkExamples
   .text-main-block-section-examples
     div
-      span.text-40-b(style="color: #452132;") За 12 лет работы было сделано
+      span.text-40-b(style="color: #452132;") За 12 лет работы выполнено
     div  
       span.text-35-b(style="color: #452132;") более 100 объектов   
     div(style="margin: 15px 0 60px 0")
-      span.text-17(style="color: #FFFFFF;") Гостиницы, промышленные производства, сети магазинов, школы и т.д 
+      span.text-17(style="color: #FFFFFF;") Школы, больницы, промышленные производства, сети магазинов и т.д 
   .block-work-examples
 
     .span-work-examples

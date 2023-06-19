@@ -5,15 +5,9 @@
   .blockRight-section-four
     .text-block-main-section-four
       .text-block-section-four
-        span.text-29-b ООО "АТМОСФЕРА" предлагает лучшее европейское оборудование
+        span.text-29-b ООО "АТМОСФЕРА" предлагает лучшее оборудование
       .text-description-block-section-four.outline-border
-        span.text-17 Все оборудование прошло сертификацию ISO 9001,
-        span.text-17 а так же Российскую сертификацию "РОСТЕСТа".  
-        span.text-17 Поставляемое оборудование отличается высокой
-        span.text-17 надежностью и долговечностью его эксплуатации.
-        span.text-17 В настоящее время ООО "АТМОСФЕРА" является 
-        span.text-17 официальным диллером таких известных
-        span.text-17 производителей климатического оборудования как:
+        span.text-17 В настоящее время наша компания является официальным диллером таких известных производителей климатического и вентиляционного   оборудования как:
       .main-block-ellipse-section-four
         .text-block-ellipse-section-four
           .text-ellipse-section-four
@@ -36,6 +30,8 @@
             span.text-15 VKT 
           .text-ellipse-section-four
             span.text-15 Breez
+          .text-ellipse-section-four
+            span.text-15 Zanussi
           .text-ellipse-section-four
             span.text-15 Тепломаш
           .text-ellipse-section-four

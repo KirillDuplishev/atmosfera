@@ -119,7 +119,7 @@ export default {
 }
 .containerTwo {
   position: relative;
-  background: linear-gradient(180deg, rgba(163, 143, 193, 0) 0%, rgba(163, 143, 193, 0.74) 56.19%);
+  background: linear-gradient(180deg, rgba(163, 143, 193, 0) 0%, rgb(190 176 212 / 74%) 56.19%);;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -264,7 +264,7 @@ export default {
 }
 .container-left {
   position: relative;
-  background: linear-gradient(180deg, rgba(163, 143, 193, 0) 0%, rgba(163, 143, 193, 0.74) 56.19%);
+  background: linear-gradient(180deg, rgba(163, 143, 193, 0) 0%, rgb(190 176 212 / 74%) 56.19%);;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -4,7 +4,7 @@ div
     
     .preloader-scene
       .preloader-block(id="preloadBlock")
-        img(src="@/assets/logo.png" width="50%" height="auto")
+        img(src="@/assets/Logo.png" width="50%" height="auto")
       .loading-block
         .progress
     
@@ -88,18 +88,25 @@ export default {
   },
 
  },
+  beforeMount() {
+    var url = window.location.href;
+    var parts = url.split("#");
+    var cleanedUrl = parts[0];
+    history.replaceState({}, document.title, cleanedUrl);
+  },
+ 
+  mounted() {
 
- mounted() {
-  this.headerShadow = false
-  this.headerColored = false
-  let el = document.getElementById('preloadBlock')
+    this.headerShadow = false
+    this.headerColored = false
+    let el = document.getElementById('preloadBlock')
 
-  el.addEventListener('animationend', function() { 
-    let sceneDiv = document.querySelector(".preloader-scene");
-    sceneDiv.className = "preloader-scene-end"; 
-  })
+    el.addEventListener('animationend', function() { 
+      let sceneDiv = document.querySelector(".preloader-scene");
+      sceneDiv.className = "preloader-scene-end"; 
+    })
 
- },
+  },
 
 }
 </script>

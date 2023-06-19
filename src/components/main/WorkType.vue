@@ -26,11 +26,11 @@ export default {
 <style scoped>
 .background{
   transform: translate(0, -25%);
-  /* width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   position: relative;
-  top: 0;
-  left: 0; */
+  top: 25%;
+  left: 0;
 }
 .container-work-type {
   overflow: hidden;
@@ -39,7 +39,7 @@ export default {
   display: flex;
   justify-content:center;
   flex-wrap: wrap;
-  padding-bottom: -200px;
+  /* padding-top: 50px; */
   box-shadow: 0 0 0 transparent;
   cursor: pointer;
   transform: scale(1);

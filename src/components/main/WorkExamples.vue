@@ -7,7 +7,7 @@ div
       slide(:index="0")
         img.img-slider(src="@/assets/schoolBersha/1.jpg")
       slide(:index="1")
-        img.img-slider(src="@/assets/schoolBersha/2.jpg")
+        img.img-slider(src="@/assets/schoolBersha/31.jpg")
       slide(:index="2")
         img.img-slider(src="@/assets/schoolBersha/3.jpg")
       slide(:index="3")
