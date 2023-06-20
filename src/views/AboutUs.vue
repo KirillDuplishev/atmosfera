@@ -18,7 +18,7 @@ div
     
     .our-advantages-block
       .title-advantages
-        span.text-40-b Наши приемущества
+        span.text-40-b Наши преимущество
       .advantages
         .elemnt
           img(src="@/assets/aboutUs/icon_1 .svg")
