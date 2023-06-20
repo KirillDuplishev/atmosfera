@@ -13,9 +13,19 @@
   font-weight: 800;
   font-size: 95px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
+  .text-95 {
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 1050px) {
   .text-95 {
     font-size: 65px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .text-95 {
+    font-size: 55px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -23,14 +33,24 @@
     font-size: 48px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
+  .text-95 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 520px) {
   .text-95 {
     font-size: 35px;
   }
 }
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 470px) {
   .text-95 {
     font-size: 30px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .text-95 {
+    font-size: 25px;
   }
 }
 .text-75-b {

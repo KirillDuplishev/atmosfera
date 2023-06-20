@@ -2,9 +2,9 @@
 .containerReviews
   .text-main-block-section-reviews
     .header-title
-      span.text-19-b Отзывы
+      //- span.text-19-b Отзывы
     div
-      span.text-40-b(style="color: #452132") Мы-Надежные партнеры-профессионалы
+      h1.text-40-b(style="color: #452132") Отзывы
     div(style="color:#000; padding: 30px 0 0 0")
       span.text-19-b Мы придаем огромное значение прочным отношениям и убедились,что они приносят пользу нашему бизнесу. 
     div(style="color:#000;")

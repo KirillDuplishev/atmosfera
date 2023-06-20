@@ -7,18 +7,20 @@ div
         .text-block-main-section-two
           .text-block-section-two
             span.text-75-b О нас
+          //- .text-block  
           .text-description-block-section-two.outline-border
             span.text-17 Наша компания начала свое развитие в 2010-х годах. Начиналось все с простой идеи, которая обрела со временем более чёткие представления и формы.
           .text-description-block-section-two.outline-border
-            span.text-17 Для нас очень важен каждый наш клиент, будь это крупные заводы, больницы, школы, либо муниципальные и федеральные заказчики, или обычные физические лица – ко всем нашим клиентам абсолютно одинаковый подход.
+            span.text-17 Для нас очень важен каждый наш клиент, будь это крупные заводы, больницы, школы, либо муниципальные и федеральные заказчики, или обычные физические лица – ко всем нашим клиентам абсолютно одинаковый подход. Для нас важны и качество выполняемых нами работ и наша репутация.
+          //- .text-block
           .text-description-block-section-two.outline-border
-            span.text-17 Для нас важны и качество выполняемых нами работ и наша репутация.
-      .blockRight-section-two
-        img.img-right-section-two(src="@/assets/aboutUs/ManAboutUs-edit.jpg" width="70%" height="auto")
-    
+            span.text-17 Выполнение всех «договорных» обязательств, а порой и устных договорённостей является одним из важнейших приоритетов нашей компании. Многое в компании зависит от того, кто находится в управлении, и все сотрудники стараются также транслировать и выполнять данную политику, которая задаётся руководителем.
+          .text-description-block-section-two.outline-border
+            span.text-17 За годы сотрудничества с различными заказчиками, кроме основной цели всех предпринимателей, были неоднократно достигнуты и нематериальные цели, по завершении объектов в виде благодарностей от заказчиков, с некоторыми у нас сложилось многолетнее продолжительное взаимовыгодное сотрудничество, в котором все участники могут друг на друга положится. Если вы разделяете наши ценности и приоритеты, мы с радостью готовы предположить вам сотрудничать с нашей компанией.
+      
     .our-advantages-block
       .title-advantages
-        span.text-40-b Наши преимущество
+        span.text-40-b Наши преимуществa
       .advantages
         .elemnt
           img(src="@/assets/aboutUs/icon_1 .svg")
@@ -33,19 +35,6 @@ div
           img(src="@/assets/aboutUs/icon_4.svg")
           span Динамичность и гибкость
     
-    .container-left
-      .blockLeft-section
-        img.right-section-img(src="@/assets/aboutUs/MenWorkingAboutUs.jpg"  width="70%" height="auto")
-      .blockRight-section
-        .text-block-main
-          .text-description-block-section.outline-border
-            span.text-17 Выполнение всех «договорных» обязательств, а порой и устных договорённостей является одним из важнейших приоритетов нашей компании. Многое в компании зависит от того, кто находится в управлении, и все сотрудники стараются также транслировать и выполнять данную политику, которая задаётся руководителем.
-          .text-description-block-section.outline-border
-            span.text-17 За годы сотрудничества с различными заказчиками, кроме основной цели всех предпринимателей, были неоднократно достигнуты и нематериальные цели, по завершении объектов в виде благодарностей от заказчиков, с некоторыми у нас сложилось многолетнее продолжительное взаимовыгодное сотрудничество, в котором все участники могут друг на друга положится.
-          .text-description-block-section.outline-border
-            span.text-17 Если вы разделяете наши ценности и приоритеты, мы с радостью готовы предположить вам сотрудничать с нашей компанией.
-  
-
   .mobile-version
     .container-two-mobile
 
@@ -61,7 +50,7 @@ div
 
       .advantages-block
         .title-advantages-block 
-          span.text-50-b Наши преимущества
+          span.text-50-b Наши преимуществa
         .advantages-card
           .advantages-img-block 
             img(src="@/assets/aboutUs/icon_1 .svg")
@@ -117,10 +106,26 @@ export default {
 .column-width{
   width: 50%;
 }
+
+@keyframes gradient {
+    0% {
+        background-position: 80% 0%;
+    }
+    50% {
+        background-position: 20% 100%;
+    }
+    100% {
+        background-position: 80% 0%;
+    }
+}
 .containerTwo {
+  background: linear-gradient(149deg,  rgba(163, 143, 193, 0.74) 0%, rgb(118, 78, 204) 42%,rgb(180, 90, 154) 72%, rgb(168, 51, 191) 100%);
+  animation: gradient 5s infinite linear;
+  background-size: 400%;
   position: relative;
-  background: linear-gradient(180deg, rgba(163, 143, 193, 0) 0%, rgb(190 176 212 / 74%) 56.19%);;
+  /* background: linear-gradient(180deg, rgba(163, 143, 193, 0) 0%, rgb(190 176 212 / 74%) 56.19%); */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: calc(100vh + 60px);
@@ -138,7 +143,7 @@ export default {
   display: none;
 }
 .blockLeft-section-two {
-  width: 50%;
+  width: 80%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -149,10 +154,10 @@ export default {
 
 .text-block-main-section-two{
   display: flex;
+  gap: 20px;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 20% 10%;
+  flex-wrap: wrap;
+  margin: 0 10% 5% 10%;
 }
 .text-block-main-section-two-mobile {
   display: flex;
@@ -168,7 +173,8 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   text-align: left ;
-  color: #452132;
+  /* color: #452132; */
+  color: #fff;
 }
 
 .text-block-section-two-mobile {
@@ -179,11 +185,15 @@ export default {
   color: #452132;
 }
 .text-description-block-section-two {
-  width: 575px;
-  margin-top: 5%;
+  width: 100%;
   text-align: left;
   line-height: 25px;
-  color: black;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: -19px 24px 31px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .text-description-block-section-two-mobile {
   width: 80%;
@@ -200,7 +210,7 @@ export default {
 .outline-border {
   border-radius: 15px;
   padding: 20px;
-  border: 2px solid rgb(0, 0, 0, 0.2);
+  border: 2px solid rgb(0, 0, 0, 0.5);
 }
 .outline-border-mobile {
   height: auto;
@@ -307,7 +317,7 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 20% 10%;
+  margin: 0 10% 20% 10%;
 }
 .advantages-block {
   background: #BBACD1;
@@ -352,5 +362,8 @@ export default {
 }
 .background-linear {
   background: linear-gradient(180deg, #BBACD1 47.47%, rgba(187, 172, 209, 0) 100%) !important;
+}
+.text-block {
+  display: flex;
 }
 </style>

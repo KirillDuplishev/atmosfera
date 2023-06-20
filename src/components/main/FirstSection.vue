@@ -1,8 +1,8 @@
 <template lang="pug">
 .containerFirst
   .hero
-    span.text-32(style="text-transform:uppercase; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные 
-    span.text-95(style="text-transform:uppercase; font-weight:800; color: white; text-shadow: 2px 2px 4px black") вентиляционные системы
+    h1.text-32(style="text-transform:uppercase; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные системы 
+    h1.text-95(style="text-transform:uppercase; font-weight:800; color: white; text-shadow: 2px 2px 4px black") вентиляция и кондиционирование 
     v-btn.button-about-us.text-15-b(@click="$router.push({path:'/aboutUs'})") Подробнее о нас
 </template>
 

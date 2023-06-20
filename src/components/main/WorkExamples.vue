@@ -21,7 +21,7 @@ div
       slide(:index="7")
         img.img-slider(src="@/assets/schoolBersha/8.jpg")
 
-  div(v-if="numberObject == 2")
+  div(v-if="numberObject == 2" v-resize='onResize')
 
     carousel-3d(:autoplay="true" :autoplayTimeout="3000" :autoplayHoverPause="true" :count="7" :display="returnCountSlide" :width="returnWidthSlide" :height="returnHeightSlide" :controlsVisible="true")
     
@@ -40,7 +40,7 @@ div
       slide(:index="6")
         img.img-slider(src="@/assets/poliklinikaVotkinsk/7.jpeg")
   
-  div(v-if="numberObject == 3")
+  div(v-if="numberObject == 3" v-resize='onResize')
 
     carousel-3d(:autoplay="true" :autoplayTimeout="3000" :autoplayHoverPause="true" :count="5" :display="returnCountSlide" :width="returnWidthSlide" :height="returnHeightSlide" :controlsVisible="true")
   

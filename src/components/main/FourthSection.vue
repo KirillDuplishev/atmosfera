@@ -34,8 +34,6 @@
             span.text-15 Zanussi
           .text-ellipse-section-four
             span.text-15 Тепломаш
-          .text-ellipse-section-four
-            span.text-15 Завод Вентилятор
 </template>
 
 <script>

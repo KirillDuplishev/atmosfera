@@ -3,13 +3,17 @@
       .blockLeft-section-two
         .text-block-main-section-two
           .text-block-section-two
-            span.text-40-b Получите готовую вентиляционную систему, сэкономив свое время
+            h1.text-40-b Вы получите 
+            h1.text-50-b готовую 
+            h1.text-50-b вентиляционную 
+            h1.text-50-b систему 
+            h1.text-40-b сэкономив свое время
           .text-description-block-section-two.outline-border
             span.text-17 Наша компания осуществляет комплексный подход к решению задач, связанных с проектированием, поставкой, монтажом, запуском и наладкой систем вентиляции и кондиционирования любой сложности.
           .text-description-block-section-two.outline-border
             span.text-17 Потенциал нашей компании позволяет осуществлять полное комплектование объектов заказчика «под ключ». Мы сопровождаем проекты любой сложности. Для нас важен каждый заказчик – будь это кондиционер в жилом доме или системы вентиляции на региональных и федеральных объектах капитального строительства, такие как школы, больницы.
           .text-description-block-section-two.outline-border
-            span.text-17 В зависимости от запросов и задач заказчика наша компания также выполняет подбор и замену оборудвания уже по готовым проектам.
+            span.text-17 В зависимости от запросов и задач заказчика наша компания также выполняет подбор и замену оборудования уже по готовым проектам.
       .blockRight-section-two
         img.img-right-section-two(src="@/assets/SecondSectionImg.png" width="70%" height="auto")
 </template>
@@ -56,9 +60,8 @@ export default {
     align-items: center;
   }
   .text-block-section-two {
-    text-align: center !important;
-    margin: auto; 
     margin: 50px 0px !important; 
+    align-items: center !important;
   }
   .text-description-block-section-two {
     text-align: center;
@@ -111,6 +114,8 @@ export default {
   align-items: flex-start;
   text-align: left ;
   color: #452132;
+  width: 100%;
+  text-transform: uppercase;
 }
 
 

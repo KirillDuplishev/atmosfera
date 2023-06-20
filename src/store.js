@@ -68,7 +68,7 @@ export const store = Vue.observable({
       id: 4,
       imgSrc: "Split-System-Ballu-Lagoon-BSD-09HN8_22Y",
       nameConddition: "Сплит-система Ballu Lagoon BSD-09HN8_22Y",
-      summCondition: "31 680 ₽",
+      summCondition: "28 690 ₽",
       ratedCoolingCapacity: "2.78 кВт",
       ratedHeatingCapacity: "2.78 кВт",
       noiseLevelInsideBlock: "26 дБ",
