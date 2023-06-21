@@ -87,7 +87,8 @@ export default {
     margin: 0 0 50px 0 !important;
   }
   .text-main-block-section-reviews {
-    padding-bottom: 50px !important;
+    /* padding-bottom: 50px !important; */
+    padding: 0 20px 50px 20px;
   }
 }
 @media screen and (max-width: 520px) {
