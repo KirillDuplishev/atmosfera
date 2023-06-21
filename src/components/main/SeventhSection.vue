@@ -7,7 +7,7 @@
         .text-block-section-map
           span.text-19-b 8-912-017-44-44
           br
-          span.text-19-b Ежедневно с 8:30 до 17:30 
+          span.text-19-b С Пн-Пт 8:30 до 17:30 
         .text-block-section-map
           span.text-19-b Ижевск
           br

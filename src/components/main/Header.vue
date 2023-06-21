@@ -19,8 +19,8 @@ div
         span.text-15(style="margin-right: 10px") 8-912-017-44-44
         span.text-15 vent444@mail.ru
       .flex-block-header
-        span.text-15 Ежедневно 
-        span.text-15 с 8:30 до 17:30      
+        span.text-15 С Пн-Пт 
+        span.text-15 8:30 до 17:30      
   
   .burgerIco#burgerHeaderMenu
     .animHeader#animHeader
