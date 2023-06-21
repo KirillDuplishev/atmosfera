@@ -50,6 +50,7 @@ export default {
     left: 0% !important;
     top: 0% !important;
     transform: translate(0%, 0%) !important;
+    align-items: center;
   }
   .text-block-main-section-two {
     width: 100%;
@@ -106,7 +107,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 
