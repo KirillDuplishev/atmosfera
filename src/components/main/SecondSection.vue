@@ -3,11 +3,11 @@
       .blockLeft-section-two
         .text-block-main-section-two
           .text-block-section-two
-            h1.text-40-b Вы получите 
-            h1.text-50-b готовую 
-            h1.text-50-b вентиляционную 
-            h1.text-50-b систему 
-            h1.text-40-b сэкономив свое время
+            h1.text-40-b.t-a-c Вы получите 
+            h1.text-50-b.t-a-c готовую 
+            h1.text-50-b.t-a-c вентиляционную 
+            h1.text-50-b.t-a-c систему 
+            h1.text-40-b.t-a-c сэкономив свое время
           .text-description-block-section-two.outline-border
             span.text-17 Наша компания осуществляет комплексный подход к решению задач, связанных с проектированием, поставкой, монтажом, запуском и наладкой систем вентиляции и кондиционирования любой сложности.
           .text-description-block-section-two.outline-border
@@ -77,6 +77,9 @@ export default {
   }
   .blockRight-section-two {
     display: none;
+  }
+  .t-a-c {
+    text-align: center !important;
   }
 }
 .containerTwo {
@@ -149,5 +152,8 @@ export default {
 .img-right-section-two {
   border-radius: 20px;
   box-shadow: 5px 5px 20px #000;
+}
+.t-a-c {
+  text-align: none;
 }
 </style>
