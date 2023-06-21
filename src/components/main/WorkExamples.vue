@@ -2,7 +2,7 @@
 div
   div(v-if="numberObject == 1" v-resize='onResize')
 
-    carousel-3d(:autoplay="true" :autoplayTimeout="3000" :autoplayHoverPause="true" :count="8" :display="returnCountSlide" :width="returnWidthSlide" :height="returnHeightSlide" :controlsVisible="true")
+    carousel-3d(:autoplay="true" :autoplayTimeout="3000" :autoplayHoverPause="true" :count="13" :display="returnCountSlide" :width="returnWidthSlide" :height="returnHeightSlide" :controlsVisible="true")
  
       slide(:index="0")
         img.img-slider(src="@/assets/schoolBersha/1.jpg")
@@ -20,6 +20,16 @@ div
         img.img-slider(src="@/assets/schoolBersha/7.jpg")
       slide(:index="7")
         img.img-slider(src="@/assets/schoolBersha/8.jpg")
+      slide(:index="8")
+        img.img-slider(src="@/assets/schoolBersha/f53.jpg" width="auto" height="100%")
+      slide(:index="9")
+        img.img-slider(src="@/assets/schoolBersha/f22.jpg")
+      slide(:index="10")
+        img.img-slider(src="@/assets/schoolBersha/f23.jpg")
+      slide(:index="11")
+        img.img-slider(src="@/assets/schoolBersha/f24.jpg")
+      slide(:index="12")
+        img.img-slider(src="@/assets/schoolBersha/f26.jpg")
 
   div(v-if="numberObject == 2" v-resize='onResize')
 
