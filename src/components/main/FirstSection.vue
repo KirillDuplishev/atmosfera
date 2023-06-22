@@ -1,8 +1,11 @@
 <template lang="pug">
 .containerFirst
   .hero
-    h1.text-32(style="text-transform:uppercase; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные системы 
-    h1.text-95(style="text-transform:uppercase; font-weight:800; color: white; text-shadow: 2px 2px 4px black") вентиляция и кондиционирование 
+    div.pad-b
+      h1.text-32(style="text-transform:uppercase; color: white; text-shadow: 2px 2px 4px black") построим современные и безопасные системы 
+    h1.text-95(style="text-transform:uppercase; font-weight:800; color: white; text-shadow: 2px 2px 4px black") вентиляция 
+    h1.text-95(style="text-transform:uppercase; font-weight:800; color: white; text-shadow: 2px 2px 4px black") и
+    h1.text-95(style="text-transform:uppercase; font-weight:800; color: white; text-shadow: 2px 2px 4px black") кондиционирование 
     v-btn.button-about-us.text-15-b(@click="$router.push({path:'/aboutUs'})") Подробнее о нас
 </template>
 
@@ -55,5 +58,8 @@ export default {
 .button-about-us:hover {
   box-shadow: 0 0 15px #000;
   transform: scale(1.03);
+}
+.pad-b {
+  padding-bottom: 40px;
 }
 </style>
