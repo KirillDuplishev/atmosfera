@@ -7,34 +7,25 @@
     .container-worktype-section-three
       .span-typework-section-three
         WorkType.block-type-section-three( id=1 nameBlock="Поставка и монтаж систем вентиляции" imgSrc="close-up-ventilation-system (2)")
-        //- WorkType.block-type-section-three( id=2 nameBlock="Поставка и монтаж систем дымоудаления" imgSrc="3d-rendering-ventilation-system (1)")
-        //- WorkType.block-type-section-three( id=2 nameBlock="Поставка и монтаж систем дымоудаления" imgSrc="dymoudal")
         WorkType.block-type-section-three( id=2 nameBlock="Поставка и монтаж систем дымоудаления" imgSrc="dimoydal1")
         WorkType.block-type-section-three( id=3 nameBlock="Поставка и монтаж систем кондиционирования" imgSrc="close-up-ventilation-system (1)")
       .span-typework-section-three
-        //- WorkType.block-type-section-three( id=4 nameBlock="Поставка и монтаж воздушного отопления" imgSrc="industrial-vent-coming-out-building")
         WorkType.block-type-section-three( id=4 nameBlock="Поставка и монтаж воздушного отопления" imgSrc="sistemy-vozdushnogo-otopleniya")
         WorkType.block-type-section-three( id=5 nameBlock="Диагностика и устранение неисправностей существующих систем вентиляций и кондиционирования." imgSrc="close-up-ventilation-system (9)")
         WorkType.block-type-section-three( id=6 nameBlock=" Обслуживание систем кондиционирования, кондиционеров." imgSrc="close-up-ventilation-system")
       .span-typework-section-three
-        //- WorkType.block-type-section-three( id=7 nameBlock="Поставка и монтаж систем автоматизации вентиляции." imgSrc="close-up-ventilation-system (3)")
         WorkType.block-type-section-three( id=7 nameBlock="Поставка и монтаж систем автоматизации вентиляции." imgSrc="automatic-shield")
-        //- WorkType.block-type-section-three( id=8 nameBlock="Настройка и пусконаладочные работы систем автоматизации, вентиляции кондиционирования. " imgSrc="3d-rendering-ventilation-system")
         WorkType.block-type-section-three( id=8 nameBlock="Настройка и пусконаладочные работы систем автоматизации, вентиляции кондиционирования. " imgSrc="pusk-system")
         WorkType.block-type-section-three( id=9 nameBlock="Реконструкция систем вентиляции и кондиционирования, демонтажные работы." imgSrc="close-up-ventilation-system (7)")
 
     .container-worktype-section-three-mobile
         WorkType.block-type-section-three-mobile( id=1 nameBlock="Поставка и монтаж систем вентиляции" imgSrc="close-up-ventilation-system (2)")
-        //- WorkType.block-type-section-three-mobile( id=2 nameBlock="Поставка и монтаж систем дымоудаления" imgSrc="3d-rendering-ventilation-system (1)")
         WorkType.block-type-section-three-mobile( id=2 nameBlock="Поставка и монтаж систем дымоудаления" imgSrc="dimoydal1")
         WorkType.block-type-section-three-mobile( id=3 nameBlock="Поставка и монтаж систем кондиционирования" imgSrc="close-up-ventilation-system (1)")
-        //- WorkType.block-type-section-three-mobile( id=4 nameBlock="Поставка и монтаж воздушного отопления" imgSrc="industrial-vent-coming-out-building")
         WorkType.block-type-section-three-mobile( id=4 nameBlock="Поставка и монтаж воздушного отопления" imgSrc="sistemy-vozdushnogo-otopleniya")
         WorkType.block-type-section-three-mobile( id=5 nameBlock="Диагностика и устранение неисправностей существующих систем вентиляций и кондиционирования." imgSrc="close-up-ventilation-system (9)")
         WorkType.block-type-section-three-mobile( id=6 nameBlock=" Обслуживание систем кондиционирования, кондиционеров." imgSrc="close-up-ventilation-system")
-        WorkType.block-type-section-three-mobile( id=7 nameBlock="Поставка и монтаж систем автоматизации вентиляции." imgSrc="close-up-ventilation-system (3)")
         WorkType.block-type-section-three-mobile( id=7 nameBlock="Поставка и монтаж систем автоматизации вентиляции." imgSrc="automatic-shield")
-        //- WorkType.block-type-section-three-mobile( id=8 nameBlock="Настройка и пусконаладочные работы систем автоматизации, вентиляции кондиционирования. " imgSrc="3d-rendering-ventilation-system")
         WorkType.block-type-section-three-mobile( id=8 nameBlock="Настройка и пусконаладочные работы систем автоматизации, вентиляции кондиционирования. " imgSrc="pusk-system")
         WorkType.block-type-section-three-mobile( id=9 nameBlock="Реконструкция систем вентиляции и кондиционирования, демонтажные работы." imgSrc="close-up-ventilation-system (7)")
 </template>
