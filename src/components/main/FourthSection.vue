@@ -1,7 +1,7 @@
 <template lang="pug">
 .containerFor
   .blockLeft-section-four
-    img.img-right-section-four(src="@/assets/FourthSectionImg.png" width="70%" height="auto")
+    img.img-right-section-four(src="@/assets/FourthSectionImg.webp" width="70%" height="auto")
   .blockRight-section-four
     .text-block-main-section-four
       .text-block-section-four
@@ -58,7 +58,7 @@ export default {
     display: none !important;
   }
   .blockRight-section-four {
-    background: url("@/assets/FourthSectionImg.png");
+    background: url("@/assets/FourthSectionImg.webp");
     background-size: cover;
     width: 100% !important;
     min-height: 93vh;

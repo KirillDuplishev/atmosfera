@@ -15,7 +15,7 @@
           .text-description-block-section-two.outline-border
             span.text-17 В зависимости от запросов и задач заказчика наша компания также выполняет подбор и замену оборудования уже по готовым проектам.
       .blockRight-section-two
-        img.img-right-section-two(src="@/assets/SecondSectionImg.png" width="70%" height="auto")
+        img.img-right-section-two(src="@/assets/SecondSectionImg.webp" width="70%" height="auto")
 </template>
 
 <script>
@@ -40,7 +40,7 @@ export default {
     display: block !important;
   }
   .blockLeft-section-two {
-    background: url("@/assets/SecondSectionImg.png");
+    background: url("@/assets/SecondSectionImg.webp");
     background-size: cover;
     width: 100% !important;
     min-height: 93vh;

@@ -31,7 +31,7 @@ export default {
   margin-top: -60px;
 }
 .hero {
-  background: url('@/assets/FirstSection.jpg');
+  background: url('@/assets/FirstSection.webp');
   background-size: cover;
   justify-content: center;
   flex-direction: column;

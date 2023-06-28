@@ -2,7 +2,6 @@
 .containerReviews
   .text-main-block-section-reviews
     .header-title
-      //- span.text-19-b Отзывы
     div
       h1.text-40-b(style="color: #452132") Отзывы
     div(style="color:#000; padding: 30px 0 0 0")
