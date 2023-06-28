@@ -4,163 +4,163 @@
 	h1.header-gallery Атмосфера
 	.gallery
 		.gallery__item
-			img(src="../assets/photoGallery/21.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/21.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/22.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/22.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/23.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/23.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/24.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/24.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/25.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/25.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f1.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f1.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f2.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f2.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f3.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f3.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f4.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f4.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f5.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f5.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f6.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f6.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f7.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f7.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f8.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f8.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f9.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f9.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f10.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f10.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f12.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f12.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f13.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f13.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f16.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f16.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f17.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f17.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f18.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f18.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f19.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f19.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f20.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f20.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f21.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f21.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f22.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f22.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f23.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f23.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f24.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f24.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f25.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f25.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f26.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f26.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f27.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f27.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f28.jpeg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f28.jpeg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f29.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f29.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f30.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f30.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f31.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f31.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f32.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f32.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f34.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f34.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f35.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f35.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f14.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f14.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f36.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f36.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f37.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f37.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f38.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f38.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f39.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f39.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f40.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f40.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f41.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f41.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f42.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f42.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f43.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f43.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f44.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f44.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f45.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f45.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f46.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f46.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f47.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f47.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f48.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f48.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f49.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f49.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f50.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f50.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f51.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f51.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f52.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f52.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f53.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f53.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f54.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f54.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f55.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f55.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f56.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f56.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f57.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f57.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f58.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f58.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f59.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f59.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f60.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f60.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f61.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f61.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f62.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f62.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f63.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f63.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f64.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f64.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f65.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f65.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f66.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f66.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f67.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f67.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f68.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f68.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f69.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f69.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f70.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f70.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f71.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f71.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f72.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f72.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f73.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f73.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f11.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f11.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f74.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f74.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f75.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f75.jpg" alt="Alt")
 		.gallery__item
-			img(src="../assets/photoGallery/f15.jpg" alt="Alt")
+			img(src="../assets/photoGallery/jpg/f15.jpg" alt="Alt")
 </template>
 
 <script>
